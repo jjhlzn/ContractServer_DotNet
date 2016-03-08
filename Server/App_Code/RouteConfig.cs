@@ -13,6 +13,7 @@ namespace Server
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.EnableFriendlyUrls();
+            routes.MapPageRoute("", "order/search.json", "~/order.aspx");
         }
     }
 }
