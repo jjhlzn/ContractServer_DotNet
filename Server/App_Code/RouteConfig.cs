@@ -12,8 +12,11 @@ namespace Server
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
-            routes.EnableFriendlyUrls();
-            routes.MapPageRoute("", "order/search.json", "~/order.aspx");
+          //  routes.EnableFriendlyUrls();
+            routes.MapPageRoute("order", "order/{action}.json", "~/order.aspx");
+            routes.MapPageRoute("approval", "approval/{action}.json", "~/approval.aspx");
+            routes.MapPageRoute("login", "login/{action}.json", "~/login.aspx");
+        
         }
     }
 }

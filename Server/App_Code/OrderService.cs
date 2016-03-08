@@ -16,7 +16,8 @@ public class OrderService
 	{
 	}
 
-    public SearchOrderResponse Search(string keyword, string startDate, string endDate, int pageNo, int pageSize)
+    public SearchOrderResponse Search(string keyword, string startDate, string endDate, 
+        int pageNo, int pageSize)
     {
         using (IDbConnection conn = ConnectionFactory.GetInstance())
         {
@@ -27,7 +28,35 @@ public class OrderService
         }
     }
 
-    public GetOrderBasicInfoResponse 
 
-    
+    public GetOrderBasicInfoResponse GetBasicInfo(string orderId)
+    {
+        GetOrderBasicInfoResponse response = new GetOrderBasicInfoResponse();
+
+        return response;
+    }
+
+    public GetOrderPurchaseInfoResponse GetPurchaseInfo(string orderId)
+    {
+        GetOrderPurchaseInfoResponse resp = new GetOrderPurchaseInfoResponse();
+        return resp;
+    }
+
+    public GetOrderChuyunInfoResponse GetChuyunInfo(string orderId)
+    {
+        GetOrderChuyunInfoResponse resp = new GetOrderChuyunInfoResponse();
+        return resp;
+    }
+
+    public GetOrderFukuangInfoResponse GetFukuangInfo(string orderId)
+    {
+        GetOrderFukuangInfoResponse resp = new GetOrderFukuangInfoResponse();
+        return resp;
+    }
+
+    public GetOrderShouhuiInfoResponse GetShouhuiInfo(string orderId)
+    {
+        GetOrderShouhuiInfoResponse resp = new GetOrderShouhuiInfoResponse();
+        return resp;
+    }
 }
