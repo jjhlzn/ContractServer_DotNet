@@ -29,3 +29,12 @@ public class SearchOrderResponse : ServerResponse
     public int totalNumber { get; set; }
     public List<Order> orders { get; set; } 
 }
+
+public class GetOrderBasicInfoResponse : ServerResponse
+{
+    public string timeLimit { get; set; }
+    public string startPort { get; set; }
+    public string destPort { get; set; }
+    public string getMoneyType { get; set; }
+    public string priceRules { get; set; }
+}
