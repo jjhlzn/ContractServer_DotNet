@@ -32,13 +32,13 @@ public partial class order : System.Web.UI.Page
         switch (action)
         {
             case "search":
-                resp = service.Search("", "", "", 0, 10);
+                resp = service.Search(GetRequestParameter("keyword"), "2013-01-01", "2015-01-01", 0, 10);
                 break;
             case "getBasicInfo":
-                resp = service.GetBasicInfo("");
+                resp = service.GetBasicInfo(GetRequestParameter("orderId"));
                 break;
             case "getPurchaseInfo":
-                resp = service.GetPurchaseInfo("");
+                resp = service.GetPurchaseInfo(GetRequestParameter("orderId"));
                 break;
             case "getChuyunInfo":
                 resp = service.GetChuyunInfo("");
@@ -58,5 +58,15 @@ public partial class order : System.Web.UI.Page
         if (resp != null)
             Response.Write(JsonConvert.SerializeObject(resp));
         Response.End();
+    }
+
+    private string GetRequestParameter(string param)
+    {
+        string value = Request[param];
+        if (value == null)
+        {
+            return "";
+        }
+        return value;
     }
 }
