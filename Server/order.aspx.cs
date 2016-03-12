@@ -9,16 +9,15 @@ using Dapper;
 using Newtonsoft.Json;
 using log4net;
 
-public partial class order : System.Web.UI.Page
+public partial class order : BasePage
 {
     private OrderService service = new OrderService();
     private static ILog Logger = LogManager.GetLogger(typeof (order));
 
-    protected void Page_Load(object sender, EventArgs e)
-    {
-        
-        //string action = Request["action"];
+   
 
+    public override ServerResponse GetServerResponse()
+    {
         var actionValue = Page.RouteData.Values["action"];
         Logger.Debug(RouteData.Values);
         if (actionValue == null)
@@ -41,32 +40,17 @@ public partial class order : System.Web.UI.Page
                 resp = service.GetPurchaseInfo(GetRequestParameter("orderId"));
                 break;
             case "getChuyunInfo":
-                resp = service.GetChuyunInfo("");
+                resp = service.GetChuyunInfo(GetRequestParameter("orderId"));
                 break;
             case "getFukuangInfo":
-                resp = service.GetFukuangInfo("");
+                resp = service.GetFukuangInfo(GetRequestParameter("orderId"));
                 break;
             case "getShouhuiInfo":
-                resp = service.GetShouhuiInfo("");
-                break;
-            
-            default:
-                //resp = service.Search("", "", "", 0, 10);
+                resp = service.GetShouhuiInfo(GetRequestParameter("orderId"));
                 break;
         }
-    
-        if (resp != null)
-            Response.Write(JsonConvert.SerializeObject(resp));
-        Response.End();
+        return resp;
     }
 
-    private string GetRequestParameter(string param)
-    {
-        string value = Request[param];
-        if (value == null)
-        {
-            return "";
-        }
-        return value;
-    }
+    
 }

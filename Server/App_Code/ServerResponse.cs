@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using DotNetOpenAuth.Messaging;
 
 /// <summary>
 /// Response 的摘要说明
@@ -20,6 +21,11 @@ public class ServerResponse
         status = 0;
         errorMessage = "";
     }
+
+    public virtual void ResetNullProperteis()
+    {
+        
+    }
 }
 
 
@@ -27,7 +33,14 @@ public class ServerResponse
 public class SearchOrderResponse : ServerResponse
 {
     public int totalNumber { get; set; }
-    public List<Order> orders { get; set; } 
+    public List<Order> orders { get; set; }
+    public override void ResetNullProperteis()
+    {
+        foreach (var order in orders)
+        {
+            order.resetNullProperties();
+        }
+    }
 }
 
 public class GetOrderBasicInfoResponse : ServerResponse
@@ -38,15 +51,24 @@ public class GetOrderBasicInfoResponse : ServerResponse
     {
         basicInfo = new OrderBasicInfo();
     }
+    public override void ResetNullProperteis()
+    {
+        basicInfo.resetNullProperties();
+    }
 }
 
-public class OrderBasicInfo
+public class OrderBasicInfo : BaseObject
 {
     public string timeLimit { get; set; }
     public string startPort { get; set; }
     public string destPort { get; set; }
     public string getMoneyType { get; set; }
     public string priceRules { get; set; }
+
+    public override string[] GetNeedResetProperties()
+    {
+        return new string[] { "timeLimit", "startPort", "destPort", "getMoneyType", "priceRules" };
+    }
 }
 
 public class GetOrderPurchaseInfoResponse : ServerResponse
@@ -57,14 +79,26 @@ public class GetOrderPurchaseInfoResponse : ServerResponse
     {
         purchaseInfo = new List<OrderPurchaseInfoItem>();
     }
+    public override void ResetNullProperteis()
+    {
+        foreach (var item  in purchaseInfo)
+        {
+            item.resetNullProperties();
+        }
+        
+    }
 }
 
-public class OrderPurchaseInfoItem
+public class OrderPurchaseInfoItem : BaseObject
 {
     public string contract { get; set; }
     public string date { get; set; }
     public string factory { get; set; }
     public decimal amount { get; set; }
+    public override string[] GetNeedResetProperties()
+    {
+        return new string[] { "contract", "date", "factory" };
+    }
 }
 
 public class GetOrderChuyunInfoResponse : ServerResponse
@@ -75,41 +109,51 @@ public class GetOrderChuyunInfoResponse : ServerResponse
     {
         chuyunInfo = new OrderChuyunInfo();
     }
+    public override void ResetNullProperteis()
+    {
+        chuyunInfo.resetNullProperties();
+    }
 }
 
-public class OrderChuyunInfo
+public class OrderChuyunInfo : BaseObject
 {
     public string detailNo { get; set; }
     public string date { get; set; }
     public decimal amount { get; set; }
+    public override string[] GetNeedResetProperties()
+    {
+        return new string[] { "detailNo", "date" };
+    }
 }
 
 public class GetOrderFukuangInfoResponse : ServerResponse
 {
-    public OrderFukuangInfo fukuangInfo { get; set; }
+    public List<OrderFukuangInfoItem> fukuangInfo { get; set; }
 
     public GetOrderFukuangInfoResponse()
     {
-        fukuangInfo = new OrderFukuangInfo();
+        fukuangInfo = new List<OrderFukuangInfoItem>();
     }
-}
-
-public class OrderFukuangInfo
-{
-    public List<OrderFukuangInfo> items { get; set; }
-
-    public OrderFukuangInfo()
+    public override void ResetNullProperteis()
     {
-        items = new List<OrderFukuangInfo>();
+        foreach (var item in fukuangInfo)
+        {
+            item.resetNullProperties();
+        }
+        
     }
 }
 
-public class OrderFukuangInfoItem
+public class OrderFukuangInfoItem : BaseObject
 {
     public string contract { get; set; }
     public string date { get; set; }
     public string factory { get; set; }
     public decimal amount { get; set; }
+    public override string[] GetNeedResetProperties()
+    {
+        return new string[] { "contract", "date", "factory" };
+    }
 }
 
 public class GetOrderShouhuiInfoResponse : ServerResponse
@@ -120,12 +164,20 @@ public class GetOrderShouhuiInfoResponse : ServerResponse
     {
         shouhuiInfo = new OrderShouhuiInfo();
     }
+    public override void ResetNullProperteis()
+    {
+        shouhuiInfo.resetNullProperties();
+    }
 }
 
-public class OrderShouhuiInfo
+public class OrderShouhuiInfo : BaseObject
 {
     public string date { get; set; }
     public decimal amount { get; set; }
+    public override string[] GetNeedResetProperties()
+    {
+        return new string[] {"date" };
+    }
 }
 
 public class SearchApprovalResponse : ServerResponse
@@ -135,6 +187,14 @@ public class SearchApprovalResponse : ServerResponse
     public SearchApprovalResponse()
     {
         approvals = new List<Approval>();
+    }
+    public override void ResetNullProperteis()
+    {
+        foreach (var item  in approvals)
+        {
+            item.resetNullProperties();
+        }
+        
     }
 }
 

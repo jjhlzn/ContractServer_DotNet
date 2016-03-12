@@ -7,12 +7,12 @@ using System.Web.UI.WebControls;
 using log4net;
 using Newtonsoft.Json;
 
-public partial class login : System.Web.UI.Page
+public partial class login : BasePage
 {
     private LoginService service = new LoginService();
     private static ILog Logger = LogManager.GetLogger(typeof(login));
 
-    protected void Page_Load(object sender, EventArgs e)
+    public override ServerResponse GetServerResponse()
     {
         var actionValue = Page.RouteData.Values["action"];
         Logger.Debug(RouteData.Values);
@@ -27,13 +27,10 @@ public partial class login : System.Web.UI.Page
         switch (action)
         {
             case "login":
-                resp = service.Login("", "");
+                resp = service.Login(GetRequestParameter("x"), GetRequestParameter("y"));
                 break;
 
         }
-
-        if (resp != null)
-            Response.Write(JsonConvert.SerializeObject(resp));
-        Response.End();
+        return resp;
     }
 }

@@ -1,0 +1,167 @@
+2016-03-11 14:28:47,007 [7] DEBUG order [(null)] - {[action, search]}
+2016-03-11 14:29:38,122 [17] DEBUG order [(null)] - {[action, search]}
+2016-03-11 14:31:16,949 [16] DEBUG order [(null)] - {[action, search]}
+2016-03-11 14:31:51,692 [16] DEBUG order [(null)] - {[action, search]}
+2016-03-11 14:33:31,956 [6] DEBUG order [(null)] - {[action, search]}
+2016-03-11 14:35:29,268 [6] DEBUG order [(null)] - {[action, search]}
+2016-03-11 14:37:42,429 [7] DEBUG order [(null)] - {[action, search]}
+2016-03-11 15:09:23,879 [22] DEBUG order [(null)] - {[action, search]}
+2016-03-11 15:11:23,656 [23] DEBUG order [(null)] - {[action, search]}
+2016-03-11 15:11:23,685 [23] DEBUG OrderService [(null)] - select top 10 name as businessPerson,wxhth as contractNo,po_no as orderNo,zje as amount,yw_contract.khmc as guestName, qyrq
+                                            from yw_contract,rs_employee,yw_wldw
+                                            where  yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' and qyrq >= @startDate and qyrq <= @endDate  and wxhth not in ( select top 0 wxhth from yw_contract,rs_employee,yw_wldw where yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' and qyrq >= @startDate and qyrq <= @endDate  order by qyrq desc) order by qyrq desc
+2016-03-11 15:16:10,707 [28] DEBUG order [(null)] - {[action, search]}
+2016-03-11 15:16:10,723 [28] DEBUG OrderService [(null)] - select top 10 name as businessPerson,wxhth as contractNo,po_no as orderNo,zje as amount,yw_contract.khmc as guestName, qyrq
+                                            from yw_contract,rs_employee,yw_wldw
+                                            where  yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%%' or po_no like '%%'  and wxhth not in ( select top 0 wxhth from yw_contract,rs_employee,yw_wldw where yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%%' or po_no like '%%'  order by qyrq desc) order by qyrq desc
+2016-03-11 15:16:28,150 [26] DEBUG order [(null)] - {[action, search]}
+2016-03-11 15:16:28,166 [26] DEBUG OrderService [(null)] - select top 10 name as businessPerson,wxhth as contractNo,po_no as orderNo,zje as amount,yw_contract.khmc as guestName, qyrq
+                                            from yw_contract,rs_employee,yw_wldw
+                                            where  yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%%' or po_no like '%%')  and wxhth not in ( select top 0 wxhth from yw_contract,rs_employee,yw_wldw where yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%%' or po_no like '%%')  order by qyrq desc) order by qyrq desc
+2016-03-11 15:18:35,187 [27] DEBUG order [(null)] - {[action, search]}
+2016-03-11 15:18:35,191 [27] DEBUG OrderService [(null)] - select top 10 name as businessPerson,wxhth as contractNo,po_no as orderNo,zje as amount,yw_contract.khmc as guestName, qyrq
+                                            from yw_contract,rs_employee,yw_wldw
+                                            where  yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%%' or po_no like '%%')  and wxhth not in ( select top 0 wxhth from yw_contract,rs_employee,yw_wldw where yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%%' or po_no like '%%')  order by qyrq desc) order by qyrq desc
+2016-03-11 15:18:48,451 [25] DEBUG order [(null)] - {[action, search]}
+2016-03-11 15:18:48,452 [25] DEBUG OrderService [(null)] - select top 10 name as businessPerson,wxhth as contractNo,po_no as orderNo,zje as amount,yw_contract.khmc as guestName, qyrq
+                                            from yw_contract,rs_employee,yw_wldw
+                                            where  yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%AT16%' or po_no like '%AT16%')  and wxhth not in ( select top 0 wxhth from yw_contract,rs_employee,yw_wldw where yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%AT16%' or po_no like '%AT16%')  order by qyrq desc) order by qyrq desc
+2016-03-11 15:22:55,480 [27] DEBUG order [(null)] - {[action, search]}
+2016-03-11 15:22:55,498 [27] DEBUG OrderService [(null)] - select top 10 name as businessPerson,wxhth as contractNo,po_no as orderNo,zje as amount,yw_contract.khmc as guestName, qyrq
+                                            from yw_contract,rs_employee,yw_wldw
+                                            where  yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%AT16%' or po_no like '%AT16%')  and wxhth not in ( select top 0 wxhth from yw_contract,rs_employee,yw_wldw where yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%AT16%' or po_no like '%AT16%')  order by qyrq desc) order by qyrq desc
+2016-03-11 15:23:33,950 [16] DEBUG order [(null)] - {[action, search]}
+2016-03-11 15:23:33,967 [16] DEBUG OrderService [(null)] - select top 10 name as businessPerson,wxhth as contractNo,po_no as orderNo,zje as amount,yw_contract.khmc as guestName, qyrq
+                                            from yw_contract,rs_employee,yw_wldw
+                                            where  yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%AT16%' or po_no like '%AT16%')  and wxhth not in ( select top 0 wxhth from yw_contract,rs_employee,yw_wldw where yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%AT16%' or po_no like '%AT16%')  order by qyrq desc) order by qyrq desc
+2016-03-11 15:23:34,053 [16] DEBUG OrderService [(null)] - select COUNT(*) from  yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%AT16%' or po_no like '%AT16%') 
+2016-03-11 15:24:18,989 [16] DEBUG order [(null)] - {[action, search]}
+2016-03-11 15:24:19,010 [16] DEBUG OrderService [(null)] - select top 10 name as businessPerson,wxhth as contractNo,po_no as orderNo,zje as amount,yw_contract.khmc as guestName, qyrq
+                                            from yw_contract,rs_employee,yw_wldw
+                                            where  yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%AT16%' or po_no like '%AT16%')  and wxhth not in ( select top 0 wxhth from yw_contract,rs_employee,yw_wldw where yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%AT16%' or po_no like '%AT16%')  order by qyrq desc) order by qyrq desc
+2016-03-11 15:24:19,126 [16] DEBUG OrderService [(null)] - select COUNT(*) from  yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%AT16%' or po_no like '%AT16%') 
+2016-03-11 15:24:36,401 [19] DEBUG order [(null)] - {[action, search]}
+2016-03-11 15:24:36,420 [19] DEBUG OrderService [(null)] - select top 10 name as businessPerson,wxhth as contractNo,po_no as orderNo,zje as amount,yw_contract.khmc as guestName, qyrq
+                                            from yw_contract,rs_employee,yw_wldw
+                                            where  yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%AT16%' or po_no like '%AT16%')  and wxhth not in ( select top 0 wxhth from yw_contract,rs_employee,yw_wldw where yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%AT16%' or po_no like '%AT16%')  order by qyrq desc) order by qyrq desc
+2016-03-11 15:24:36,536 [19] DEBUG OrderService [(null)] - select COUNT(*) from  yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%AT16%' or po_no like '%AT16%') 
+2016-03-11 15:25:12,787 [18] DEBUG order [(null)] - {[action, search]}
+2016-03-11 15:25:12,804 [18] DEBUG OrderService [(null)] - select top 10 name as businessPerson,wxhth as contractNo,po_no as orderNo,zje as amount,yw_contract.khmc as guestName, qyrq
+                                            from yw_contract,rs_employee,yw_wldw
+                                            where  yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%AT16%' or po_no like '%AT16%')  and wxhth not in ( select top 0 wxhth from yw_contract,rs_employee,yw_wldw where yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%AT16%' or po_no like '%AT16%')  order by qyrq desc) order by qyrq desc
+2016-03-11 15:25:12,925 [18] DEBUG OrderService [(null)] - select COUNT(*) from  yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%AT16%' or po_no like '%AT16%') 
+2016-03-11 15:25:51,510 [19] DEBUG order [(null)] - {[action, search]}
+2016-03-11 15:25:51,528 [19] DEBUG OrderService [(null)] - select top 10 name as businessPerson,wxhth as contractNo,po_no as orderNo,zje as amount,yw_contract.khmc as guestName, qyrq
+                                            from yw_contract,rs_employee,yw_wldw
+                                            where  yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%AT16%' or po_no like '%AT16%')  and wxhth not in ( select top 0 wxhth from yw_contract,rs_employee,yw_wldw where yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%AT16%' or po_no like '%AT16%')  order by qyrq desc) order by qyrq desc
+2016-03-11 15:25:51,634 [19] DEBUG OrderService [(null)] - select COUNT(*) from  yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%AT16%' or po_no like '%AT16%') 
+2016-03-11 15:25:51,679 [19] DEBUG OrderService [(null)] - count = {0}{DapperRow,  = '1'}
+2016-03-11 15:26:40,858 [27] DEBUG order [(null)] - {[action, search]}
+2016-03-11 15:26:40,876 [27] DEBUG OrderService [(null)] - select top 10 name as businessPerson,wxhth as contractNo,po_no as orderNo,zje as amount,yw_contract.khmc as guestName, qyrq
+                                            from yw_contract,rs_employee,yw_wldw
+                                            where  yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%AT16%' or po_no like '%AT16%')  and wxhth not in ( select top 0 wxhth from yw_contract,rs_employee,yw_wldw where yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%AT16%' or po_no like '%AT16%')  order by qyrq desc) order by qyrq desc
+2016-03-11 15:26:40,979 [27] DEBUG OrderService [(null)] - select COUNT(*) from  yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%AT16%' or po_no like '%AT16%') 
+2016-03-11 15:27:17,662 [18] DEBUG order [(null)] - {[action, search]}
+2016-03-11 15:27:17,679 [18] DEBUG OrderService [(null)] - select top 10 name as businessPerson,wxhth as contractNo,po_no as orderNo,zje as amount,yw_contract.khmc as guestName, qyrq
+                                            from yw_contract,rs_employee,yw_wldw
+                                            where  yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%AT16%' or po_no like '%AT16%')  and wxhth not in ( select top 0 wxhth from yw_contract,rs_employee,yw_wldw where yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%AT16%' or po_no like '%AT16%')  order by qyrq desc) order by qyrq desc
+2016-03-11 15:27:17,778 [18] DEBUG OrderService [(null)] - select COUNT(*) from  yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%AT16%' or po_no like '%AT16%') 
+2016-03-11 15:27:17,801 [18] DEBUG OrderService [(null)] - count = {0}1
+2016-03-11 15:33:49,862 [18] DEBUG order [(null)] - {[action, getBasicInfo]}
+2016-03-11 15:36:03,420 [16] DEBUG order [(null)] - {[action, getBasicInfo]}
+2016-03-11 15:36:03,433 [16] DEBUG OrderService [(null)] - SELECT  yw_contract.zyqx as timeLimit, 
+                              yw_contract.ckka as startPort ,       
+                              yw_contract.mdka as destPort,        
+                              yw_contract.shfs as getMoneyType,       
+                              yw_contract.jgtk as priceRules
+                            FROM yw_contract      
+                            WHERE ( yw_contract.wxhth = @orderId ) and ( yw_contract.bb_flag = 'Y' )
+2016-03-11 15:37:50,073 [27] DEBUG order [(null)] - {[action, getBasicInfo]}
+2016-03-11 15:37:50,085 [27] DEBUG OrderService [(null)] - SELECT  yw_contract.zyqx as timeLimit, 
+                              yw_contract.ckka as startPort ,       
+                              yw_contract.mdka as destPort,        
+                              yw_contract.shfs as getMoneyType,       
+                              yw_contract.jgtk as priceRules
+                            FROM yw_contract      
+                            WHERE ( yw_contract.wxhth = @orderId ) and ( yw_contract.bb_flag = 'Y' )
+2016-03-11 16:17:13,192 [33] DEBUG order [(null)] - {[action, getPurchaseInfo]}
+2016-03-11 16:17:28,337 [33] DEBUG order [(null)] - {[action, getPurchaseInfo]}
+2016-03-11 16:18:31,110 [33] DEBUG order [(null)] - {[action, getPurchaseInfo]}
+2016-03-11 16:18:33,344 [32] DEBUG order [(null)] - {[action, getPurchaseInfo]}
+2016-03-11 16:18:46,560 [33] DEBUG order [(null)] - {[action, getPurchaseInfo]}
+2016-03-11 16:18:48,198 [32] DEBUG order [(null)] - {[action, getPurchaseInfo]}
+2016-03-11 16:19:11,345 [32] DEBUG order [(null)] - {[action, getPurchaseInfo]}
+2016-03-11 16:19:11,359 [32] DEBUG OrderService [(null)] - select sghth as contract,
+                              gfmc as date,
+                              qyrq as factory,
+                              zje as amount
+                        from yw_bcontract
+                        where wxhth=@orderId and
+                              bb_flag='Y'
+2016-03-11 16:20:40,041 [32] DEBUG order [(null)] - {[action, getPurchaseInfo]}
+2016-03-11 16:20:40,054 [32] DEBUG OrderService [(null)] - select sghth as contract,
+                              gfmc as date,
+                              qyrq as factory,
+                              zje as amount
+                        from yw_bcontract
+                        where wxhth=@orderId and
+                              bb_flag='Y'
+2016-03-11 16:20:40,055 [32] DEBUG OrderService [(null)] - loggerId = orderId
+2016-03-11 16:21:04,240 [33] DEBUG order [(null)] - {[action, getPurchaseInfo]}
+2016-03-11 16:21:04,241 [33] DEBUG OrderService [(null)] - select sghth as contract,
+                              gfmc as date,
+                              qyrq as factory,
+                              zje as amount
+                        from yw_bcontract
+                        where wxhth=@orderId and
+                              bb_flag='Y'
+2016-03-11 16:21:04,242 [33] DEBUG OrderService [(null)] - loggerId = ZYTT12LAO08
+2016-03-11 16:21:12,245 [18] DEBUG order [(null)] - {[action, getPurchaseInfo]}
+2016-03-11 16:21:12,246 [18] DEBUG OrderService [(null)] - select sghth as contract,
+                              gfmc as date,
+                              qyrq as factory,
+                              zje as amount
+                        from yw_bcontract
+                        where wxhth=@orderId and
+                              bb_flag='Y'
+2016-03-11 16:21:12,247 [18] DEBUG OrderService [(null)] - loggerId = ZYTT14LAT16
+2016-03-11 16:22:26,251 [30] DEBUG order [(null)] - {[action, getPurchaseInfo]}
+2016-03-11 16:22:26,265 [30] DEBUG OrderService [(null)] - select sghth as contract,
+                              gfmc as factory,
+                              qyrq as date,
+                              zje as amount
+                        from yw_bcontract
+                        where wxhth=@orderId and
+                              bb_flag='Y'
+2016-03-11 16:22:26,266 [30] DEBUG OrderService [(null)] - loggerId = ZYTT14LAT16

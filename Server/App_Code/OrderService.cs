@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Activities.Expressions;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -65,7 +66,11 @@ public class OrderService
         using (var conn = ConnectionFactory.GetInstance())
         {
             var basicInfo = conn.Query<OrderBasicInfo>(sql, new {orderId}).FirstOrDefault();
-            if (basicInfo != null && basicInfo.timeLimit != null)
+            if (basicInfo == null)
+            {
+                basicInfo = new OrderBasicInfo();
+            }
+            if (basicInfo.timeLimit != null)
             {
                 basicInfo.timeLimit = basicInfo.timeLimit.Substring(0, basicInfo.timeLimit.IndexOf(' '));
             }
@@ -104,17 +109,28 @@ public class OrderService
     public GetOrderChuyunInfoResponse GetChuyunInfo(string orderId)
     {
         GetOrderChuyunInfoResponse resp = new GetOrderChuyunInfoResponse();
-        string sql = @"SELECT mxdbh = yw_mxd.mxdbh,
-                              amount =Sum(yw_mxd_cmd.wxzj),
-                              fprq = yw_mxd.fprq 
+        string sql = @"SELECT yw_mxd.mxdbh as detailNo,
+                              Sum(yw_mxd_cmd.wxzj) as amount,
+                              yw_mxd.fprq as date 
                            FROM yw_mxd_cmd,yw_mxd  
-                           WHERE yw_mxd_cmd.wxhth = @as_wxhth and
+                           WHERE yw_mxd_cmd.wxhth = @orderId and
                         yw_mxd_cmd.mxdbh = yw_mxd.mxdbh and 
                         yw_mxd_cmd.bbh = yw_mxd.bbh and 
-                        yw_mxd.bb_flag = 'Y'";
+                        yw_mxd.bb_flag = 'Y' 
+                        GROUP BY yw_mxd.mxdbh, yw_mxd.fprq ";
+        Logger.Debug(sql);
         using (var conn = ConnectionFactory.GetInstance())
         {
-            
+            var result = conn.Query<OrderChuyunInfo>(sql, new {orderId}).FirstOrDefault();
+            if (result == null)
+            {
+                result = new OrderChuyunInfo();
+            }
+            if (result != null && result.date != null)
+            {
+                result.date = result.date.Substring(0, result.date.IndexOf(' '));
+            }
+            resp.chuyunInfo = result;
         }
         return resp;
     }
@@ -122,12 +138,55 @@ public class OrderService
     public GetOrderFukuangInfoResponse GetFukuangInfo(string orderId)
     {
         GetOrderFukuangInfoResponse resp = new GetOrderFukuangInfoResponse();
+        string sql = @"select yw_fksqd.sqdbh as contract,
+                              yw_fksqd.skdwmc as factory,
+                              yw_fksqd_mx.kpje as amount,
+                              yw_fksqd.sjfkrq as date
+                        from yw_fksqd,yw_fksqd_mx,yw_bcontract  
+                        where yw_fksqd.sqdbh=yw_fksqd_mx.sqdbh and
+                              yw_fksqd_mx.sghth=yw_bcontract.sghth and
+                              yw_bcontract.bb_flag='Y' and
+                              yw_bcontract.wxhth=@orderId";
+        Logger.Debug(sql);
+        using (var conn = ConnectionFactory.GetInstance())
+        {
+            var result = conn.Query<OrderFukuangInfoItem>(sql, new { orderId });
+            foreach (var item in result)
+            {
+                if (item.date != null)
+                {
+                    item.date = item.date.Substring(0, item.date.IndexOf(' '));
+                }
+            }
+            resp.fukuangInfo = new List<OrderFukuangInfoItem>(result);
+        }
         return resp;
     }
 
     public GetOrderShouhuiInfoResponse GetShouhuiInfo(string orderId)
     {
         GetOrderShouhuiInfoResponse resp = new GetOrderShouhuiInfoResponse();
+        string sql = @"SELECT sd_master_new.sdbh,   
+                             sd_master_new.shrq as date,   
+                             sd_mx.shje as amount   
+                        FROM sd_master_new,   
+                             sd_mx
+                       WHERE ( sd_master_new.sdbh = sd_mx.sdbh ) and  
+                             ( ( sd_mx.wxhth = @orderId ) )";
+        Logger.Debug(sql);
+        using (var conn = ConnectionFactory.GetInstance())
+        {
+            var result = conn.Query<OrderShouhuiInfo>(sql, new {orderId}).FirstOrDefault();
+            if (result == null)
+            {
+                result = new OrderShouhuiInfo();
+            }
+            if (result.date != null)
+            {
+                result.date = result.date.Substring(0, result.date.IndexOf(' '));
+            }
+            resp.shouhuiInfo = result;
+        }
         return resp;
     }
 }

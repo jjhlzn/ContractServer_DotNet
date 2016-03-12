@@ -6,7 +6,7 @@ using System.Web;
 /// <summary>
 /// Approval 的摘要说明
 /// </summary>
-public class Approval
+public class Approval : BaseObject
 {
 	public Approval()
 	{
@@ -21,4 +21,8 @@ public class Approval
     public string status { get; set; }
     public string reportDate { get; set; }
 
+    public override string[] GetNeedResetProperties()
+    {
+        return new string[] { "id", "keyword", "type", "reporter", "approvalObject", "status", "reportDate" };
+    }
 }
