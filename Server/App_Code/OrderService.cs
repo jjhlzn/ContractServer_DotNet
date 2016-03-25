@@ -40,8 +40,6 @@ public class OrderService
             
             var result = conn.Query<Order>(sql , new { startDate, endDate });
 
-            sql = "select COUNT(*) from " + whereClause;
-            Logger.Debug(sql);
             var count = conn.Query<int>("select COUNT(*) from yw_contract,rs_employee,yw_wldw where " + whereClause, new { startDate, endDate }).First();
             var response = new SearchOrderResponse();
             response.orders = new List<Order>(result);

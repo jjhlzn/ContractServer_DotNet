@@ -1,165 +1,108 @@
-2016-03-12 08:44:55,197 [33] DEBUG order [(null)] - {[action, getChuyunInfo]}
-2016-03-12 08:44:55,210 [33] DEBUG OrderService [(null)] - SELECT mxdbh = yw_mxd.mxdbh as detailNo,
-                              amount =Sum(yw_mxd_cmd.wxzj) as amount,
-                              fprq = yw_mxd.fprq as date 
-                           FROM yw_mxd_cmd,yw_mxd  
-                           WHERE yw_mxd_cmd.wxhth = @orderId and
-                        yw_mxd_cmd.mxdbh = yw_mxd.mxdbh and 
-                        yw_mxd_cmd.bbh = yw_mxd.bbh and 
-                        yw_mxd.bb_flag = 'Y'
-2016-03-12 08:49:15,543 [27] DEBUG order [(null)] - {[action, getChuyunInfo]}
-2016-03-12 08:49:15,556 [27] DEBUG OrderService [(null)] - SELECT yw_mxd.mxdbh as detailNo,
-                              Sum(yw_mxd_cmd.wxzj) as amount,
-                              yw_mxd.fprq as date 
-                           FROM yw_mxd_cmd,yw_mxd  
-                           WHERE yw_mxd_cmd.wxhth = @orderId and
-                        yw_mxd_cmd.mxdbh = yw_mxd.mxdbh and 
-                        yw_mxd_cmd.bbh = yw_mxd.bbh and 
-                        yw_mxd.bb_flag = 'Y' 
-                        GROUP BY yw_mxd.mxdbh, yw_mxd.fprq 
-2016-03-12 08:49:42,335 [7] DEBUG order [(null)] - {[action, getChuyunInfo]}
-2016-03-12 08:49:42,336 [7] DEBUG OrderService [(null)] - SELECT yw_mxd.mxdbh as detailNo,
-                              Sum(yw_mxd_cmd.wxzj) as amount,
-                              yw_mxd.fprq as date 
-                           FROM yw_mxd_cmd,yw_mxd  
-                           WHERE yw_mxd_cmd.wxhth = @orderId and
-                        yw_mxd_cmd.mxdbh = yw_mxd.mxdbh and 
-                        yw_mxd_cmd.bbh = yw_mxd.bbh and 
-                        yw_mxd.bb_flag = 'Y' 
-                        GROUP BY yw_mxd.mxdbh, yw_mxd.fprq 
-2016-03-12 08:51:32,095 [7] DEBUG order [(null)] - {[action, getChuyunInfo]}
-2016-03-12 08:51:32,108 [7] DEBUG OrderService [(null)] - SELECT yw_mxd.mxdbh as detailNo,
-                              Sum(yw_mxd_cmd.wxzj) as amount,
-                              yw_mxd.fprq as date 
-                           FROM yw_mxd_cmd,yw_mxd  
-                           WHERE yw_mxd_cmd.wxhth = @orderId and
-                        yw_mxd_cmd.mxdbh = yw_mxd.mxdbh and 
-                        yw_mxd_cmd.bbh = yw_mxd.bbh and 
-                        yw_mxd.bb_flag = 'Y' 
-                        GROUP BY yw_mxd.mxdbh, yw_mxd.fprq 
-2016-03-12 08:58:28,584 [26] DEBUG order [(null)] - {[action, getFukuangInfo]}
-2016-03-12 08:58:28,596 [26] DEBUG OrderService [(null)] - select yw_fksqd.skdwmc as contract,
-                              yw_fksqd_mx.kpje as amount,
-                              yw_fksqd.sjfkrq as date
-                        from yw_fksqd,yw_fksqd_mx,yw_bcontract  
-                        where yw_fksqd.sqdbh=yw_fksqd_mx.sqdbh and
-                              yw_fksqd_mx.sghth=yw_bcontract.sghth and
-                              yw_bcontract.bb_flag='Y' and
-                              yw_bcontract.wxhth=@orderId
-2016-03-12 08:59:07,211 [26] DEBUG order [(null)] - {[action, getFukuangInfo]}
-2016-03-12 08:59:07,234 [26] DEBUG OrderService [(null)] - select yw_fksqd.skdwmc as factory,
-                              yw_fksqd_mx.kpje as amount,
-                              yw_fksqd.sjfkrq as date
-                        from yw_fksqd,yw_fksqd_mx,yw_bcontract  
-                        where yw_fksqd.sqdbh=yw_fksqd_mx.sqdbh and
-                              yw_fksqd_mx.sghth=yw_bcontract.sghth and
-                              yw_bcontract.bb_flag='Y' and
-                              yw_bcontract.wxhth=@orderId
-2016-03-12 09:01:45,025 [6] DEBUG order [(null)] - {[action, getFukuangInfo]}
-2016-03-12 09:01:45,039 [6] DEBUG OrderService [(null)] - select yw_fksqd.sqdbh as contract,
-                              yw_fksqd.skdwmc as factory,
-                              yw_fksqd_mx.kpje as amount,
-                              yw_fksqd.sjfkrq as date
-                        from yw_fksqd,yw_fksqd_mx,yw_bcontract  
-                        where yw_fksqd.sqdbh=yw_fksqd_mx.sqdbh and
-                              yw_fksqd_mx.sghth=yw_bcontract.sghth and
-                              yw_bcontract.bb_flag='Y' and
-                              yw_bcontract.wxhth=@orderId
-2016-03-12 09:07:16,859 [32] DEBUG order [(null)] - {[action, getShouhuiInfo]}
-2016-03-12 09:08:36,186 [26] DEBUG order [(null)] - {[action, getShouhuiInfo]}
-2016-03-12 09:08:36,199 [26] DEBUG OrderService [(null)] - SELECT sd_master_new.sdbh,   
-                             sd_master_new.shrq as date,   
-                             sd_mx.shje as amount   
-                        FROM sd_master_new,   
-                             sd_mx
-                       WHERE sd_master_new.sdbh = sd_mx.sdbh  and  
-                             sd_mx.wxhth = @orderId
-2016-03-12 09:16:04,463 [26] DEBUG order [(null)] - {[action, search]}
-2016-03-12 09:16:04,468 [26] DEBUG OrderService [(null)] - select top 10 name as businessPerson,wxhth as contractNo,po_no as orderNo,zje as amount,yw_contract.khmc as guestName, qyrq
-                                            from yw_contract,rs_employee,yw_wldw
-                                            where  yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
-                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%%' or po_no like '%%')  and wxhth not in ( select top 0 wxhth from yw_contract,rs_employee,yw_wldw where yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
-                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%%' or po_no like '%%')  order by qyrq desc) order by qyrq desc
-2016-03-12 09:16:04,534 [26] DEBUG OrderService [(null)] - select COUNT(*) from  yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
-                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%%' or po_no like '%%') 
-2016-03-12 09:47:14,297 [29] DEBUG order [(null)] - {}
-2016-03-12 09:47:14,309 [29] INFO  order [(null)] - no action value
-2016-03-12 09:48:31,219 [29] DEBUG order [(null)] - {[action, search]}
-2016-03-12 09:48:31,227 [29] DEBUG OrderService [(null)] - select top 10 name as businessPerson,wxhth as contractNo,po_no as orderNo,zje as amount,yw_contract.khmc as guestName, qyrq
-                                            from yw_contract,rs_employee,yw_wldw
-                                            where  yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
-                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%%' or po_no like '%%')  and wxhth not in ( select top 0 wxhth from yw_contract,rs_employee,yw_wldw where yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
-                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%%' or po_no like '%%')  order by qyrq desc) order by qyrq desc
-2016-03-12 09:48:31,340 [29] DEBUG OrderService [(null)] - select COUNT(*) from  yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
-                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%%' or po_no like '%%') 
-2016-03-12 11:18:08,746 [26] DEBUG order [(null)] - {[action, search]}
-2016-03-12 11:18:08,778 [26] DEBUG OrderService [(null)] - select top 10 name as businessPerson,wxhth as contractNo,po_no as orderNo,zje as amount,yw_contract.khmc as guestName, qyrq
-                                            from yw_contract,rs_employee,yw_wldw
-                                            where  yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
-                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%%' or po_no like '%%')  and wxhth not in ( select top 0 wxhth from yw_contract,rs_employee,yw_wldw where yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
-                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%%' or po_no like '%%')  order by qyrq desc) order by qyrq desc
-2016-03-12 11:18:08,910 [26] DEBUG OrderService [(null)] - select COUNT(*) from  yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
-                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%%' or po_no like '%%') 
-2016-03-12 11:18:11,387 [7] DEBUG order [(null)] - {[action, search]}
-2016-03-12 11:18:11,393 [7] DEBUG OrderService [(null)] - select top 10 name as businessPerson,wxhth as contractNo,po_no as orderNo,zje as amount,yw_contract.khmc as guestName, qyrq
-                                            from yw_contract,rs_employee,yw_wldw
-                                            where  yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
-                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%%' or po_no like '%%')  and wxhth not in ( select top 0 wxhth from yw_contract,rs_employee,yw_wldw where yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
-                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%%' or po_no like '%%')  order by qyrq desc) order by qyrq desc
-2016-03-12 11:18:11,411 [7] DEBUG OrderService [(null)] - select COUNT(*) from  yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
-                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%%' or po_no like '%%') 
-2016-03-12 11:18:22,030 [26] DEBUG order [(null)] - {[action, getPurchaseInfo]}
-2016-03-12 11:18:22,032 [26] DEBUG OrderService [(null)] - select sghth as contract,
-                              gfmc as factory,
-                              qyrq as date,
-                              zje as amount
-                        from yw_bcontract
-                        where wxhth=@orderId and
-                              bb_flag='Y'
-2016-03-12 11:18:22,033 [26] DEBUG OrderService [(null)] - loggerId = ZYTT12LAO08
-2016-03-12 11:18:35,403 [7] DEBUG order [(null)] - {[action, getBasicInfo]}
-2016-03-12 11:18:35,404 [7] DEBUG OrderService [(null)] - SELECT  yw_contract.zyqx as timeLimit, 
-                              yw_contract.ckka as startPort ,       
-                              yw_contract.mdka as destPort,        
-                              yw_contract.shfs as getMoneyType,       
-                              yw_contract.jgtk as priceRules
-                            FROM yw_contract      
-                            WHERE ( yw_contract.wxhth = @orderId ) and ( yw_contract.bb_flag = 'Y' )
-2016-03-12 11:18:54,174 [7] DEBUG order [(null)] - {[action, getChuyunInfo]}
-2016-03-12 11:18:54,175 [7] DEBUG OrderService [(null)] - SELECT yw_mxd.mxdbh as detailNo,
-                              Sum(yw_mxd_cmd.wxzj) as amount,
-                              yw_mxd.fprq as date 
-                           FROM yw_mxd_cmd,yw_mxd  
-                           WHERE yw_mxd_cmd.wxhth = @orderId and
-                        yw_mxd_cmd.mxdbh = yw_mxd.mxdbh and 
-                        yw_mxd_cmd.bbh = yw_mxd.bbh and 
-                        yw_mxd.bb_flag = 'Y' 
-                        GROUP BY yw_mxd.mxdbh, yw_mxd.fprq 
-2016-03-12 11:19:00,279 [26] DEBUG order [(null)] - {[action, getFukuangInfo]}
-2016-03-12 11:19:00,280 [26] DEBUG OrderService [(null)] - select yw_fksqd.sqdbh as contract,
-                              yw_fksqd.skdwmc as factory,
-                              yw_fksqd_mx.kpje as amount,
-                              yw_fksqd.sjfkrq as date
-                        from yw_fksqd,yw_fksqd_mx,yw_bcontract  
-                        where yw_fksqd.sqdbh=yw_fksqd_mx.sqdbh and
-                              yw_fksqd_mx.sghth=yw_bcontract.sghth and
-                              yw_bcontract.bb_flag='Y' and
-                              yw_bcontract.wxhth=@orderId
-2016-03-12 11:19:05,797 [7] DEBUG order [(null)] - {[action, getShouhuiInfo]}
-2016-03-12 11:19:05,799 [7] DEBUG OrderService [(null)] - SELECT sd_master_new.sdbh,   
-                             sd_master_new.shrq as date,   
-                             sd_mx.shje as amount   
-                        FROM sd_master_new,   
-                             sd_mx
-                       WHERE ( sd_master_new.sdbh = sd_mx.sdbh ) and  
-                             ( ( sd_mx.wxhth = @orderId ) )
-2016-03-12 13:38:05,853 [7] DEBUG order [(null)] - {[action, getChuyunInfo]}
-2016-03-12 13:38:05,867 [7] DEBUG OrderService [(null)] - SELECT yw_mxd.mxdbh as detailNo,
-                              Sum(yw_mxd_cmd.wxzj) as amount,
-                              yw_mxd.fprq as date 
-                           FROM yw_mxd_cmd,yw_mxd  
-                           WHERE yw_mxd_cmd.wxhth = @orderId and
-                        yw_mxd_cmd.mxdbh = yw_mxd.mxdbh and 
-                        yw_mxd_cmd.bbh = yw_mxd.bbh and 
-                        yw_mxd.bb_flag = 'Y' 
-                        GROUP BY yw_mxd.mxdbh, yw_mxd.fprq 
+2016-03-25 12:05:55,142 [11] DEBUG approval [(null)] - {[action, audit]}
+2016-03-25 12:06:41,114 [11] DEBUG approval [(null)] - {[action, audit]}
+2016-03-25 12:07:10,760 [11] DEBUG approval [(null)] - {[action, audit]}
+2016-03-25 12:07:34,922 [6] DEBUG approval [(null)] - {[action, audit]}
+2016-03-25 12:08:39,846 [12] DEBUG approval [(null)] - {[action, audit]}
+2016-03-25 12:09:51,996 [12] DEBUG approval [(null)] - {[action, audit]}
+2016-03-25 12:12:11,639 [12] DEBUG approval [(null)] - {[action, audit]}
+2016-03-25 12:12:11,652 [12] DEBUG ApprovalService [(null)] - path = C:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\
+2016-03-25 12:12:32,924 [9] DEBUG approval [(null)] - {[action, audit]}
+2016-03-25 12:12:32,925 [9] DEBUG ApprovalService [(null)] - path = C:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\
+2016-03-25 12:12:55,286 [12] DEBUG approval [(null)] - {[action, audit]}
+2016-03-25 12:12:55,287 [12] DEBUG ApprovalService [(null)] - path = C:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\
+2016-03-25 12:37:54,301 [14] DEBUG approval [(null)] - {[action, audit]}
+2016-03-25 12:40:19,177 [15] DEBUG approval [(null)] - {[action, audit]}
+2016-03-25 12:40:21,600 [15] DEBUG ApprovalService [(null)] - returnValue = 0
+2016-03-25 12:43:07,762 [14] DEBUG approval [(null)] - {[action, audit]}
+2016-03-25 12:43:07,775 [14] DEBUG ApprovalService [(null)] - fileName = C:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\/bin/shenpi/shenpi.exe
+2016-03-25 12:43:10,376 [14] DEBUG ApprovalService [(null)] - returnValue = 0
+2016-03-25 12:43:46,691 [5] DEBUG approval [(null)] - {[action, audit]}
+2016-03-25 12:43:46,710 [5] DEBUG ApprovalService [(null)] - fileName = C:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\bin\shenpi\shenpi.exe
+2016-03-25 12:43:48,735 [5] DEBUG ApprovalService [(null)] - returnValue = 0
+2016-03-25 12:43:59,785 [14] DEBUG approval [(null)] - {[action, audit]}
+2016-03-25 12:43:59,799 [14] DEBUG ApprovalService [(null)] - fileName = C:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\bin\shenpi\shenpi.exe
+2016-03-25 12:44:02,102 [14] DEBUG ApprovalService [(null)] - returnValue = 0
+2016-03-25 16:22:35,424 [12] DEBUG approval [(null)] - {[action, search]}
+2016-03-25 16:22:35,437 [12] DEBUG ApprovalService [(null)] - SELECT top 10
+                                                    xh as id, 
+                                                    '' as keyword, 
+                                                    bssj as reportDate, 
+                                                    sprymc as reporter, 
+                                                    shdx as appovalObject, 
+                                                    je as amount, [status], 
+                                                    shlx as type  
+                                                        FROM [dbo].[t_spjl] where  t_spjl.spry = @userId  AND
+                                            t_spjl.status = '待批'
+                                            AND       t_spjl.enabled = '1' and xh not in ( select top 0 xh from [dbo].[t_spjl] where t_spjl.spry = @userId  AND
+                                            t_spjl.status = '待批'
+                                            AND       t_spjl.enabled = '1' order by xh ) order by xh 
+2016-03-25 16:23:21,408 [12] DEBUG approval [(null)] - {[action, search]}
+2016-03-25 16:23:21,421 [12] DEBUG ApprovalService [(null)] - SELECT top 10
+                                                    xh as id, 
+                                                    '' as keyword, 
+                                                    bssj as reportDate, 
+                                                    sprymc as reporter, 
+                                                    shdx as appovalObject, 
+                                                    je as amount, [status], 
+                                                    shlx as type  
+                                                        FROM [dbo].[t_spjl] where  t_spjl.spry = @userId  AND
+                                            t_spjl.status = '待批'
+                                            AND       t_spjl.enabled = '1' and xh not in ( select top 0 xh from [dbo].[t_spjl] where t_spjl.spry = @userId  AND
+                                            t_spjl.status = '待批'
+                                            AND       t_spjl.enabled = '1' order by xh ) order by xh 
+2016-03-25 16:24:24,434 [15] DEBUG approval [(null)] - {[action, search]}
+2016-03-25 16:24:24,435 [15] DEBUG ApprovalService [(null)] - SELECT top 10
+                                                    xh as id, 
+                                                    '' as keyword, 
+                                                    bssj as reportDate, 
+                                                    sprymc as reporter, 
+                                                    shdx as appovalObject, 
+                                                    je as amount, [status], 
+                                                    shlx as type  
+                                                        FROM [dbo].[t_spjl] where  t_spjl.spry = @userId  AND
+                                            t_spjl.status = '待批'
+                                            AND       t_spjl.enabled = '1' and xh not in ( select top 0 xh from [dbo].[t_spjl] where t_spjl.spry = @userId  AND
+                                            t_spjl.status = '待批'
+                                            AND       t_spjl.enabled = '1' order by xh ) order by xh 
+2016-03-25 16:49:35,794 [21] DEBUG approval [(null)] - {[action, search]}
+2016-03-25 16:49:35,859 [21] DEBUG ApprovalService [(null)] - SELECT top 10
+                                                    xh as id, 
+                                                    '' as keyword, 
+                                                    bssj as reportDate, 
+                                                    sprymc as reporter, 
+                                                    shdx as appovalObject, 
+                                                    je as amount, [status], 
+                                                    shlx as type  
+                                                        FROM [dbo].[t_spjl] where  t_spjl.spry = @userId  AND
+                                            t_spjl.status = '待批'
+                                            AND       t_spjl.enabled = '1' and xh not in ( select top 0 xh from [dbo].[t_spjl] where t_spjl.spry = @userId  AND
+                                            t_spjl.status = '待批'
+                                            AND       t_spjl.enabled = '1' order by xh ) order by xh 
+2016-03-25 16:55:18,967 [7] DEBUG approval [(null)] - {[action, search]}
+2016-03-25 16:55:18,980 [7] DEBUG ApprovalService [(null)] - SELECT top 10
+                                                    xh as id, 
+                                                    shgjz as keyword, 
+                                                    bssj as reportDate, 
+                                                    sprymc as reporter, 
+                                                    shdx as appovalObject, 
+                                                    je as amount, [status], 
+                                                    shlx as type  
+                                                        FROM [dbo].[t_spjl] where  t_spjl.spry = @userId  AND
+                                            t_spjl.status = '待批'
+                                            AND       t_spjl.enabled = '1' and xh not in ( select top 0 xh from [dbo].[t_spjl] where t_spjl.spry = @userId  AND
+                                            t_spjl.status = '待批'
+                                            AND       t_spjl.enabled = '1' order by xh ) order by xh 
+2016-03-25 16:56:13,314 [16] DEBUG approval [(null)] - {[action, search]}
+2016-03-25 16:56:13,327 [16] DEBUG ApprovalService [(null)] - SELECT top 10
+                                                    xh as id, 
+                                                    shgjz as keyword, 
+                                                    bssj as reportDate, 
+                                                    sprymc as reporter, 
+                                                    shdx as approvalObject, 
+                                                    je as amount, [status], 
+                                                    shlx as type  
+                                                        FROM [dbo].[t_spjl] where  t_spjl.spry = @userId  AND
+                                            t_spjl.status = '待批'
+                                            AND       t_spjl.enabled = '1' and xh not in ( select top 0 xh from [dbo].[t_spjl] where t_spjl.spry = @userId  AND
+                                            t_spjl.status = '待批'
+                                            AND       t_spjl.enabled = '1' order by xh ) order by xh 

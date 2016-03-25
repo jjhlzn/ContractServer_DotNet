@@ -1,0 +1,1 @@
+getmac.exe > getmac.txt

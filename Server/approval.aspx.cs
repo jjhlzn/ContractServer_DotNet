@@ -26,10 +26,10 @@ public partial class approval : System.Web.UI.Page
         switch (action)
         {
             case "search":
-                resp = service.Search("", true, true, "", "", 0, 10);
+                resp = service.Search("0004", "", true, true, "", "", 0, 10);
                 break;
             case "audit":
-                resp = service.Audit("", "pass");
+                resp = service.Audit("", "0004", "pass");
                 break;
         }
 

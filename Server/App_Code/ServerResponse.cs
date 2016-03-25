@@ -182,7 +182,9 @@ public class OrderShouhuiInfo : BaseObject
 
 public class SearchApprovalResponse : ServerResponse
 {
+    public int totalNumber { get; set; }
     public List<Approval> approvals { get; set; }
+    
 
     public SearchApprovalResponse()
     {
