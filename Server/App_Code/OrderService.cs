@@ -23,6 +23,12 @@ public class OrderService
     public SearchOrderResponse Search(string keyword, string startDate, string endDate, 
         int pageNo, int pageSize)
     {
+        var response = new SearchOrderResponse();
+        if (string.IsNullOrEmpty(startDate) || string.IsNullOrEmpty(endDate))
+        {
+            Logger.Debug("startdate or enddate is empty");
+            return response;
+        }
         using (IDbConnection conn = ConnectionFactory.GetInstance())
         {
             int skipCount = pageNo*pageSize;
@@ -41,7 +47,7 @@ public class OrderService
             var result = conn.Query<Order>(sql , new { startDate, endDate });
 
             var count = conn.Query<int>("select COUNT(*) from yw_contract,rs_employee,yw_wldw where " + whereClause, new { startDate, endDate }).First();
-            var response = new SearchOrderResponse();
+            
             response.orders = new List<Order>(result);
             response.totalNumber = count;
             return response;

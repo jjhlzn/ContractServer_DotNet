@@ -1,0 +1,115 @@
+2016-03-26 08:51:48,967 [17] DEBUG approval [(null)] - {[action, search]}
+2016-03-26 08:52:21,675 [12] DEBUG approval [(null)] - {[action, search]}
+2016-03-26 08:52:40,981 [5] DEBUG approval [(null)] - {[action, search]}
+2016-03-26 08:52:56,751 [17] DEBUG approval [(null)] - {[action, search]}
+2016-03-26 08:53:03,525 [15] DEBUG approval [(null)] - {[action, search]}
+2016-03-26 08:54:00,898 [5] DEBUG approval [(null)] - {[action, search]}
+2016-03-26 08:54:00,921 [5] DEBUG ApprovalService [(null)] - startdate or enddate is empty
+2016-03-26 08:54:11,657 [22] DEBUG approval [(null)] - {[action, search]}
+2016-03-26 08:54:11,658 [22] DEBUG ApprovalService [(null)] - SELECT top 10
+                                                    xh as id, 
+                                                    shgjz as keyword, 
+                                                    bssj as reportDate, 
+                                                    sprymc as reporter, 
+                                                    shdx as approvalObject, 
+                                                    je as amount, [status], 
+                                                    shlx as type  
+                                                        FROM [dbo].[t_spjl] where  t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2010-1-1' AND bssj <= '2017-1-1' and xh not in ( select top 0 xh from [dbo].[t_spjl] where t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2010-1-1' AND bssj <= '2017-1-1' order by xh ) order by xh 
+2016-03-26 08:54:41,751 [15] DEBUG approval [(null)] - {[action, search]}
+2016-03-26 08:54:41,752 [15] DEBUG ApprovalService [(null)] - SELECT top 10
+                                                    xh as id, 
+                                                    shgjz as keyword, 
+                                                    bssj as reportDate, 
+                                                    sprymc as reporter, 
+                                                    shdx as approvalObject, 
+                                                    je as amount, [status], 
+                                                    shlx as type  
+                                                        FROM [dbo].[t_spjl] where  t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2010-1-1' AND bssj <= '2017-1-1' and shgjz like '%YFK13000006%'  and xh not in ( select top 0 xh from [dbo].[t_spjl] where t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2010-1-1' AND bssj <= '2017-1-1' and shgjz like '%YFK13000006%'  order by xh ) order by xh 
+2016-03-26 08:54:49,177 [17] DEBUG approval [(null)] - {[action, search]}
+2016-03-26 08:54:49,178 [17] DEBUG ApprovalService [(null)] - SELECT top 10
+                                                    xh as id, 
+                                                    shgjz as keyword, 
+                                                    bssj as reportDate, 
+                                                    sprymc as reporter, 
+                                                    shdx as approvalObject, 
+                                                    je as amount, [status], 
+                                                    shlx as type  
+                                                        FROM [dbo].[t_spjl] where  t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2010-1-1' AND bssj <= '2017-1-1' and shgjz like '%YFK1300%'  and xh not in ( select top 0 xh from [dbo].[t_spjl] where t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2010-1-1' AND bssj <= '2017-1-1' and shgjz like '%YFK1300%'  order by xh ) order by xh 
+2016-03-26 08:59:09,117 [15] DEBUG order [(null)] - {[action, search]}
+2016-03-26 08:59:09,134 [15] DEBUG OrderService [(null)] - startdate or enddate is empty
+2016-03-26 09:00:12,181 [20] DEBUG order [(null)] - {[action, search]}
+2016-03-26 09:00:12,200 [20] DEBUG OrderService [(null)] - startdate or enddate is empty
+2016-03-26 09:00:39,931 [15] DEBUG order [(null)] - {[action, search]}
+2016-03-26 09:00:39,946 [15] DEBUG OrderService [(null)] - select top 10 name as businessPerson,wxhth as contractNo,po_no as orderNo,zje as amount,yw_contract.khmc as guestName, qyrq
+                                            from yw_contract,rs_employee,yw_wldw
+                                            where  yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%%' or po_no like '%%')  and wxhth not in ( select top 0 wxhth from yw_contract,rs_employee,yw_wldw where yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%%' or po_no like '%%')  order by qyrq desc) order by qyrq desc
+2016-03-26 09:06:47,039 [17] DEBUG approval [(null)] - {[action, search]}
+2016-03-26 09:16:39,574 [17] DEBUG approval [(null)] - {[action, search]}
+2016-03-26 09:16:44,444 [18] DEBUG approval [(null)] - {[action, search]}
+2016-03-26 09:16:55,231 [6] DEBUG approval [(null)] - {[action, search]}
+2016-03-26 09:17:17,519 [17] DEBUG approval [(null)] - {[action, search]}
+2016-03-26 09:17:23,073 [16] DEBUG approval [(null)] - {[action, search]}
+2016-03-26 09:17:43,894 [11] DEBUG approval [(null)] - {[action, search]}
+2016-03-26 09:17:43,895 [11] DEBUG ApprovalService [(null)] - SELECT top 10
+                                                    xh as id, 
+                                                    shgjz as keyword, 
+                                                    bssj as reportDate, 
+                                                    sprymc as reporter, 
+                                                    shdx as approvalObject, 
+                                                    je as amount, [status], 
+                                                    shlx as type  
+                                                        FROM [dbo].[t_spjl] where  t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2010-1-1' AND bssj <= '2017-1-1' and shgjz like '%YFK1300%'  and xh not in ( select top 0 xh from [dbo].[t_spjl] where t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2010-1-1' AND bssj <= '2017-1-1' and shgjz like '%YFK1300%'  order by xh ) order by xh 
+2016-03-26 09:17:49,322 [18] DEBUG approval [(null)] - {[action, search]}
+2016-03-26 09:17:49,323 [18] DEBUG ApprovalService [(null)] - SELECT top 10
+                                                    xh as id, 
+                                                    shgjz as keyword, 
+                                                    bssj as reportDate, 
+                                                    sprymc as reporter, 
+                                                    shdx as approvalObject, 
+                                                    je as amount, [status], 
+                                                    shlx as type  
+                                                        FROM [dbo].[t_spjl] where  t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2010-1-1' AND bssj <= '2017-1-1' and shgjz like '%YFK1300%'  and xh not in ( select top 10 xh from [dbo].[t_spjl] where t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2010-1-1' AND bssj <= '2017-1-1' and shgjz like '%YFK1300%'  order by xh ) order by xh 
+2016-03-26 09:18:32,324 [17] DEBUG approval [(null)] - {[action, search]}
+2016-03-26 09:18:32,325 [17] DEBUG ApprovalService [(null)] - SELECT top 10
+                                                    xh as id, 
+                                                    shgjz as keyword, 
+                                                    bssj as reportDate, 
+                                                    sprymc as reporter, 
+                                                    shdx as approvalObject, 
+                                                    je as amount, [status], 
+                                                    shlx as type  
+                                                        FROM [dbo].[t_spjl] where  t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2010-1-1' AND bssj <= '2017-1-1' and shgjz like '%YFK1300%'  and xh not in ( select top 10 xh from [dbo].[t_spjl] where t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2010-1-1' AND bssj <= '2017-1-1' and shgjz like '%YFK1300%'  order by xh ) order by xh 
+2016-03-26 09:19:18,770 [17] DEBUG approval [(null)] - {[action, search]}
+2016-03-26 09:19:18,771 [17] DEBUG ApprovalService [(null)] - SELECT top 10
+                                                    xh as id, 
+                                                    shgjz as keyword, 
+                                                    bssj as reportDate, 
+                                                    sprymc as reporter, 
+                                                    shdx as approvalObject, 
+                                                    je as amount, [status], 
+                                                    shlx as type  
+                                                        FROM [dbo].[t_spjl] where  t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2010-1-1' AND bssj <= '2017-1-1' and xh not in ( select top 10 xh from [dbo].[t_spjl] where t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2010-1-1' AND bssj <= '2017-1-1' order by xh ) order by xh 
+2016-03-26 09:38:41,070 [28] DEBUG order [(null)] - {[action, search]}
+2016-03-26 09:38:41,074 [28] DEBUG OrderService [(null)] - startdate or enddate is empty
+2016-03-26 09:38:52,184 [26] DEBUG order [(null)] - {[action, search]}
+2016-03-26 09:38:52,186 [26] DEBUG OrderService [(null)] - select top 10 name as businessPerson,wxhth as contractNo,po_no as orderNo,zje as amount,yw_contract.khmc as guestName, qyrq
+                                            from yw_contract,rs_employee,yw_wldw
+                                            where  yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%%' or po_no like '%%')  and wxhth not in ( select top 0 wxhth from yw_contract,rs_employee,yw_wldw where yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
+                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%%' or po_no like '%%')  order by qyrq desc) order by qyrq desc

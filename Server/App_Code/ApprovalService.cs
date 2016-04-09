@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Web;
+using Antlr.Runtime.Tree;
 using Dapper;
 using log4net;
 using log4net.Repository.Hierarchy;
@@ -26,15 +27,46 @@ public class ApprovalService
 
         SearchApprovalResponse resp = new SearchApprovalResponse();
         int skipCount = pageNo*pageSize;
-        String whereClause = string.Format(@" t_spjl.spry = @userId  AND
-                                            t_spjl.status = '待批'
-                                            AND       t_spjl.enabled = '1'", userId);
+
+        if (string.IsNullOrEmpty(startDate) || string.IsNullOrEmpty(endDate))
+        {
+            logger.Debug("startdate or enddate is empty");
+            return resp;
+        }
+        
+        String whereClause = string.Format(@" t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '{0}' AND bssj <= '{1}'", startDate, endDate);
+        
+
+        if (containPass && containUnpass)
+        {
+            //empty 
+        }
+        else if (!containPass && containUnpass)
+        {
+            whereClause += " and t_spjl.status = '待批' ";
+        }
+        else if (containPass && !containUnpass)
+        {
+            whereClause += " and t_spjl.status != '待批' ";
+        }
+        else
+        {
+            return resp;
+        }
+
+        if (!string.IsNullOrEmpty(keyword))
+        {
+            whereClause += " and shgjz like '%" + keyword + "%' ";
+        }
+
         String sql = @"SELECT top " +  pageSize + @"
                                                     xh as id, 
                                                     shgjz as keyword, 
                                                     bssj as reportDate, 
                                                     sprymc as reporter, 
                                                     shdx as approvalObject, 
+                                                    spjg as approvalResult,
                                                     je as amount, [status], 
                                                     shlx as type  
                                                         FROM [dbo].[t_spjl] where " + whereClause + @" and xh not in ( select top " + skipCount +
@@ -70,8 +102,18 @@ public class ApprovalService
 
         string fileName = string.Format(@"{0}bin\shenpi\shenpi.exe", baseDir);
         logger.Debug("fileName = " + fileName);
-        
-        string para = string.Format(@"{0} {1} {2} {3}", approvalId, result, "nocomment", userId);
+
+
+        string yijian = "";
+        if (result == "0")
+        {
+            yijian = "tongyi";
+        }
+        else
+        {
+            yijian = "butongyi";
+        }
+        string para = string.Format(@"{0} {1} {2} {3}", approvalId, result, yijian, userId);
 
         ProcessStartInfo myProcessStartInfo = new ProcessStartInfo(fileName, para);
         myProcessStartInfo.WorkingDirectory = string.Format(@"{0}bin\shenpi\", baseDir);
@@ -87,6 +129,7 @@ public class ApprovalService
 
         int returnValue = myProcess.ExitCode;
         logger.Debug("returnValue = " + returnValue);
+        resp.auditResult.result = true;
         return resp;
     }
 }

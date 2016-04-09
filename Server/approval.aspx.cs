@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+﻿
 using log4net;
-using Newtonsoft.Json;
 
-public partial class approval : System.Web.UI.Page
+
+public partial class approval : BasePage
 {
     private ApprovalService service = new ApprovalService();
     private static ILog Logger = LogManager.GetLogger(typeof(approval));
 
-    protected void Page_Load(object sender, EventArgs e)
+    public override ServerResponse GetServerResponse()
     {
         var actionValue = Page.RouteData.Values["action"];
         Logger.Debug(RouteData.Values);
@@ -26,15 +21,21 @@ public partial class approval : System.Web.UI.Page
         switch (action)
         {
             case "search":
-                resp = service.Search("0004", "", true, true, "", "", 0, 10);
+                resp = service.Search(GetRequestParameter("userid"),
+                    GetRequestParameter("keyword"),
+                    GetRequestParameter("containapproved") == "true", 
+                    GetRequestParameter("containunapproved") == "true",
+                    GetRequestParameter("startdate"), 
+                    GetRequestParameter("enddate"), 
+                    GetIntRequestParameter("index"), 
+                    GetIntRequestParameter("pagesize"));
                 break;
             case "audit":
-                resp = service.Audit("", "0004", "pass");
+                resp = service.Audit(GetRequestParameter("approvalid"), GetRequestParameter("userid"), GetRequestParameter("result"));
                 break;
         }
-
-        if (resp != null)
-            Response.Write(JsonConvert.SerializeObject(resp));
-        Response.End();
+        return resp;
     }
+
+   
 }

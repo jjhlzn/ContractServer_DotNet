@@ -15,6 +15,7 @@ namespace Server
           //  routes.EnableFriendlyUrls();
             routes.MapPageRoute("order", "order/{action}.json", "~/order.aspx");
             routes.MapPageRoute("approval", "approval/{action}.json", "~/approval.aspx");
+            routes.MapPageRoute("product", "product/{action}.json", "~/product.aspx");
             routes.MapPageRoute("login", "login/{action}.json", "~/login.aspx");
         
         }

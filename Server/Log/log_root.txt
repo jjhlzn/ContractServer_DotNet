@@ -1,108 +1,632 @@
-2016-03-25 12:05:55,142 [11] DEBUG approval [(null)] - {[action, audit]}
-2016-03-25 12:06:41,114 [11] DEBUG approval [(null)] - {[action, audit]}
-2016-03-25 12:07:10,760 [11] DEBUG approval [(null)] - {[action, audit]}
-2016-03-25 12:07:34,922 [6] DEBUG approval [(null)] - {[action, audit]}
-2016-03-25 12:08:39,846 [12] DEBUG approval [(null)] - {[action, audit]}
-2016-03-25 12:09:51,996 [12] DEBUG approval [(null)] - {[action, audit]}
-2016-03-25 12:12:11,639 [12] DEBUG approval [(null)] - {[action, audit]}
-2016-03-25 12:12:11,652 [12] DEBUG ApprovalService [(null)] - path = C:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\
-2016-03-25 12:12:32,924 [9] DEBUG approval [(null)] - {[action, audit]}
-2016-03-25 12:12:32,925 [9] DEBUG ApprovalService [(null)] - path = C:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\
-2016-03-25 12:12:55,286 [12] DEBUG approval [(null)] - {[action, audit]}
-2016-03-25 12:12:55,287 [12] DEBUG ApprovalService [(null)] - path = C:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\
-2016-03-25 12:37:54,301 [14] DEBUG approval [(null)] - {[action, audit]}
-2016-03-25 12:40:19,177 [15] DEBUG approval [(null)] - {[action, audit]}
-2016-03-25 12:40:21,600 [15] DEBUG ApprovalService [(null)] - returnValue = 0
-2016-03-25 12:43:07,762 [14] DEBUG approval [(null)] - {[action, audit]}
-2016-03-25 12:43:07,775 [14] DEBUG ApprovalService [(null)] - fileName = C:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\/bin/shenpi/shenpi.exe
-2016-03-25 12:43:10,376 [14] DEBUG ApprovalService [(null)] - returnValue = 0
-2016-03-25 12:43:46,691 [5] DEBUG approval [(null)] - {[action, audit]}
-2016-03-25 12:43:46,710 [5] DEBUG ApprovalService [(null)] - fileName = C:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\bin\shenpi\shenpi.exe
-2016-03-25 12:43:48,735 [5] DEBUG ApprovalService [(null)] - returnValue = 0
-2016-03-25 12:43:59,785 [14] DEBUG approval [(null)] - {[action, audit]}
-2016-03-25 12:43:59,799 [14] DEBUG ApprovalService [(null)] - fileName = C:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\bin\shenpi\shenpi.exe
-2016-03-25 12:44:02,102 [14] DEBUG ApprovalService [(null)] - returnValue = 0
-2016-03-25 16:22:35,424 [12] DEBUG approval [(null)] - {[action, search]}
-2016-03-25 16:22:35,437 [12] DEBUG ApprovalService [(null)] - SELECT top 10
-                                                    xh as id, 
-                                                    '' as keyword, 
-                                                    bssj as reportDate, 
-                                                    sprymc as reporter, 
-                                                    shdx as appovalObject, 
-                                                    je as amount, [status], 
-                                                    shlx as type  
-                                                        FROM [dbo].[t_spjl] where  t_spjl.spry = @userId  AND
-                                            t_spjl.status = '待批'
-                                            AND       t_spjl.enabled = '1' and xh not in ( select top 0 xh from [dbo].[t_spjl] where t_spjl.spry = @userId  AND
-                                            t_spjl.status = '待批'
-                                            AND       t_spjl.enabled = '1' order by xh ) order by xh 
-2016-03-25 16:23:21,408 [12] DEBUG approval [(null)] - {[action, search]}
-2016-03-25 16:23:21,421 [12] DEBUG ApprovalService [(null)] - SELECT top 10
-                                                    xh as id, 
-                                                    '' as keyword, 
-                                                    bssj as reportDate, 
-                                                    sprymc as reporter, 
-                                                    shdx as appovalObject, 
-                                                    je as amount, [status], 
-                                                    shlx as type  
-                                                        FROM [dbo].[t_spjl] where  t_spjl.spry = @userId  AND
-                                            t_spjl.status = '待批'
-                                            AND       t_spjl.enabled = '1' and xh not in ( select top 0 xh from [dbo].[t_spjl] where t_spjl.spry = @userId  AND
-                                            t_spjl.status = '待批'
-                                            AND       t_spjl.enabled = '1' order by xh ) order by xh 
-2016-03-25 16:24:24,434 [15] DEBUG approval [(null)] - {[action, search]}
-2016-03-25 16:24:24,435 [15] DEBUG ApprovalService [(null)] - SELECT top 10
-                                                    xh as id, 
-                                                    '' as keyword, 
-                                                    bssj as reportDate, 
-                                                    sprymc as reporter, 
-                                                    shdx as appovalObject, 
-                                                    je as amount, [status], 
-                                                    shlx as type  
-                                                        FROM [dbo].[t_spjl] where  t_spjl.spry = @userId  AND
-                                            t_spjl.status = '待批'
-                                            AND       t_spjl.enabled = '1' and xh not in ( select top 0 xh from [dbo].[t_spjl] where t_spjl.spry = @userId  AND
-                                            t_spjl.status = '待批'
-                                            AND       t_spjl.enabled = '1' order by xh ) order by xh 
-2016-03-25 16:49:35,794 [21] DEBUG approval [(null)] - {[action, search]}
-2016-03-25 16:49:35,859 [21] DEBUG ApprovalService [(null)] - SELECT top 10
-                                                    xh as id, 
-                                                    '' as keyword, 
-                                                    bssj as reportDate, 
-                                                    sprymc as reporter, 
-                                                    shdx as appovalObject, 
-                                                    je as amount, [status], 
-                                                    shlx as type  
-                                                        FROM [dbo].[t_spjl] where  t_spjl.spry = @userId  AND
-                                            t_spjl.status = '待批'
-                                            AND       t_spjl.enabled = '1' and xh not in ( select top 0 xh from [dbo].[t_spjl] where t_spjl.spry = @userId  AND
-                                            t_spjl.status = '待批'
-                                            AND       t_spjl.enabled = '1' order by xh ) order by xh 
-2016-03-25 16:55:18,967 [7] DEBUG approval [(null)] - {[action, search]}
-2016-03-25 16:55:18,980 [7] DEBUG ApprovalService [(null)] - SELECT top 10
-                                                    xh as id, 
-                                                    shgjz as keyword, 
-                                                    bssj as reportDate, 
-                                                    sprymc as reporter, 
-                                                    shdx as appovalObject, 
-                                                    je as amount, [status], 
-                                                    shlx as type  
-                                                        FROM [dbo].[t_spjl] where  t_spjl.spry = @userId  AND
-                                            t_spjl.status = '待批'
-                                            AND       t_spjl.enabled = '1' and xh not in ( select top 0 xh from [dbo].[t_spjl] where t_spjl.spry = @userId  AND
-                                            t_spjl.status = '待批'
-                                            AND       t_spjl.enabled = '1' order by xh ) order by xh 
-2016-03-25 16:56:13,314 [16] DEBUG approval [(null)] - {[action, search]}
-2016-03-25 16:56:13,327 [16] DEBUG ApprovalService [(null)] - SELECT top 10
-                                                    xh as id, 
-                                                    shgjz as keyword, 
-                                                    bssj as reportDate, 
-                                                    sprymc as reporter, 
-                                                    shdx as approvalObject, 
-                                                    je as amount, [status], 
-                                                    shlx as type  
-                                                        FROM [dbo].[t_spjl] where  t_spjl.spry = @userId  AND
-                                            t_spjl.status = '待批'
-                                            AND       t_spjl.enabled = '1' and xh not in ( select top 0 xh from [dbo].[t_spjl] where t_spjl.spry = @userId  AND
-                                            t_spjl.status = '待批'
-                                            AND       t_spjl.enabled = '1' order by xh ) order by xh 
+2016-04-09 10:04:21,767 [13] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:04:21,789 [13] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:07:26,593 [14] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:07:26,606 [14] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:07:51,757 [13] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:07:51,770 [13] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:19:22,774 [17] DEBUG product [(null)] - {[action, getImage]}
+2016-04-09 10:21:14,471 [17] DEBUG product [(null)] - {[action, getImage]}
+2016-04-09 10:22:25,762 [15] DEBUG product [(null)] - {[action, getImage]}
+2016-04-09 10:23:59,377 [17] DEBUG product [(null)] - {[action, getImage]}
+2016-04-09 10:23:59,403 [17] DEBUG BasePage [(null)] - getImage
+2016-04-09 10:24:38,719 [19] DEBUG product [(null)] - {[action, getImage]}
+2016-04-09 10:24:38,720 [19] DEBUG BasePage [(null)] - getImage
+2016-04-09 10:25:24,430 [14] DEBUG product [(null)] - {[action, getImage]}
+2016-04-09 10:25:24,443 [14] DEBUG BasePage [(null)] - getImage
+2016-04-09 10:26:16,166 [14] DEBUG product [(null)] - {[action, getImage]}
+2016-04-09 10:26:16,180 [14] DEBUG Product [(null)] - imgByte.size = 14171
+2016-04-09 10:26:16,181 [14] DEBUG BasePage [(null)] - getImage
+2016-04-09 10:31:52,496 [16] DEBUG product [(null)] - {[action, getImage]}
+2016-04-09 10:31:52,509 [16] DEBUG Product [(null)] - imgByte.size = 14171
+2016-04-09 10:31:52,510 [16] DEBUG BasePage [(null)] - getImage
+2016-04-09 10:32:14,698 [6] DEBUG product [(null)] - {[action, getImage]}
+2016-04-09 10:32:14,711 [6] DEBUG Product [(null)] - imgByte.size = 14171
+2016-04-09 10:32:14,712 [6] DEBUG BasePage [(null)] - getImage
+2016-04-09 10:39:34,330 [5] DEBUG product [(null)] - {[action, getImage]}
+2016-04-09 10:39:34,344 [5] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:39:34,588 [5] DEBUG BasePage [(null)] - getImage
+2016-04-09 10:40:07,543 [16] DEBUG product [(null)] - {[action, getImage]}
+2016-04-09 10:40:07,543 [16] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:40:07,569 [16] DEBUG BasePage [(null)] - getImage
+2016-04-09 10:40:24,340 [5] DEBUG product [(null)] - {[action, getImage]}
+2016-04-09 10:40:24,341 [5] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:40:24,368 [5] DEBUG BasePage [(null)] - getImage
+2016-04-09 10:41:19,322 [17] DEBUG product [(null)] - {[action, getImage]}
+2016-04-09 10:41:19,323 [17] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:41:19,339 [17] DEBUG BasePage [(null)] - getImage
+2016-04-09 10:51:24,226 [9] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:51:24,239 [9] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:51:24,332 [9] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:51:31,889 [9] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:51:31,890 [9] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:51:31,903 [9] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:51:33,122 [14] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:51:33,123 [14] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:51:33,142 [14] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:51:33,911 [16] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:51:33,912 [16] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:51:33,924 [16] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:51:34,481 [9] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:51:34,482 [9] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:51:34,497 [9] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:51:34,976 [10] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:51:34,977 [10] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:51:34,990 [10] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:52:01,210 [14] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:52:01,224 [14] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:52:01,332 [14] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:52:03,761 [18] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:52:03,762 [18] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:52:03,779 [18] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:52:04,683 [12] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:52:04,684 [12] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:52:04,699 [12] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:52:05,842 [14] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:52:05,843 [14] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:52:05,910 [14] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:52:06,956 [18] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:52:06,957 [18] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:52:07,029 [18] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:52:09,362 [15] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:52:09,363 [15] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:52:09,378 [15] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:52:10,113 [26] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:52:10,114 [26] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:52:10,130 [26] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:52:11,233 [14] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:52:11,234 [14] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:52:11,249 [14] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:52:12,615 [18] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:52:12,616 [18] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:52:12,632 [18] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:52:13,465 [9] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:52:13,467 [9] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:52:13,483 [9] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:52:14,291 [16] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:52:14,292 [16] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:52:14,307 [16] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:52:15,206 [26] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:52:15,207 [26] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:52:15,223 [26] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:52:15,879 [9] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:52:15,881 [9] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:52:15,897 [9] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:52:16,624 [16] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:52:16,625 [16] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:52:16,640 [16] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:52:17,488 [10] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:52:17,489 [10] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:52:17,504 [10] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:52:18,153 [9] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:52:18,154 [9] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:52:18,170 [9] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:52:19,371 [14] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:52:19,371 [14] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:52:19,388 [14] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:52:20,208 [14] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:52:20,210 [14] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:52:20,225 [14] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:52:20,842 [15] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:52:20,843 [15] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:52:20,859 [15] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:52:21,424 [16] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:52:21,425 [16] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:52:21,441 [16] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:52:21,980 [26] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:52:21,981 [26] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:52:21,997 [26] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:52:23,027 [15] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:52:23,027 [15] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:52:23,044 [15] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:52:24,217 [14] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:52:24,218 [14] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:52:24,234 [14] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:52:25,255 [26] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:52:25,256 [26] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:52:25,273 [26] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:52:26,169 [15] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:52:26,170 [15] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:52:26,185 [15] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:52:27,127 [10] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:52:27,128 [10] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:52:27,173 [10] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'
+2016-04-09 10:52:27,795 [15] DEBUG product [(null)] - {[action, search]}
+2016-04-09 10:52:27,796 [15] DEBUG Product [(null)] - select spzwmc as chineseName,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        cbdj as chengbenPrice, 
+                        wxdj as sellPrice,
+                        spgg as xinghao,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity
+                        where txm= @productId
+2016-04-09 10:52:27,812 [15] DEBUG Product [(null)] - select picture_file as image
+                        from yw_commodity_picture
+                        where yw_spbm= @id and picture_lx='主图' and picture_xz='主图'

@@ -20,6 +20,7 @@ public class Approval : BaseObject
     public decimal amount { get; set; }
     public string status { get; set; }
     public string reportDate { get; set; }
+    public string approvalResult { get; set; }
 
     public override string[] GetNeedResetProperties()
     {

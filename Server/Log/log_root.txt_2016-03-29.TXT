@@ -1,0 +1,17 @@
+2016-03-29 15:27:11,054 [131] DEBUG approval [(null)] - {[action, search]}
+2016-03-29 15:27:14,707 [132] DEBUG approval [(null)] - {[action, search]}
+2016-03-29 15:27:23,131 [131] DEBUG approval [(null)] - {[action, search]}
+2016-03-29 15:27:42,317 [132] DEBUG approval [(null)] - {[action, search]}
+2016-03-29 15:28:23,485 [130] DEBUG approval [(null)] - {[action, search]}
+2016-03-29 15:28:23,486 [130] DEBUG ApprovalService [(null)] - SELECT top 10
+                                                    xh as id, 
+                                                    shgjz as keyword, 
+                                                    bssj as reportDate, 
+                                                    sprymc as reporter, 
+                                                    shdx as approvalObject, 
+                                                    spjg as approvalResult,
+                                                    je as amount, [status], 
+                                                    shlx as type  
+                                                        FROM [dbo].[t_spjl] where  t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2010-1-1' AND bssj <= '2017-1-1' and xh not in ( select top 0 xh from [dbo].[t_spjl] where t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2010-1-1' AND bssj <= '2017-1-1' order by xh ) order by xh 

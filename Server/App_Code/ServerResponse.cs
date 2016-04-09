@@ -34,6 +34,11 @@ public class SearchOrderResponse : ServerResponse
 {
     public int totalNumber { get; set; }
     public List<Order> orders { get; set; }
+
+    public SearchOrderResponse()
+    {
+        orders = new List<Order>();
+    }
     public override void ResetNullProperteis()
     {
         foreach (var order in orders)
@@ -231,6 +236,12 @@ public class LoginResult
     public string errorMessage { get; set; }
     public string name { get; set; }
     public string department { get; set; }
+}
+
+public class GetProductResponse : ServerResponse
+{
+    public bool isExist { get; set; }
+    public Product product { get; set; }
 }
 
 

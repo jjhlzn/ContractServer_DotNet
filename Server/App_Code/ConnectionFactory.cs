@@ -15,4 +15,9 @@ public class ConnectionFactory
     {
         return new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString);
     }
+
+    public static IDbConnection GetImageInstance()
+    {
+        return new SqlConnection(ConfigurationManager.ConnectionStrings["ImageConnection"].ConnectionString);
+    }
 }

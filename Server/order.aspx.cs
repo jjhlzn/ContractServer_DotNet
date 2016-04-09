@@ -31,7 +31,7 @@ public partial class order : BasePage
         switch (action)
         {
             case "search":
-                resp = service.Search(GetRequestParameter("keyword"), "2013-01-01", "2015-01-01", 0, 10);
+                resp = service.Search(GetRequestParameter("keyword"), GetRequestParameter("startdate"), GetRequestParameter("enddate"), GetIntRequestParameter("index"), GetIntRequestParameter("pagesize"));
                 break;
             case "getBasicInfo":
                 resp = service.GetBasicInfo(GetRequestParameter("orderId"));
