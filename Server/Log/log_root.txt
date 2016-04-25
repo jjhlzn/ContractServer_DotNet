@@ -4,3 +4,251 @@
                                             where  yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
                         and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%%' or po_no like '%%')  and wxhth not in ( select top 0 wxhth from yw_contract,rs_employee,yw_wldw where yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
                         and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%%' or po_no like '%%')  order by qyrq desc) order by qyrq desc
+2016-04-25 20:14:27,673 [6] DEBUG order [(null)] - {}
+2016-04-25 20:14:27,691 [6] INFO  order [(null)] - no action value
+2016-04-25 20:14:34,299 [7] DEBUG order [(null)] - {[action, search]}
+2016-04-25 20:14:34,306 [7] DEBUG OrderService [(null)] - startdate or enddate is empty
+2016-04-25 20:36:26,930 [20] DEBUG login [(null)] - {[action, login]}
+2016-04-25 20:36:26,946 [20] DEBUG LoginService [(null)] - result = 
+2016-04-25 20:38:20,050 [20] DEBUG login [(null)] - {[action, login]}
+2016-04-25 20:38:20,071 [20] DEBUG LoginService [(null)] - result = 
+2016-04-25 20:41:59,626 [22] DEBUG login [(null)] - {[action, login]}
+2016-04-25 20:41:59,642 [22] DEBUG LoginService [(null)] - result = 
+2016-04-25 20:42:38,995 [7] DEBUG login [(null)] - {[action, login]}
+2016-04-25 20:45:07,919 [18] DEBUG login [(null)] - {[action, login]}
+2016-04-25 20:45:07,932 [18] DEBUG LoginService [(null)] - start = 57
+2016-04-25 20:45:46,294 [17] DEBUG login [(null)] - {[action, login]}
+2016-04-25 20:45:46,308 [17] DEBUG LoginService [(null)] - start = 35
+2016-04-25 20:45:46,309 [17] DEBUG LoginService [(null)] - decodeString = 9ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+2016-04-25 20:45:46,310 [17] DEBUG LoginService [(null)] - i = 0, H
+2016-04-25 20:45:46,310 [17] DEBUG LoginService [(null)] - start = 35
+2016-04-25 20:45:46,310 [17] DEBUG LoginService [(null)] - decodeString = 9ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+2016-04-25 20:45:46,311 [17] DEBUG LoginService [(null)] - i = 1, A
+2016-04-25 20:45:46,311 [17] DEBUG LoginService [(null)] - start = 26
+2016-04-25 20:45:46,311 [17] DEBUG LoginService [(null)] - decodeString = 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ0
+2016-04-25 20:45:46,312 [17] DEBUG LoginService [(null)] - i = 2, O
+2016-04-25 20:45:46,312 [17] DEBUG LoginService [(null)] - start = 26
+2016-04-25 20:45:46,312 [17] DEBUG LoginService [(null)] - decodeString = 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ0
+2016-04-25 20:45:46,313 [17] DEBUG LoginService [(null)] - i = 3, M
+2016-04-25 20:45:46,313 [17] DEBUG LoginService [(null)] - start = 35
+2016-04-25 20:45:46,313 [17] DEBUG LoginService [(null)] - decodeString = 9ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+2016-04-25 20:45:46,313 [17] DEBUG LoginService [(null)] - i = 4, I
+2016-04-25 20:45:46,314 [17] DEBUG LoginService [(null)] - start = 35
+2016-04-25 20:45:46,314 [17] DEBUG LoginService [(null)] - decodeString = 9ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+2016-04-25 20:45:46,314 [17] DEBUG LoginService [(null)] - i = 5, M
+2016-04-25 20:45:46,315 [17] DEBUG LoginService [(null)] - start = 26
+2016-04-25 20:45:46,315 [17] DEBUG LoginService [(null)] - decodeString = 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ0
+2016-04-25 20:45:46,315 [17] DEBUG LoginService [(null)] - i = 6, A
+2016-04-25 20:45:46,316 [17] DEBUG LoginService [(null)] - result = IBYWJNK
+2016-04-25 20:51:54,862 [11] DEBUG login [(null)] - {[action, login]}
+2016-04-25 20:51:54,877 [11] DEBUG LoginService [(null)] - start = 35
+2016-04-25 20:51:54,877 [11] DEBUG LoginService [(null)] - decodeString = 9ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+2016-04-25 20:51:54,878 [11] DEBUG LoginService [(null)] - i = 0, I
+2016-04-25 20:51:54,878 [11] DEBUG LoginService [(null)] - start = 35
+2016-04-25 20:51:54,879 [11] DEBUG LoginService [(null)] - decodeString = 9ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+2016-04-25 20:51:54,879 [11] DEBUG LoginService [(null)] - i = 1, B
+2016-04-25 20:51:54,879 [11] DEBUG LoginService [(null)] - start = 26
+2016-04-25 20:51:54,880 [11] DEBUG LoginService [(null)] - decodeString = 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ0
+2016-04-25 20:51:54,880 [11] DEBUG LoginService [(null)] - i = 2, Y
+2016-04-25 20:51:54,880 [11] DEBUG LoginService [(null)] - start = 26
+2016-04-25 20:51:54,880 [11] DEBUG LoginService [(null)] - decodeString = 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ0
+2016-04-25 20:51:54,881 [11] DEBUG LoginService [(null)] - i = 3, W
+2016-04-25 20:51:54,881 [11] DEBUG LoginService [(null)] - start = 35
+2016-04-25 20:51:54,881 [11] DEBUG LoginService [(null)] - decodeString = 9ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+2016-04-25 20:51:54,881 [11] DEBUG LoginService [(null)] - i = 4, J
+2016-04-25 20:51:54,882 [11] DEBUG LoginService [(null)] - start = 35
+2016-04-25 20:51:54,882 [11] DEBUG LoginService [(null)] - decodeString = 9ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+2016-04-25 20:51:54,882 [11] DEBUG LoginService [(null)] - i = 5, N
+2016-04-25 20:51:54,883 [11] DEBUG LoginService [(null)] - start = 26
+2016-04-25 20:51:54,883 [11] DEBUG LoginService [(null)] - decodeString = 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ0
+2016-04-25 20:51:54,883 [11] DEBUG LoginService [(null)] - i = 6, K
+2016-04-25 20:51:54,883 [11] DEBUG LoginService [(null)] - result = IBYWJNK
+2016-04-25 20:59:01,585 [17] DEBUG login [(null)] - {[action, login]}
+2016-04-25 20:59:01,599 [17] DEBUG LoginService [(null)] - j = 0
+2016-04-25 20:59:01,600 [17] DEBUG LoginService [(null)] - start = 35
+2016-04-25 20:59:01,601 [17] DEBUG LoginService [(null)] - decodeString = 9ABCDEFGHIJKLMNOPQRSTUVWXYZ012345678
+2016-04-25 20:59:01,601 [17] DEBUG LoginService [(null)] - i = 0, I
+2016-04-25 20:59:01,601 [17] DEBUG LoginService [(null)] - j = 1
+2016-04-25 20:59:01,602 [17] DEBUG LoginService [(null)] - start = 35
+2016-04-25 20:59:01,602 [17] DEBUG LoginService [(null)] - decodeString = 9ABCDEFGHIJKLMNOPQRSTUVWXYZ012345678
+2016-04-25 20:59:01,602 [17] DEBUG LoginService [(null)] - i = 1, B
+2016-04-25 20:59:01,603 [17] DEBUG LoginService [(null)] - j = 2
+2016-04-25 20:59:01,603 [17] DEBUG LoginService [(null)] - start = 26
+2016-04-25 20:59:01,603 [17] DEBUG LoginService [(null)] - decodeString = 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
+2016-04-25 20:59:01,604 [17] DEBUG LoginService [(null)] - i = 2, Y
+2016-04-25 20:59:01,604 [17] DEBUG LoginService [(null)] - j = 3
+2016-04-25 20:59:01,604 [17] DEBUG LoginService [(null)] - start = 26
+2016-04-25 20:59:01,604 [17] DEBUG LoginService [(null)] - decodeString = 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
+2016-04-25 20:59:01,605 [17] DEBUG LoginService [(null)] - i = 3, W
+2016-04-25 20:59:01,605 [17] DEBUG LoginService [(null)] - j = 0
+2016-04-25 20:59:01,605 [17] DEBUG LoginService [(null)] - start = 35
+2016-04-25 20:59:01,606 [17] DEBUG LoginService [(null)] - decodeString = 9ABCDEFGHIJKLMNOPQRSTUVWXYZ012345678
+2016-04-25 20:59:01,606 [17] DEBUG LoginService [(null)] - i = 4, J
+2016-04-25 20:59:01,606 [17] DEBUG LoginService [(null)] - j = 1
+2016-04-25 20:59:01,607 [17] DEBUG LoginService [(null)] - start = 35
+2016-04-25 20:59:01,607 [17] DEBUG LoginService [(null)] - decodeString = 9ABCDEFGHIJKLMNOPQRSTUVWXYZ012345678
+2016-04-25 20:59:01,607 [17] DEBUG LoginService [(null)] - i = 5, N
+2016-04-25 20:59:01,608 [17] DEBUG LoginService [(null)] - j = 2
+2016-04-25 20:59:01,608 [17] DEBUG LoginService [(null)] - start = 26
+2016-04-25 20:59:01,608 [17] DEBUG LoginService [(null)] - decodeString = 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
+2016-04-25 20:59:01,608 [17] DEBUG LoginService [(null)] - i = 6, K
+2016-04-25 20:59:01,609 [17] DEBUG LoginService [(null)] - result = IBYWJNK
+2016-04-25 21:04:56,998 [6] DEBUG login [(null)] - {[action, login]}
+2016-04-25 21:04:56,999 [6] DEBUG LoginService [(null)] - j = 0
+2016-04-25 21:04:56,999 [6] DEBUG LoginService [(null)] - start = 35
+2016-04-25 21:04:57,000 [6] DEBUG LoginService [(null)] - decodeString = 9ABCDEFGHIJKLMNOPQRSTUVWXYZ012345678
+2016-04-25 21:04:57,000 [6] DEBUG LoginService [(null)] - i = 0, A
+2016-04-25 21:04:57,000 [6] DEBUG LoginService [(null)] - j = 1
+2016-04-25 21:04:57,000 [6] DEBUG LoginService [(null)] - start = 35
+2016-04-25 21:04:57,001 [6] DEBUG LoginService [(null)] - decodeString = 9ABCDEFGHIJKLMNOPQRSTUVWXYZ012345678
+2016-04-25 21:04:57,001 [6] DEBUG LoginService [(null)] - i = 1, M
+2016-04-25 21:04:57,001 [6] DEBUG LoginService [(null)] - j = 2
+2016-04-25 21:04:57,002 [6] DEBUG LoginService [(null)] - start = 26
+2016-04-25 21:04:57,002 [6] DEBUG LoginService [(null)] - decodeString = 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
+2016-04-25 21:04:57,002 [6] DEBUG LoginService [(null)] - i = 2, I
+2016-04-25 21:04:57,002 [6] DEBUG LoginService [(null)] - j = 3
+2016-04-25 21:04:57,003 [6] DEBUG LoginService [(null)] - start = 26
+2016-04-25 21:04:57,003 [6] DEBUG LoginService [(null)] - decodeString = 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
+2016-04-25 21:04:57,003 [6] DEBUG LoginService [(null)] - i = 3, M
+2016-04-25 21:04:57,004 [6] DEBUG LoginService [(null)] - j = 0
+2016-04-25 21:04:57,004 [6] DEBUG LoginService [(null)] - start = 35
+2016-04-25 21:04:57,005 [6] DEBUG LoginService [(null)] - decodeString = 9ABCDEFGHIJKLMNOPQRSTUVWXYZ012345678
+2016-04-25 21:04:57,005 [6] DEBUG LoginService [(null)] - i = 4, O
+2016-04-25 21:04:57,005 [6] DEBUG LoginService [(null)] - j = 1
+2016-04-25 21:04:57,006 [6] DEBUG LoginService [(null)] - start = 35
+2016-04-25 21:04:57,006 [6] DEBUG LoginService [(null)] - decodeString = 9ABCDEFGHIJKLMNOPQRSTUVWXYZ012345678
+2016-04-25 21:04:57,006 [6] DEBUG LoginService [(null)] - i = 5, A
+2016-04-25 21:04:57,006 [6] DEBUG LoginService [(null)] - j = 2
+2016-04-25 21:04:57,007 [6] DEBUG LoginService [(null)] - start = 26
+2016-04-25 21:04:57,007 [6] DEBUG LoginService [(null)] - decodeString = 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
+2016-04-25 21:04:57,007 [6] DEBUG LoginService [(null)] - i = 6, H
+2016-04-25 21:04:57,007 [6] DEBUG LoginService [(null)] - result = AMIMOAH
+2016-04-25 21:05:00,011 [5] DEBUG login [(null)] - {[action, login]}
+2016-04-25 21:05:00,012 [5] DEBUG LoginService [(null)] - j = 0
+2016-04-25 21:05:00,012 [5] DEBUG LoginService [(null)] - start = 35
+2016-04-25 21:05:00,013 [5] DEBUG LoginService [(null)] - decodeString = 9ABCDEFGHIJKLMNOPQRSTUVWXYZ012345678
+2016-04-25 21:05:00,013 [5] DEBUG LoginService [(null)] - i = 0, A
+2016-04-25 21:05:00,014 [5] DEBUG LoginService [(null)] - j = 1
+2016-04-25 21:05:00,014 [5] DEBUG LoginService [(null)] - start = 35
+2016-04-25 21:05:00,015 [5] DEBUG LoginService [(null)] - decodeString = 9ABCDEFGHIJKLMNOPQRSTUVWXYZ012345678
+2016-04-25 21:05:00,015 [5] DEBUG LoginService [(null)] - i = 1, M
+2016-04-25 21:05:00,016 [5] DEBUG LoginService [(null)] - j = 2
+2016-04-25 21:05:00,016 [5] DEBUG LoginService [(null)] - start = 26
+2016-04-25 21:05:00,017 [5] DEBUG LoginService [(null)] - decodeString = 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
+2016-04-25 21:05:00,017 [5] DEBUG LoginService [(null)] - i = 2, I
+2016-04-25 21:05:00,018 [5] DEBUG LoginService [(null)] - j = 3
+2016-04-25 21:05:00,018 [5] DEBUG LoginService [(null)] - start = 26
+2016-04-25 21:05:00,019 [5] DEBUG LoginService [(null)] - decodeString = 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
+2016-04-25 21:05:00,019 [5] DEBUG LoginService [(null)] - i = 3, M
+2016-04-25 21:05:00,019 [5] DEBUG LoginService [(null)] - j = 0
+2016-04-25 21:05:00,020 [5] DEBUG LoginService [(null)] - start = 35
+2016-04-25 21:05:00,020 [5] DEBUG LoginService [(null)] - decodeString = 9ABCDEFGHIJKLMNOPQRSTUVWXYZ012345678
+2016-04-25 21:05:00,020 [5] DEBUG LoginService [(null)] - i = 4, O
+2016-04-25 21:05:00,020 [5] DEBUG LoginService [(null)] - j = 1
+2016-04-25 21:05:00,021 [5] DEBUG LoginService [(null)] - start = 35
+2016-04-25 21:05:00,021 [5] DEBUG LoginService [(null)] - decodeString = 9ABCDEFGHIJKLMNOPQRSTUVWXYZ012345678
+2016-04-25 21:05:00,021 [5] DEBUG LoginService [(null)] - i = 5, A
+2016-04-25 21:05:00,022 [5] DEBUG LoginService [(null)] - j = 2
+2016-04-25 21:05:00,022 [5] DEBUG LoginService [(null)] - start = 26
+2016-04-25 21:05:00,023 [5] DEBUG LoginService [(null)] - decodeString = 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
+2016-04-25 21:05:00,023 [5] DEBUG LoginService [(null)] - i = 6, H
+2016-04-25 21:05:00,023 [5] DEBUG LoginService [(null)] - result = AMIMOAH
+2016-04-25 21:42:44,700 [5] DEBUG login [(null)] - {[action, login]}
+2016-04-25 21:42:44,714 [5] DEBUG LoginService [(null)] - SELECT e_no as  id, e_name as name, d_name as department, password FROm t_operator where e_no = @userName
+2016-04-25 21:42:44,922 [5] DEBUG LoginService [(null)] - j = 0
+2016-04-25 21:42:44,923 [5] DEBUG LoginService [(null)] - j = 1
+2016-04-25 21:42:44,923 [5] DEBUG LoginService [(null)] - j = 2
+2016-04-25 21:42:44,923 [5] DEBUG LoginService [(null)] - j = 3
+2016-04-25 21:42:44,924 [5] DEBUG LoginService [(null)] - j = 0
+2016-04-25 21:42:44,924 [5] DEBUG LoginService [(null)] - j = 1
+2016-04-25 21:42:44,925 [5] DEBUG LoginService [(null)] - j = 2
+2016-04-25 21:42:44,925 [5] DEBUG LoginService [(null)] - decrptPassword = System.Linq.Enumerable+<ReverseIterator>d__1`1[System.Char]
+2016-04-25 21:43:08,412 [11] DEBUG login [(null)] - {[action, login]}
+2016-04-25 21:43:08,426 [11] DEBUG LoginService [(null)] - SELECT e_no as  id, e_name as name, d_name as department, password FROm t_operator where e_no = @userName
+2016-04-25 21:43:08,565 [11] DEBUG LoginService [(null)] - j = 0
+2016-04-25 21:43:08,566 [11] DEBUG LoginService [(null)] - j = 1
+2016-04-25 21:43:08,567 [11] DEBUG LoginService [(null)] - j = 2
+2016-04-25 21:43:08,567 [11] DEBUG LoginService [(null)] - j = 3
+2016-04-25 21:43:08,568 [11] DEBUG LoginService [(null)] - j = 0
+2016-04-25 21:43:08,568 [11] DEBUG LoginService [(null)] - j = 1
+2016-04-25 21:43:08,569 [11] DEBUG LoginService [(null)] - j = 2
+2016-04-25 21:43:08,570 [11] DEBUG LoginService [(null)] - decrptPassword = System.Linq.Enumerable+<ReverseIterator>d__1`1[System.Char]
+2016-04-25 21:44:16,179 [17] DEBUG login [(null)] - {[action, login]}
+2016-04-25 21:44:16,192 [17] DEBUG LoginService [(null)] - SELECT e_no as  id, e_name as name, d_name as department, password FROm t_operator where e_no = @userName
+2016-04-25 21:44:16,316 [17] DEBUG LoginService [(null)] - j = 0
+2016-04-25 21:44:16,318 [17] DEBUG LoginService [(null)] - j = 1
+2016-04-25 21:44:16,318 [17] DEBUG LoginService [(null)] - j = 2
+2016-04-25 21:44:16,319 [17] DEBUG LoginService [(null)] - j = 3
+2016-04-25 21:44:16,319 [17] DEBUG LoginService [(null)] - j = 0
+2016-04-25 21:44:16,320 [17] DEBUG LoginService [(null)] - j = 1
+2016-04-25 21:44:16,321 [17] DEBUG LoginService [(null)] - j = 2
+2016-04-25 21:44:16,322 [17] DEBUG LoginService [(null)] - decrptPassword = System.Linq.Enumerable+<ReverseIterator>d__1`1[System.Char]
+2016-04-25 21:45:48,297 [5] DEBUG login [(null)] - {[action, login]}
+2016-04-25 21:45:48,310 [5] DEBUG LoginService [(null)] - SELECT e_no as  id, e_name as name, d_name as department, password FROm t_operator where e_no = @userName
+2016-04-25 21:45:48,411 [5] DEBUG LoginService [(null)] - j = 0
+2016-04-25 21:45:48,411 [5] DEBUG LoginService [(null)] - j = 1
+2016-04-25 21:45:48,412 [5] DEBUG LoginService [(null)] - j = 2
+2016-04-25 21:45:48,412 [5] DEBUG LoginService [(null)] - j = 3
+2016-04-25 21:45:48,412 [5] DEBUG LoginService [(null)] - j = 0
+2016-04-25 21:45:48,413 [5] DEBUG LoginService [(null)] - j = 1
+2016-04-25 21:45:48,413 [5] DEBUG LoginService [(null)] - j = 2
+2016-04-25 21:45:48,414 [5] DEBUG LoginService [(null)] - originPassword = haomima, dbPassword = 9L8CN97 decrptPassword = System.Linq.Enumerable+<ReverseIterator>d__1`1[System.Char]
+2016-04-25 21:49:50,450 [11] DEBUG login [(null)] - {[action, login]}
+2016-04-25 21:49:50,464 [11] DEBUG LoginService [(null)] - SELECT e_no as  id, e_name as name, d_name as department, password FROm t_operator where e_no = @userName
+2016-04-25 21:49:50,566 [11] DEBUG LoginService [(null)] - originPassword = haomima, dbPassword = 9L8CN97 decrptPassword = HJXLIVJ
+2016-04-25 21:51:21,315 [5] DEBUG login [(null)] - {[action, login]}
+2016-04-25 21:51:21,329 [5] DEBUG LoginService [(null)] - SELECT e_no as  id, e_name as name, d_name as department, password FROm t_operator where e_no = @userName
+2016-04-25 21:51:21,438 [5] DEBUG LoginService [(null)] - i = 0, J
+2016-04-25 21:51:21,438 [5] DEBUG LoginService [(null)] - i = 1, V
+2016-04-25 21:51:21,439 [5] DEBUG LoginService [(null)] - i = 2, I
+2016-04-25 21:51:21,439 [5] DEBUG LoginService [(null)] - i = 3, L
+2016-04-25 21:51:21,439 [5] DEBUG LoginService [(null)] - i = 4, X
+2016-04-25 21:51:21,440 [5] DEBUG LoginService [(null)] - i = 5, J
+2016-04-25 21:51:21,440 [5] DEBUG LoginService [(null)] - i = 6, H
+2016-04-25 21:51:21,441 [5] DEBUG LoginService [(null)] - originPassword = haomima, dbPassword = 9L8CN97 decrptPassword = HJXLIVJ
+2016-04-25 21:51:45,547 [16] DEBUG login [(null)] - {[action, login]}
+2016-04-25 21:51:45,547 [16] DEBUG LoginService [(null)] - SELECT e_no as  id, e_name as name, d_name as department, password FROm t_operator where e_no = @userName
+2016-04-25 21:51:45,561 [16] DEBUG LoginService [(null)] - i = 0, A
+2016-04-25 21:51:45,562 [16] DEBUG LoginService [(null)] - i = 1, M
+2016-04-25 21:51:45,562 [16] DEBUG LoginService [(null)] - i = 2, I
+2016-04-25 21:51:45,562 [16] DEBUG LoginService [(null)] - i = 3, M
+2016-04-25 21:51:45,563 [16] DEBUG LoginService [(null)] - i = 4, O
+2016-04-25 21:51:45,563 [16] DEBUG LoginService [(null)] - i = 5, A
+2016-04-25 21:51:45,563 [16] DEBUG LoginService [(null)] - i = 6, H
+2016-04-25 21:51:45,563 [16] DEBUG LoginService [(null)] - originPassword = haomima, dbPassword = 9L8CN97 decrptPassword = HAOMIMA
+2016-04-25 21:52:19,360 [13] DEBUG login [(null)] - {[action, login]}
+2016-04-25 21:52:19,361 [13] DEBUG LoginService [(null)] - SELECT e_no as  id, e_name as name, d_name as department, password FROm t_operator where e_no = @userName
+2016-04-25 21:52:19,390 [13] DEBUG LoginService [(null)] - i = 0, A
+2016-04-25 21:52:19,390 [13] DEBUG LoginService [(null)] - i = 1, M
+2016-04-25 21:52:19,390 [13] DEBUG LoginService [(null)] - i = 2, I
+2016-04-25 21:52:19,390 [13] DEBUG LoginService [(null)] - i = 3, M
+2016-04-25 21:52:19,390 [13] DEBUG LoginService [(null)] - i = 4, O
+2016-04-25 21:52:19,390 [13] DEBUG LoginService [(null)] - i = 5, A
+2016-04-25 21:52:19,391 [13] DEBUG LoginService [(null)] - i = 6, H
+2016-04-25 21:52:19,391 [13] DEBUG LoginService [(null)] - originPassword = haomima, dbPassword = 9L8CN97 decrptPassword = HAOMIMA
+2016-04-25 21:52:34,563 [11] DEBUG login [(null)] - {[action, login]}
+2016-04-25 21:52:34,563 [11] DEBUG LoginService [(null)] - SELECT e_no as  id, e_name as name, d_name as department, password FROm t_operator where e_no = @userName
+2016-04-25 21:52:34,578 [11] DEBUG LoginService [(null)] - i = 0, J
+2016-04-25 21:52:34,578 [11] DEBUG LoginService [(null)] - i = 1, V
+2016-04-25 21:52:34,579 [11] DEBUG LoginService [(null)] - i = 2, I
+2016-04-25 21:52:34,579 [11] DEBUG LoginService [(null)] - i = 3, L
+2016-04-25 21:52:34,579 [11] DEBUG LoginService [(null)] - i = 4, X
+2016-04-25 21:52:34,580 [11] DEBUG LoginService [(null)] - i = 5, J
+2016-04-25 21:52:34,580 [11] DEBUG LoginService [(null)] - i = 6, H
+2016-04-25 21:52:34,580 [11] DEBUG LoginService [(null)] - originPassword = haomima, dbPassword = 9L8CN97 decrptPassword = HJXLIVJ
+2016-04-25 21:52:50,947 [11] DEBUG login [(null)] - {[action, login]}
+2016-04-25 21:52:50,947 [11] DEBUG LoginService [(null)] - SELECT e_no as  id, e_name as name, d_name as department, password FROm t_operator where e_no = @userName
+2016-04-25 21:52:50,960 [11] DEBUG LoginService [(null)] - i = 0, J
+2016-04-25 21:52:50,961 [11] DEBUG LoginService [(null)] - i = 1, V
+2016-04-25 21:52:50,961 [11] DEBUG LoginService [(null)] - i = 2, I
+2016-04-25 21:52:50,961 [11] DEBUG LoginService [(null)] - i = 3, L
+2016-04-25 21:52:50,962 [11] DEBUG LoginService [(null)] - i = 4, X
+2016-04-25 21:52:50,962 [11] DEBUG LoginService [(null)] - i = 5, J
+2016-04-25 21:52:50,962 [11] DEBUG LoginService [(null)] - i = 6, H
+2016-04-25 21:52:50,962 [11] DEBUG LoginService [(null)] - originPassword = HJXLIVJ, dbPassword = 9L8CN97 decrptPassword = HJXLIVJ
+2016-04-25 21:53:31,688 [13] DEBUG login [(null)] - {[action, login]}
+2016-04-25 21:53:31,689 [13] DEBUG LoginService [(null)] - SELECT e_no as  id, e_name as name, d_name as department, password FROm t_operator where e_no = @userName
+2016-04-25 21:53:36,842 [13] DEBUG login [(null)] - {[action, login]}
+2016-04-25 21:53:36,843 [13] DEBUG LoginService [(null)] - SELECT e_no as  id, e_name as name, d_name as department, password FROm t_operator where e_no = @userName
+2016-04-25 21:53:40,761 [5] DEBUG login [(null)] - {[action, login]}
+2016-04-25 21:53:40,762 [5] DEBUG LoginService [(null)] - SELECT e_no as  id, e_name as name, d_name as department, password FROm t_operator where e_no = @userName
