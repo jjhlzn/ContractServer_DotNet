@@ -40,8 +40,10 @@ public class Order : BaseObject
         set;
     }
 
+    public string moneyType { get; set; }
+
     public override string[] GetNeedResetProperties()
     {
-        return new string[]{"businessPerson", "contractNo", "orderNo", "guestName"};
+        return new string[]{"businessPerson", "contractNo", "orderNo", "guestName", "moneyType"};
     }
 }
