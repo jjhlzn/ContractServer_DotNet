@@ -77,7 +77,7 @@ public class LoginService
             {
                 if (password[i] == decodeString[k])
                 {
-                    Logger.DebugFormat("i = {0}, {1}", i, letters[k]);
+                   // Logger.DebugFormat("i = {0}, {1}", i, letters[k]);
                     result += letters[k];
                     break;
                 }
