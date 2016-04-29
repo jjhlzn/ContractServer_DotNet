@@ -36,7 +36,7 @@ public class OrderService
                 string.Format(
                     @" yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
                         and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%{0}%' or po_no like '%{1}%') ", keyword, keyword);
-            string sql = @"select top " + pageSize + @" name as businessPerson,wxhth as contractNo,po_no as orderNo,zje as amount,yw_contract.khmc as guestName,wbbb as moneyType , qyrq
+            string sql = @"select top " + pageSize + @" name as businessPerson,wxhth as contractNo,po_no as orderNo,zje as amount,yw_wldw.khmc as guestName,yw_contract.wbbb as moneyType , qyrq
                                             from yw_contract,rs_employee,yw_wldw
                                             where " + whereClause + @" and wxhth not in ( select top " + skipCount +
                          " wxhth from yw_contract,rs_employee,yw_wldw where"
