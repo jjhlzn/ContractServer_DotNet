@@ -64,7 +64,7 @@ public class ApprovalService
                                                     xh as id, 
                                                     shgjz as keyword, 
                                                     bssj as reportDate, 
-                                                    sprymc as reporter, 
+                                                    (SELECT name FROM rs_employee where rs_employee.e_no = bsry) as reporter, 
                                                     shdx as approvalObject, 
                                                     spjg as approvalResult,
                                                     je as amount, [status], 

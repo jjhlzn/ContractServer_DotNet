@@ -22,6 +22,7 @@ public class LoginService
 
     public LoginResponse Login(string userName, string password)
     {
+        Logger.DebugFormat("login start");
         LoginResponse resp = new LoginResponse();
         LoginResult loginResult = new LoginResult();
         loginResult.success = false;
@@ -35,6 +36,7 @@ public class LoginService
             {
                
                 loginResult.errorMessage = "用户名不存在";
+                Logger.DebugFormat("login end");
                 return resp;
             }
 
@@ -50,6 +52,7 @@ public class LoginService
                 loginResult.name = user.name;
                 loginResult.department = user.department;
             }
+            Logger.DebugFormat("login end");
             return resp;
         }
     }

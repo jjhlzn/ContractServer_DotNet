@@ -14,6 +14,7 @@ public abstract class BasePage : System.Web.UI.Page
     private ILog Logger = LogManager.GetLogger(typeof (BasePage));
     protected void Page_Load(object sender, EventArgs e)
     {
+        Logger.DebugFormat("start handle request from {0}, action is {1}", Request.UserHostAddress, Page.RouteData.Values["action"]);
 
         var actionValue = Page.RouteData.Values["action"];
 
@@ -34,6 +35,7 @@ public abstract class BasePage : System.Web.UI.Page
             }
             
         }
+        Logger.DebugFormat("request handle complete from {0}, action is {1}", Request.UserHostAddress, Page.RouteData.Values["action"]);
         Response.End();
     }
 
