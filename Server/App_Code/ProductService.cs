@@ -18,6 +18,13 @@ public class ProductService
     public GetProductResponse GetProductById(String productId)
     {
         GetProductResponse resp = new GetProductResponse();
+        if (string.IsNullOrEmpty(productId))
+        {
+            resp.product = new Product();
+            resp.isExist = false;
+            return resp;
+        }
+
         string sql = @"select spzwmc as chineseName,
                         spywmc as englishName,
                         sphh as huohao,
@@ -43,10 +50,10 @@ public class ProductService
             else
             {
                 resp.isExist = true;
-                Random random = new Random();
+               // Random random = new Random();
 
 
-                byte[] image = GetImageById(GetRandomProductId());
+                byte[] image = GetImageById(productId);
                 if (image == null)
                 {
                     product.hasImage = false;

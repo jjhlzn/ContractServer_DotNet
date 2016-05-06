@@ -71,7 +71,7 @@ public class ApprovalService
                                                     shlx as type  
                                                         FROM [dbo].[t_spjl] where " + whereClause + @" and xh not in ( select top " + skipCount +
                          " xh from [dbo].[t_spjl] where"
-                         + whereClause + " order by xh ) order by xh ";
+                         + whereClause + " order by bssj desc ) order by bssj desc ";
         logger.Debug(sql);
         using (IDbConnection conn = ConnectionFactory.GetInstance())
         {
