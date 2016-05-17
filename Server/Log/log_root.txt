@@ -20,3 +20,62 @@
 2016-05-18 00:19:16,499 [50] DEBUG sendNotify [(null)] - sign=  980926dfd113deb74b1b70f80105ac4f
 2016-05-18 00:19:16,499 [50] DEBUG sendNotify [(null)] - access_id=2200199196&device_token=1c2a875088c8a6c23959aa72468357d1eb6a8d6f3297da405a5b6664ef489250&environment=2&message={"aps":{"alert":"gogogo"}}&message_type=0&sign=980926dfd113deb74b1b70f80105ac4f&timestamp=1463501956
 2016-05-18 00:19:16,703 [50] DEBUG sendNotify [(null)] - response = {"ret_code":0}
+2016-05-18 06:46:43,283 [11] DEBUG sendNotify [(null)] - POSTopenapi.xg.qq.com/v2/push/single_deviceaccess_id=2200199272device_token=317ad7ee51cdd3c322cc0e0efb8af74b2d2376e817f0e637117e9d8bb55bc45fenvironment=2message={"aps":{"alert":"gogogo"}}message_type=0timestamp=14635252039fd933583a4b3c8fb4d3f7201daaeca3
+2016-05-18 06:46:43,299 [11] DEBUG sendNotify [(null)] - sign=  354f6d88ab96410d62aa408ac1cd5481
+2016-05-18 06:46:43,300 [11] DEBUG sendNotify [(null)] - access_id=2200199272&device_token=317ad7ee51cdd3c322cc0e0efb8af74b2d2376e817f0e637117e9d8bb55bc45f&environment=2&message={"aps":{"alert":"gogogo"}}&message_type=0&sign=354f6d88ab96410d62aa408ac1cd5481&timestamp=1463525203
+2016-05-18 06:46:43,485 [11] DEBUG sendNotify [(null)] - response = {"ret_code":-1,"err_msg":"参数access_id异常，请检查后重试"}
+2016-05-18 06:48:16,267 [5] DEBUG sendNotify [(null)] - POSTopenapi.xg.qq.com/v2/push/single_deviceaccess_id=2200199272device_token=317ad7ee51cdd3c322cc0e0efb8af74b2d2376e817f0e637117e9d8bb55bc45fenvironment=2message={"aps":{"alert":"gogogo"}}message_type=0timestamp=14635252969fd933583a4b3c8fb4d3f7201daaeca3
+2016-05-18 06:48:16,267 [5] DEBUG sendNotify [(null)] - sign=  95bf52e086ef1d0fd0bcb8400c82b3e9
+2016-05-18 06:48:16,268 [5] DEBUG sendNotify [(null)] - access_id=2200199272&device_token=317ad7ee51cdd3c322cc0e0efb8af74b2d2376e817f0e637117e9d8bb55bc45f&environment=2&message={"aps":{"alert":"gogogo"}}&message_type=0&sign=95bf52e086ef1d0fd0bcb8400c82b3e9&timestamp=1463525296
+2016-05-18 06:48:17,010 [5] DEBUG sendNotify [(null)] - response = {"ret_code":0}
+2016-05-18 06:50:31,051 [11] DEBUG sendNotify [(null)] - POSTopenapi.xg.qq.com/v2/push/single_deviceaccess_id=2200199272device_token=317ad7ee51cdd3c322cc0e0efb8af74b2d2376e817f0e637117e9d8bb55bc45fenvironment=2message={"aps":{"alert":"gogogo", "sournd":"default"}}message_type=0timestamp=14635254319fd933583a4b3c8fb4d3f7201daaeca3
+2016-05-18 06:50:31,052 [11] DEBUG sendNotify [(null)] - sign=  0ed9070abb971a60ed23ee72ae0753b4
+2016-05-18 06:50:31,052 [11] DEBUG sendNotify [(null)] - access_id=2200199272&device_token=317ad7ee51cdd3c322cc0e0efb8af74b2d2376e817f0e637117e9d8bb55bc45f&environment=2&message={"aps":{"alert":"gogogo", "sournd":"default"}}&message_type=0&sign=0ed9070abb971a60ed23ee72ae0753b4&timestamp=1463525431
+2016-05-18 06:50:32,134 [11] DEBUG sendNotify [(null)] - response = {"ret_code":0}
+2016-05-18 06:50:56,308 [15] DEBUG sendNotify [(null)] - POSTopenapi.xg.qq.com/v2/push/single_deviceaccess_id=2200199272device_token=317ad7ee51cdd3c322cc0e0efb8af74b2d2376e817f0e637117e9d8bb55bc45fenvironment=2message={"aps":{"alert":"gogogo", "sound":"default"}}message_type=0timestamp=14635254569fd933583a4b3c8fb4d3f7201daaeca3
+2016-05-18 06:50:56,309 [15] DEBUG sendNotify [(null)] - sign=  70a3bd74d4f84868e7ce37c10559628f
+2016-05-18 06:50:56,309 [15] DEBUG sendNotify [(null)] - access_id=2200199272&device_token=317ad7ee51cdd3c322cc0e0efb8af74b2d2376e817f0e637117e9d8bb55bc45f&environment=2&message={"aps":{"alert":"gogogo", "sound":"default"}}&message_type=0&sign=70a3bd74d4f84868e7ce37c10559628f&timestamp=1463525456
+2016-05-18 06:50:56,474 [15] DEBUG sendNotify [(null)] - response = {"ret_code":0}
+2016-05-18 06:51:10,853 [5] DEBUG sendNotify [(null)] - POSTopenapi.xg.qq.com/v2/push/single_deviceaccess_id=2200199272device_token=317ad7ee51cdd3c322cc0e0efb8af74b2d2376e817f0e637117e9d8bb55bc45fenvironment=2message={"aps":{"alert":"gogogo", "sound":"default"}}message_type=0timestamp=14635254709fd933583a4b3c8fb4d3f7201daaeca3
+2016-05-18 06:51:10,853 [5] DEBUG sendNotify [(null)] - sign=  07a173c374aac3314497dd921710a33b
+2016-05-18 06:51:10,853 [5] DEBUG sendNotify [(null)] - access_id=2200199272&device_token=317ad7ee51cdd3c322cc0e0efb8af74b2d2376e817f0e637117e9d8bb55bc45f&environment=2&message={"aps":{"alert":"gogogo", "sound":"default"}}&message_type=0&sign=07a173c374aac3314497dd921710a33b&timestamp=1463525470
+2016-05-18 06:51:11,910 [5] DEBUG sendNotify [(null)] - response = {"ret_code":0}
+2016-05-18 06:51:22,620 [5] DEBUG sendNotify [(null)] - POSTopenapi.xg.qq.com/v2/push/single_deviceaccess_id=2200199272device_token=317ad7ee51cdd3c322cc0e0efb8af74b2d2376e817f0e637117e9d8bb55bc45fenvironment=2message={"aps":{"alert":"gogogo", "sound":"default"}}message_type=0timestamp=14635254829fd933583a4b3c8fb4d3f7201daaeca3
+2016-05-18 06:51:22,620 [5] DEBUG sendNotify [(null)] - sign=  6f3d3f9a4ddf48f23bc7df53b7f974a4
+2016-05-18 06:51:22,620 [5] DEBUG sendNotify [(null)] - access_id=2200199272&device_token=317ad7ee51cdd3c322cc0e0efb8af74b2d2376e817f0e637117e9d8bb55bc45f&environment=2&message={"aps":{"alert":"gogogo", "sound":"default"}}&message_type=0&sign=6f3d3f9a4ddf48f23bc7df53b7f974a4&timestamp=1463525482
+2016-05-18 06:51:22,795 [5] DEBUG sendNotify [(null)] - response = {"ret_code":0}
+2016-05-18 06:51:29,542 [5] DEBUG sendNotify [(null)] - POSTopenapi.xg.qq.com/v2/push/single_deviceaccess_id=2200199272device_token=317ad7ee51cdd3c322cc0e0efb8af74b2d2376e817f0e637117e9d8bb55bc45fenvironment=2message={"aps":{"alert":"gogogo", "sound":"default"}}message_type=0timestamp=14635254899fd933583a4b3c8fb4d3f7201daaeca3
+2016-05-18 06:51:29,542 [5] DEBUG sendNotify [(null)] - sign=  3c2ea3e1119a286d3f04b40277d63580
+2016-05-18 06:51:29,543 [5] DEBUG sendNotify [(null)] - access_id=2200199272&device_token=317ad7ee51cdd3c322cc0e0efb8af74b2d2376e817f0e637117e9d8bb55bc45f&environment=2&message={"aps":{"alert":"gogogo", "sound":"default"}}&message_type=0&sign=3c2ea3e1119a286d3f04b40277d63580&timestamp=1463525489
+2016-05-18 06:51:30,287 [5] DEBUG sendNotify [(null)] - response = {"ret_code":0}
+2016-05-18 06:51:57,060 [12] DEBUG sendNotify [(null)] - POSTopenapi.xg.qq.com/v2/push/single_deviceaccess_id=2200199272device_token=317ad7ee51cdd3c322cc0e0efb8af74b2d2376e817f0e637117e9d8bb55bc45fenvironment=2message={"aps":{"alert":"gogogo", "sound":"default"}}message_type=0timestamp=14635255179fd933583a4b3c8fb4d3f7201daaeca3
+2016-05-18 06:51:57,060 [12] DEBUG sendNotify [(null)] - sign=  380d4b03caba12f35f08499ac709eeac
+2016-05-18 06:51:57,061 [12] DEBUG sendNotify [(null)] - access_id=2200199272&device_token=317ad7ee51cdd3c322cc0e0efb8af74b2d2376e817f0e637117e9d8bb55bc45f&environment=2&message={"aps":{"alert":"gogogo", "sound":"default"}}&message_type=0&sign=380d4b03caba12f35f08499ac709eeac&timestamp=1463525517
+2016-05-18 06:52:10,454 [6] DEBUG sendNotify [(null)] - POSTopenapi.xg.qq.com/v2/push/single_deviceaccess_id=2200199272device_token=317ad7ee51cdd3c322cc0e0efb8af74b2d2376e817f0e637117e9d8bb55bc45fenvironment=2message={"aps":{"alert":"gogogo", "sound":"default"}}message_type=0timestamp=14635255309fd933583a4b3c8fb4d3f7201daaeca3
+2016-05-18 06:52:10,455 [6] DEBUG sendNotify [(null)] - sign=  ece19c8c5acffec3d34052a44ea13501
+2016-05-18 06:52:10,455 [6] DEBUG sendNotify [(null)] - access_id=2200199272&device_token=317ad7ee51cdd3c322cc0e0efb8af74b2d2376e817f0e637117e9d8bb55bc45f&environment=2&message={"aps":{"alert":"gogogo", "sound":"default"}}&message_type=0&sign=ece19c8c5acffec3d34052a44ea13501&timestamp=1463525530
+2016-05-18 06:52:15,890 [6] DEBUG sendNotify [(null)] - response = {"ret_code":0}
+2016-05-18 07:01:32,162 [10] DEBUG sendNotify [(null)] - POSTopenapi.xg.qq.com/v2/push/single_deviceaccess_id=2200199196device_token=1c2a875088c8a6c23959aa72468357d1eb6a8d6f3297da405a5b6664ef489250environment=2message={"aps":{"alert":"gogogo"}}message_type=0timestamp=14635260923ba8903b6c3ae3b74cf2eebedfcc6188
+2016-05-18 07:01:32,163 [10] DEBUG sendNotify [(null)] - sign=  c54240bfea2a042b08a4895e77a40243
+2016-05-18 07:01:32,163 [10] DEBUG sendNotify [(null)] - access_id=2200199196&device_token=1c2a875088c8a6c23959aa72468357d1eb6a8d6f3297da405a5b6664ef489250&environment=2&message={"aps":{"alert":"gogogo"}}&message_type=0&sign=c54240bfea2a042b08a4895e77a40243&timestamp=1463526092
+2016-05-18 07:01:32,370 [10] DEBUG sendNotify [(null)] - response = {"ret_code":0}
+2016-05-18 07:02:12,433 [10] DEBUG sendNotify [(null)] - POSTopenapi.xg.qq.com/v2/push/single_deviceaccess_id=2200199196device_token=1c2a875088c8a6c23959aa72468357d1eb6a8d6f3297da405a5b6664ef489250environment=2message={"aps":{"alert":"gogogo", "sound":"default"}}message_type=0timestamp=14635261323ba8903b6c3ae3b74cf2eebedfcc6188
+2016-05-18 07:02:12,434 [10] DEBUG sendNotify [(null)] - sign=  0b51552a318f8d8ec0e3685ff7552985
+2016-05-18 07:02:12,434 [10] DEBUG sendNotify [(null)] - access_id=2200199196&device_token=1c2a875088c8a6c23959aa72468357d1eb6a8d6f3297da405a5b6664ef489250&environment=2&message={"aps":{"alert":"gogogo", "sound":"default"}}&message_type=0&sign=0b51552a318f8d8ec0e3685ff7552985&timestamp=1463526132
+2016-05-18 07:02:13,179 [10] DEBUG sendNotify [(null)] - response = {"ret_code":0}
+2016-05-18 07:02:31,498 [17] DEBUG sendNotify [(null)] - POSTopenapi.xg.qq.com/v2/push/single_deviceaccess_id=2200199196device_token=1c2a875088c8a6c23959aa72468357d1eb6a8d6f3297da405a5b6664ef489250environment=2message={"aps":{"alert":"gogogo", "sound":"default"}}message_type=0timestamp=14635261513ba8903b6c3ae3b74cf2eebedfcc6188
+2016-05-18 07:02:31,499 [17] DEBUG sendNotify [(null)] - sign=  389c01e1d6944b5c39421cf2ccb3bece
+2016-05-18 07:02:31,499 [17] DEBUG sendNotify [(null)] - access_id=2200199196&device_token=1c2a875088c8a6c23959aa72468357d1eb6a8d6f3297da405a5b6664ef489250&environment=2&message={"aps":{"alert":"gogogo", "sound":"default"}}&message_type=0&sign=389c01e1d6944b5c39421cf2ccb3bece&timestamp=1463526151
+2016-05-18 07:02:32,532 [17] DEBUG sendNotify [(null)] - response = {"ret_code":0}
+2016-05-18 07:02:38,342 [17] DEBUG sendNotify [(null)] - POSTopenapi.xg.qq.com/v2/push/single_deviceaccess_id=2200199196device_token=1c2a875088c8a6c23959aa72468357d1eb6a8d6f3297da405a5b6664ef489250environment=2message={"aps":{"alert":"gogogo", "sound":"default"}}message_type=0timestamp=14635261583ba8903b6c3ae3b74cf2eebedfcc6188
+2016-05-18 07:02:38,343 [17] DEBUG sendNotify [(null)] - sign=  1709e4b7625e225b2e7e944824d62b8a
+2016-05-18 07:02:38,343 [17] DEBUG sendNotify [(null)] - access_id=2200199196&device_token=1c2a875088c8a6c23959aa72468357d1eb6a8d6f3297da405a5b6664ef489250&environment=2&message={"aps":{"alert":"gogogo", "sound":"default"}}&message_type=0&sign=1709e4b7625e225b2e7e944824d62b8a&timestamp=1463526158
+2016-05-18 07:02:38,502 [17] DEBUG sendNotify [(null)] - response = {"ret_code":0}
+2016-05-18 07:03:26,791 [9] DEBUG sendNotify [(null)] - POSTopenapi.xg.qq.com/v2/push/single_deviceaccess_id=2200199196device_token=1c2a875088c8a6c23959aa72468357d1eb6a8d6f3297da405a5b6664ef489250environment=2message={"aps":{"alert":"gogogo", "sound":"default"}}message_type=0timestamp=14635262063ba8903b6c3ae3b74cf2eebedfcc6188
+2016-05-18 07:03:26,791 [9] DEBUG sendNotify [(null)] - sign=  8e7c861ec1cf96d1d641791ded63701e
+2016-05-18 07:03:26,792 [9] DEBUG sendNotify [(null)] - access_id=2200199196&device_token=1c2a875088c8a6c23959aa72468357d1eb6a8d6f3297da405a5b6664ef489250&environment=2&message={"aps":{"alert":"gogogo", "sound":"default"}}&message_type=0&sign=8e7c861ec1cf96d1d641791ded63701e&timestamp=1463526206
+2016-05-18 07:03:26,948 [9] DEBUG sendNotify [(null)] - response = {"ret_code":0}
+2016-05-18 07:04:09,709 [19] DEBUG sendNotify [(null)] - POSTopenapi.xg.qq.com/v2/push/single_deviceaccess_id=2200199196device_token=1c2a875088c8a6c23959aa72468357d1eb6a8d6f3297da405a5b6664ef489250environment=2message={"aps":{"alert":"gogogo", "sound":"default"}}message_type=0timestamp=14635262493ba8903b6c3ae3b74cf2eebedfcc6188
+2016-05-18 07:04:09,710 [19] DEBUG sendNotify [(null)] - sign=  49557f9aca9a2cc8fd0a5c2376364444
+2016-05-18 07:04:09,710 [19] DEBUG sendNotify [(null)] - access_id=2200199196&device_token=1c2a875088c8a6c23959aa72468357d1eb6a8d6f3297da405a5b6664ef489250&environment=2&message={"aps":{"alert":"gogogo", "sound":"default"}}&message_type=0&sign=49557f9aca9a2cc8fd0a5c2376364444&timestamp=1463526249
+2016-05-18 07:04:09,885 [19] DEBUG sendNotify [(null)] - response = {"ret_code":0}
