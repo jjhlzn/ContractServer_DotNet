@@ -6,31 +6,38 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using log4net;
+using Newtonsoft.Json;
 
-public partial class sendNotify : System.Web.UI.Page
+/// <summary>
+/// NotificationService 的摘要说明
+/// </summary>
+public class NotificationService
 {
-    private ILog Logger = LogManager.GetLogger(typeof (sendNotify));
+    private static String Dev_Env = "2";
+    private static String Prod_Env = "1";
+    private ILog Logger = LogManager.GetLogger(typeof(NotificationService));
     private String serviceUrl = "openapi.xg.qq.com/v2/push/single_device";
-     
+    private String AccessId = "2200199196";
+    private String SecretKey = "3ba8903b6c3ae3b74cf2eebedfcc6188";
+    private static String Env = Dev_Env;
 
-    protected void Page_Load(object sender, EventArgs e)
+
+    protected bool Send(string deviceToken, int badge, String message, String platform)
     {
         var url = "http://" + serviceUrl;
 
         Hashtable parameters = new Hashtable();
-        parameters["access_id"] = "2200199196";
+        parameters["access_id"] = AccessId;
         parameters["timestamp"] = ConvertDateTimeInt(DateTime.Now).ToString();
-       
 
-        var message = "{\"aps\":{\"alert\":\"gogogo\", \"sound\":\"default\", \"badge\": 1}}";
+
+        var messageJSON = "{\"aps\":{\"alert\":\""+message+"\", \"sound\":\"default\", \"badge\": "+badge+"}}";
         //var message = "{}";
-        parameters["message"] = message;
+        parameters["message"] = messageJSON;
         parameters["message_type"] = "0";
-        parameters["environment"] = "2";
-        parameters["device_token"] = "005fb11b6d182ec3aa156f27a20c2f65f158def3430ac71425a0d8cac4393c31";
+        parameters["environment"] = Env;
+        parameters["device_token"] = deviceToken;
 
         parameters["sign"] = createSign(serviceUrl, parameters);
 
@@ -39,10 +46,16 @@ public partial class sendNotify : System.Web.UI.Page
         var responseString = OpenReadWithHttps(url, postData);
 
         Logger.Debug("response = " + responseString);
-        Response.Write(responseString);
 
-        
+
+        if (responseString == "{\"ret_code\":0}")
+        {
+            return true;
+        }
+        return false;
     }
+
+   
 
     public string OpenReadWithHttps(string URL, string strPostdata)
     {
@@ -71,7 +84,7 @@ public partial class sendNotify : System.Web.UI.Page
 
     public String createSign(String url, Hashtable parameters)
     {
-        StringBuilder sb = new StringBuilder("POST"+url);
+        StringBuilder sb = new StringBuilder("POST" + url);
 
         ArrayList akeys = new ArrayList(parameters.Keys);
         akeys.Sort();
@@ -105,7 +118,7 @@ public partial class sendNotify : System.Web.UI.Page
             string v = (string)parameters[k];
 
             sb.Append(k + "=" + v + "&");
-            
+
         }
         var result = sb.ToString().Substring(0, sb.Length - 1);
         Logger.Debug(result);
@@ -114,8 +127,9 @@ public partial class sendNotify : System.Web.UI.Page
 
     private String getKey()
     {
-        return "3ba8903b6c3ae3b74cf2eebedfcc6188";
+        return SecretKey;
 
     }
-     
+
+
 }

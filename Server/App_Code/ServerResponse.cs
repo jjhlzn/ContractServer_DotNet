@@ -244,4 +244,13 @@ public class GetProductResponse : ServerResponse
     public Product product { get; set; }
 }
 
+public class RegisterDeviceResponse : ServerResponse
+{
+}
+
+public class ResetBadgeResponse : ServerResponse
+{
+    
+}
+
 

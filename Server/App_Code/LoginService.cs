@@ -1,5 +1,6 @@
 ﻿using System;
 using System.CodeDom;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -19,6 +20,50 @@ public class LoginService
 	}
 
     private static String letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+    public RegisterDeviceResponse RegisterDevice(string userName, string platform, string deviceToken)
+    {
+        RegisterDeviceResponse resp = new RegisterDeviceResponse();
+
+        //check the userName exist in tbl_user_device
+        //1. if not, add a new record
+        //2. if exist, update the record
+        using (var conn = ConnectionFactory.GetInstance())
+        {
+            string sql = "SELECT COUNT(*) FROM tbl_user_device WHERE userName = @userName";
+            IEnumerable result = conn.Query(sql, new[] {userName});
+            if ((int) result.GetEnumerator().Current > 0)
+            {
+                conn.Execute(
+                    "UPDATE tbl_user_device set deviceToken = @deviceToken, platform = @platform  WHERE userName = @userName",
+                    new[] {deviceToken, platform});
+            }
+            else
+            {
+                conn.Execute(
+                    "INSERT INTO tbl_user_device (userName, platform, deviceToken) values(@userName, @platform, @deviceToken",
+                    new[] {deviceToken, platform});
+            }
+        }
+
+        return resp;
+    }
+
+    public ResetBadgeResponse ResetBadge(string userName)
+    {
+        ResetBadgeResponse resp = new ResetBadgeResponse();
+
+        //execute update sql
+        using (var conn = ConnectionFactory.GetInstance())
+        {
+            conn.Execute(
+                "UPDATE tbl_user_device set badge = 0  WHERE userName = @userName", new []{userName});
+        }
+
+        return resp;
+    }
+
+   
 
     public LoginResponse Login(string userName, string password)
     {
