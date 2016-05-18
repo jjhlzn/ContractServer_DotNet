@@ -29,6 +29,13 @@ public partial class login : BasePage
             case "login":
                 resp = service.Login(GetRequestParameter("x"), GetRequestParameter("y"));
                 break;
+            case "registerdevice":
+                resp = service.RegisterDevice(GetRequestParameter("username"), GetRequestParameter("platform"),
+                    GetRequestParameter("devicetoken"));
+                break;
+            case "resetbadge":
+                resp = service.ResetBadge(GetRequestParameter("username"));
+                break;
 
         }
         return resp;

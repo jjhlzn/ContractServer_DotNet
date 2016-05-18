@@ -25,7 +25,7 @@ public partial class sendNotify : System.Web.UI.Page
         parameters["timestamp"] = ConvertDateTimeInt(DateTime.Now).ToString();
        
 
-        var message = "{\"aps\":{\"alert\":\"gogogo\", \"sound\":\"default\", \"badge\": 1}}";
+        var message = "{\"aps\":{\"alert\":\"gogogo\", \"sound\":\"default\", \"badge\": 3}}";
         //var message = "{}";
         parameters["message"] = message;
         parameters["message_type"] = "0";

@@ -28,21 +28,26 @@ public class LoginService
         //check the userName exist in tbl_user_device
         //1. if not, add a new record
         //2. if exist, update the record
+        if (string.IsNullOrEmpty(userName))
+        {
+            resp.status = -1;
+            return resp;
+        }
+
         using (var conn = ConnectionFactory.GetInstance())
         {
-            string sql = "SELECT COUNT(*) FROM tbl_user_device WHERE userName = @userName";
-            IEnumerable result = conn.Query(sql, new[] {userName});
-            if ((int) result.GetEnumerator().Current > 0)
+            string sql = "SELECT * FROM tbl_user_device WHERE userid = @userName";
+            if ( conn.Query(sql, new {userName}).Any())
             {
                 conn.Execute(
-                    "UPDATE tbl_user_device set deviceToken = @deviceToken, platform = @platform  WHERE userName = @userName",
-                    new[] {deviceToken, platform});
+                    "UPDATE tbl_user_device set deviceToken = @deviceToken, platform = @platform  WHERE userid = @userName",
+                    new {deviceToken, platform, userName});
             }
             else
             {
                 conn.Execute(
-                    "INSERT INTO tbl_user_device (userName, platform, deviceToken) values(@userName, @platform, @deviceToken",
-                    new[] {deviceToken, platform});
+                    "INSERT INTO tbl_user_device (userid, platform, deviceToken) values(@userName, @platform, @deviceToken)",
+                    new {deviceToken, platform, userName});
             }
         }
 
@@ -57,7 +62,7 @@ public class LoginService
         using (var conn = ConnectionFactory.GetInstance())
         {
             conn.Execute(
-                "UPDATE tbl_user_device set badge = 0  WHERE userName = @userName", new []{userName});
+                "UPDATE tbl_user_device set badge = 0  WHERE userid = @userName", new { userName });
         }
 
         return resp;

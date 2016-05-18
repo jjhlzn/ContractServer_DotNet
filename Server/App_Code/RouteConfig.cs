@@ -17,6 +17,7 @@ namespace Server
             routes.MapPageRoute("approval", "approval/{action}.json", "~/approval.aspx");
             routes.MapPageRoute("product", "product/{action}.json", "~/product.aspx");
             routes.MapPageRoute("login", "login/{action}.json", "~/login.aspx");
+
         
         }
     }
