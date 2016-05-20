@@ -23,7 +23,7 @@ public class NotificationService
     private static String Env = Dev_Env;
 
 
-    protected bool Send(string deviceToken, int badge, String message, String platform)
+    public String Send(string deviceToken, int badge, String message, Approval approval, String platform)
     {
         var url = "http://" + serviceUrl;
 
@@ -31,14 +31,17 @@ public class NotificationService
         parameters["access_id"] = AccessId;
         parameters["timestamp"] = ConvertDateTimeInt(DateTime.Now).ToString();
 
-
-        var messageJSON = "{\"aps\":{\"alert\":\""+message+"\", \"sound\":\"default\", \"badge\": "+badge+"}}";
-        //var message = "{}";
-        parameters["message"] = messageJSON;
-        parameters["message_type"] = "0";
         parameters["environment"] = Env;
         parameters["device_token"] = deviceToken;
 
+        if (platform == "ios")
+        {
+            setParameter4iOS(deviceToken, badge, message, approval, parameters);
+        }
+        else
+        {
+            setParameter4Android(deviceToken, badge, message, approval, parameters);
+        }
         parameters["sign"] = createSign(serviceUrl, parameters);
 
         var postData = GetPostData(parameters);
@@ -47,15 +50,32 @@ public class NotificationService
 
         Logger.Debug("response = " + responseString);
 
+        return responseString;
 
-        if (responseString == "{\"ret_code\":0}")
-        {
-            return true;
-        }
-        return false;
     }
 
-   
+    private Hashtable setParameter4iOS(string deviceToken, int badge, String message, Approval approval, Hashtable parameters)
+    {
+        var messageJSON = "{\"aps\":{\"alert\":\"您有一条来自于金军航的审批\", \"sound\":\"default\", \"badge\": 3, \"approval\": " + JsonConvert.SerializeObject(approval)  + "  }}";
+        //var message = "{}";
+        parameters["message"] = messageJSON;
+        parameters["message_type"] = "0";
+
+        return parameters;
+    }
+
+    public Hashtable setParameter4Android(string deviceToken, int badge, String message, Approval approval, Hashtable parameters)
+    {
+
+       // var messageJSON = "{\"aps\":{\"alert\":\"" + message + "\", \"sound\":\"default\", \"badge\": " + badge + "}}";
+
+        var messageJSON = "{\"content\":\"您有一条来自于金军航的审批\",\"title\":\"新审批\", \"vibrate\":1, \"approval\": " + JsonConvert.SerializeObject(approval) + " }";
+
+        parameters["message"] = messageJSON;
+        parameters["message_type"] = "1";
+
+        return parameters;
+    }
 
     public string OpenReadWithHttps(string URL, string strPostdata)
     {
