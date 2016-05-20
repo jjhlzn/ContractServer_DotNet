@@ -18,8 +18,10 @@ public class NotificationService
     private static String Prod_Env = "1";
     private ILog Logger = LogManager.GetLogger(typeof(NotificationService));
     private String serviceUrl = "openapi.xg.qq.com/v2/push/single_device";
-    private String AccessId = "2200199196";
-    private String SecretKey = "3ba8903b6c3ae3b74cf2eebedfcc6188";
+    private String iOSAccessId = "2200199196";
+    private String iOSSecretKey = "3ba8903b6c3ae3b74cf2eebedfcc6188";
+    private String androidAccessId = "2100199195";
+    private String andriodSecretKey = "9033de614af0fa12d8899701c45908fb";
     private static String Env = Dev_Env;
 
 
@@ -28,10 +30,10 @@ public class NotificationService
         var url = "http://" + serviceUrl;
 
         Hashtable parameters = new Hashtable();
-        parameters["access_id"] = AccessId;
+       
         parameters["timestamp"] = ConvertDateTimeInt(DateTime.Now).ToString();
 
-        parameters["environment"] = Env;
+        
         parameters["device_token"] = deviceToken;
 
         if (platform == "ios")
@@ -42,7 +44,7 @@ public class NotificationService
         {
             setParameter4Android(deviceToken, badge, message, approval, parameters);
         }
-        parameters["sign"] = createSign(serviceUrl, parameters);
+       
 
         var postData = GetPostData(parameters);
 
@@ -60,7 +62,9 @@ public class NotificationService
         //var message = "{}";
         parameters["message"] = messageJSON;
         parameters["message_type"] = "0";
-
+        parameters["environment"] = Env;
+        parameters["access_id"] = iOSAccessId;
+        parameters["sign"] = createSign(serviceUrl, iOSSecretKey, parameters);
         return parameters;
     }
 
@@ -73,7 +77,8 @@ public class NotificationService
 
         parameters["message"] = messageJSON;
         parameters["message_type"] = "1";
-
+        parameters["access_id"] = androidAccessId;
+        parameters["sign"] = createSign(serviceUrl, andriodSecretKey, parameters);
         return parameters;
     }
 
@@ -102,7 +107,7 @@ public class NotificationService
         return (int)intResult;
     }
 
-    public String createSign(String url, Hashtable parameters)
+    public String createSign(String url, String secretKey, Hashtable parameters)
     {
         StringBuilder sb = new StringBuilder("POST" + url);
 
@@ -119,7 +124,7 @@ public class NotificationService
             }
         }
 
-        sb.Append(this.getKey());
+        sb.Append(secretKey);
         Logger.Debug(sb.ToString());
         string sign = MD5Util.GetMD5(sb.ToString(), "UTF-8");
         Logger.Debug("sign=  " + sign);
@@ -145,11 +150,6 @@ public class NotificationService
         return result;
     }
 
-    private String getKey()
-    {
-        return SecretKey;
-
-    }
 
 
 }
