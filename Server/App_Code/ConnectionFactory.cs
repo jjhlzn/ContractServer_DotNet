@@ -15,9 +15,7 @@ public class ConnectionFactory
     private static ILog Logger = LogManager.GetLogger(typeof (ConnectionFactory));
     public static IDbConnection GetInstance()
     {
-        Logger.DebugFormat("start get connection");
         IDbConnection conn =  new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString);
-        Logger.DebugFormat("end get connection");
         return conn;
     }
 

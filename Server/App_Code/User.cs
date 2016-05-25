@@ -19,4 +19,7 @@ public class User
     public String department { get; set; }
     public String name { get; set; }
     public String password { get; set; }
+    public String deviceToken { get; set; }
+    public String platform { get; set; }
+    public int badge { get; set; }
 }

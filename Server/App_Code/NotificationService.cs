@@ -38,11 +38,11 @@ public class NotificationService
 
         if (platform == "ios")
         {
-            setParameter4iOS(deviceToken, badge, message, approval, parameters);
+            setParameter4iOS( badge, message, approval, parameters);
         }
         else
         {
-            setParameter4Android(deviceToken, badge, message, approval, parameters);
+            setParameter4Android( badge, message, approval, parameters);
         }
        
 
@@ -56,9 +56,9 @@ public class NotificationService
 
     }
 
-    private Hashtable setParameter4iOS(string deviceToken, int badge, String message, Approval approval, Hashtable parameters)
+    private Hashtable setParameter4iOS(int badge, String message, Approval approval, Hashtable parameters)
     {
-        var messageJSON = "{\"aps\":{\"alert\":\"您有一条来自于金军航的审批\", \"sound\":\"default\", \"badge\": 3, \"approval\": " + JsonConvert.SerializeObject(approval)  + "  }}";
+        var messageJSON = "{\"aps\":{\"alert\":\""+ message+"\", \"sound\":\"default\", \"badge\": "+badge+", \"approval\": " + JsonConvert.SerializeObject(approval)  + "  }}";
         //var message = "{}";
         parameters["message"] = messageJSON;
         parameters["message_type"] = "0";
@@ -68,12 +68,12 @@ public class NotificationService
         return parameters;
     }
 
-    public Hashtable setParameter4Android(string deviceToken, int badge, String message, Approval approval, Hashtable parameters)
+    public Hashtable setParameter4Android(int badge, String message, Approval approval, Hashtable parameters)
     {
 
        // var messageJSON = "{\"aps\":{\"alert\":\"" + message + "\", \"sound\":\"default\", \"badge\": " + badge + "}}";
 
-        var messageJSON = "{\"content\":\"您有一条来自于金军航的审批\",\"title\":\"新审批\", \"vibrate\":1, \"approval\": " + JsonConvert.SerializeObject(approval) + " }";
+        var messageJSON = "{\"content\":\""+message+"\",\"title\":\"新审批\", \"vibrate\":1, \"approval\": " + JsonConvert.SerializeObject(approval) + " }";
 
         parameters["message"] = messageJSON;
         parameters["message_type"] = "1";
