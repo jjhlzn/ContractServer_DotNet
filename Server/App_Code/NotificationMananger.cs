@@ -160,7 +160,7 @@ public class NotificationMananger
     public List<Approval> GetApprovalsForNotification(String userId)
     {
         String endDate = DateTime.Now.ToString("yyyy-MM-dd");
-        String startDate = DateTime.Now.AddDays(-1500).ToString("yyyy-MM-dd");
+        String startDate = DateTime.Now.AddDays(-31).ToString("yyyy-MM-dd");
         SearchApprovalResponse resp = approvalService.Search(userId, "", false, true, startDate, endDate, 0, 10000);
         if (resp.status == 0)
         {

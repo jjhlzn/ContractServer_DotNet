@@ -22,7 +22,7 @@ public class NotificationService
     private String iOSSecretKey = "3ba8903b6c3ae3b74cf2eebedfcc6188";
     private String androidAccessId = "2100199195";
     private String andriodSecretKey = "9033de614af0fa12d8899701c45908fb";
-    private static String Env = Dev_Env;
+    private static String Env = Prod_Env;
 
 
     public String Send(string deviceToken, int badge, String message, Approval approval, String platform)
