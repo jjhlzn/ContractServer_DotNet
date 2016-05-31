@@ -72,8 +72,8 @@ public class NotificationService
     {
 
        // var messageJSON = "{\"aps\":{\"alert\":\"" + message + "\", \"sound\":\"default\", \"badge\": " + badge + "}}";
-
-        var messageJSON = "{\"content\":\""+message+"\",\"title\":\"新审批\", \"vibrate\":1, \"approval\": " + JsonConvert.SerializeObject(approval) + " }";
+        var messageJSON = "{\"content\":\"您有一条来自于金军航的审批\",\"title\":\"新审批\", \"vibrate\":1, " +
+                          "\"action\": {\"activity\": \"com.jinjunhang.contract.controller.MainActivity2\"},  \"approval\": " + JsonConvert.SerializeObject(approval) + " }";
 
         parameters["message"] = messageJSON;
         parameters["message_type"] = "1";

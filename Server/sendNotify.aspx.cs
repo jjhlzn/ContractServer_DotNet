@@ -42,7 +42,7 @@ public partial class sendNotify : System.Web.UI.Page
         }
         else
         {
-            responseString = notificationService.Send("005fb11b6d182ec3aa156f27a20c2f65f158def3430ac71425a0d8cac4393c31", 1,
+            responseString = notificationService.Send("8db529eec958ef80f94f7a5d46a165b3367f83f87c91f6a8ffc3435c551e70ec", 1,
                 "您有一条来自于金军航的审批", approval, "ios");
         }
 
