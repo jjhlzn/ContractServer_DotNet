@@ -1,16 +1,8 @@
-2016-06-01 07:55:10,727 [6] DEBUG NotificationService [(null)] - POSTopenapi.xg.qq.com/v2/push/single_deviceaccess_id=2200199196device_token=35ac9e03445d666ad62e750e2b6b13281ccc9efcad5e3e395bfccaaf2b1369bfenvironment=1message={"aps":{"alert":"您有一条来自于金军航的审批", "sound":"default", "badge": 1, "approval": {"id":"111","keyword":"keyword","type":"type","reporter":"reporter","approvalObject":"审批对象","amount":100.0,"status":"待批","reportDate":"2016-05-01","approvalResult":""}  }}message_type=0timestamp=14647389103ba8903b6c3ae3b74cf2eebedfcc6188
-2016-06-01 07:55:10,742 [6] DEBUG NotificationService [(null)] - sign=  0f77f5fe41902bc886c196302a757e97
-2016-06-01 07:55:10,743 [6] DEBUG NotificationService [(null)] - access_id=2200199196&device_token=35ac9e03445d666ad62e750e2b6b13281ccc9efcad5e3e395bfccaaf2b1369bf&environment=1&message={"aps":{"alert":"您有一条来自于金军航的审批", "sound":"default", "badge": 1, "approval": {"id":"111","keyword":"keyword","type":"type","reporter":"reporter","approvalObject":"审批对象","amount":100.0,"status":"待批","reportDate":"2016-05-01","approvalResult":""}  }}&message_type=0&sign=0f77f5fe41902bc886c196302a757e97&timestamp=1464738910
-2016-06-01 07:55:10,923 [6] DEBUG NotificationService [(null)] - response = {"ret_code":0}
-2016-06-01 07:55:23,382 [10] DEBUG NotificationService [(null)] - POSTopenapi.xg.qq.com/v2/push/single_deviceaccess_id=2200199196device_token=35ac9e03445d666ad62e750e2b6b13281ccc9efcad5e3e395bfccaaf2b1369bfenvironment=1message={"aps":{"alert":"您有一条来自于金军航的审批", "sound":"default", "badge": 1, "approval": {"id":"111","keyword":"keyword","type":"type","reporter":"reporter","approvalObject":"审批对象","amount":100.0,"status":"待批","reportDate":"2016-05-01","approvalResult":""}  }}message_type=0timestamp=14647389233ba8903b6c3ae3b74cf2eebedfcc6188
-2016-06-01 07:55:23,383 [10] DEBUG NotificationService [(null)] - sign=  1fe56b8f0170e1d912faca6ce6a4fe62
-2016-06-01 07:55:23,383 [10] DEBUG NotificationService [(null)] - access_id=2200199196&device_token=35ac9e03445d666ad62e750e2b6b13281ccc9efcad5e3e395bfccaaf2b1369bf&environment=1&message={"aps":{"alert":"您有一条来自于金军航的审批", "sound":"default", "badge": 1, "approval": {"id":"111","keyword":"keyword","type":"type","reporter":"reporter","approvalObject":"审批对象","amount":100.0,"status":"待批","reportDate":"2016-05-01","approvalResult":""}  }}&message_type=0&sign=1fe56b8f0170e1d912faca6ce6a4fe62&timestamp=1464738923
-2016-06-01 07:55:23,535 [10] DEBUG NotificationService [(null)] - response = {"ret_code":0}
-2016-06-01 07:56:32,988 [5] DEBUG Global [(null)] - TimerWorker
-2016-06-01 07:56:32,995 [5] DEBUG NotificationMananger [(null)] - sleep 0 seconds
-2016-06-01 07:56:33,243 [5] DEBUG NotificationMananger [(null)] - 继续执行
-2016-06-01 07:56:33,255 [5] DEBUG NotificationMananger [(null)] - check userid = 0001, platform = ios, badeg = 0 approvals
-2016-06-01 07:56:33,258 [5] DEBUG ApprovalService [(null)] - SELECT top 10000
+2016-06-02 10:19:21,095 [25] DEBUG Global [(null)] - TimerWorker
+2016-06-02 10:19:21,098 [25] DEBUG NotificationMananger [(null)] - sleep 4 seconds
+2016-06-02 10:19:26,377 [25] DEBUG NotificationMananger [(null)] - 继续执行
+2016-06-02 10:19:26,698 [25] DEBUG NotificationMananger [(null)] - check userid = 0001, platform = android, badeg = 0 approvals
+2016-06-02 10:19:26,700 [25] DEBUG ApprovalService [(null)] - SELECT top 10000
                                                     xh as id, 
                                                     shgjz as keyword, 
                                                     bssj as reportDate, 
@@ -20,15 +12,250 @@
                                                     je as amount, [status], 
                                                     shlx as type  
                                                         FROM [dbo].[t_spjl] where  t_spjl.spry = @userId 
-                                            AND  t_spjl.enabled = '1' AND bssj >= '2012-04-23' AND bssj <= '2016-06-01' and t_spjl.status = '待批'  and xh not in ( select top 0 xh from [dbo].[t_spjl] where t_spjl.spry = @userId 
-                                            AND  t_spjl.enabled = '1' AND bssj >= '2012-04-23' AND bssj <= '2016-06-01' and t_spjl.status = '待批'  order by bssj desc ) order by bssj desc 
-2016-06-01 07:56:33,338 [5] DEBUG NotificationService [(null)] - POSTopenapi.xg.qq.com/v2/push/single_deviceaccess_id=2200199196device_token=35ac9e03445d666ad62e750e2b6b13281ccc9efcad5e3e395bfccaaf2b1369bfenvironment=1message={"aps":{"alert":"您有一条来自董客娜的审批", "sound":"default", "badge": 1, "approval": {"id":"20415","keyword":"FY14001049","type":"总经理审批","reporter":"董客娜","approvalObject":"出口费用申请单","amount":851.24,"status":"待批","reportDate":"2014-11-15","approvalResult":null}  }}message_type=0timestamp=14647389933ba8903b6c3ae3b74cf2eebedfcc6188
-2016-06-01 07:56:33,339 [5] DEBUG NotificationService [(null)] - sign=  78ddcfb2d0322ae8d05a00afbcd62ae8
-2016-06-01 07:56:33,340 [5] DEBUG NotificationService [(null)] - access_id=2200199196&device_token=35ac9e03445d666ad62e750e2b6b13281ccc9efcad5e3e395bfccaaf2b1369bf&environment=1&message={"aps":{"alert":"您有一条来自董客娜的审批", "sound":"default", "badge": 1, "approval": {"id":"20415","keyword":"FY14001049","type":"总经理审批","reporter":"董客娜","approvalObject":"出口费用申请单","amount":851.24,"status":"待批","reportDate":"2014-11-15","approvalResult":null}  }}&message_type=0&sign=78ddcfb2d0322ae8d05a00afbcd62ae8&timestamp=1464738993
-2016-06-01 07:56:33,494 [5] DEBUG NotificationService [(null)] - response = {"ret_code":0}
-2016-06-01 07:56:33,501 [5] DEBUG NotificationMananger [(null)] - userid = 0001, approvalId = 20415, 消息发送成功
-2016-06-01 07:56:33,533 [5] DEBUG NotificationService [(null)] - POSTopenapi.xg.qq.com/v2/push/single_deviceaccess_id=2200199196device_token=35ac9e03445d666ad62e750e2b6b13281ccc9efcad5e3e395bfccaaf2b1369bfenvironment=1message={"aps":{"alert":"您有一条来自徐金儿的审批", "sound":"default", "badge": 2, "approval": {"id":"20407","keyword":"FY14000783","type":"总经理审批","reporter":"徐金儿","approvalObject":"出口费用申请单","amount":316.37,"status":"待批","reportDate":"2014-9-10","approvalResult":null}  }}message_type=0timestamp=14647389933ba8903b6c3ae3b74cf2eebedfcc6188
-2016-06-01 07:56:33,534 [5] DEBUG NotificationService [(null)] - sign=  79d3b28fed055f0fbb0bebf74d6f84e6
-2016-06-01 07:56:33,535 [5] DEBUG NotificationService [(null)] - access_id=2200199196&device_token=35ac9e03445d666ad62e750e2b6b13281ccc9efcad5e3e395bfccaaf2b1369bf&environment=1&message={"aps":{"alert":"您有一条来自徐金儿的审批", "sound":"default", "badge": 2, "approval": {"id":"20407","keyword":"FY14000783","type":"总经理审批","reporter":"徐金儿","approvalObject":"出口费用申请单","amount":316.37,"status":"待批","reportDate":"2014-9-10","approvalResult":null}  }}&message_type=0&sign=79d3b28fed055f0fbb0bebf74d6f84e6&timestamp=1464738993
-2016-06-01 07:56:33,641 [5] DEBUG NotificationService [(null)] - response = {"ret_code":0}
-2016-06-01 07:56:33,641 [5] DEBUG NotificationMananger [(null)] - userid = 0001, approvalId = 20407, 消息发送成功
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2013-08-06' AND bssj <= '2016-06-02' and t_spjl.status = '待批'  and xh not in ( select top 0 xh from [dbo].[t_spjl] where t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2013-08-06' AND bssj <= '2016-06-02' and t_spjl.status = '待批'  order by bssj desc ) order by bssj desc 
+2016-06-02 10:19:26,986 [25] DEBUG NotificationService [(null)] - POSTopenapi.xg.qq.com/v2/push/single_deviceaccess_id=2100199195device_token=7e720d4e7b2ffadd46ad85f23237568a75b64c1cmessage={"content":"您有一条来自董客娜的审批","title":"新审批", "vibrate":1, "action": {"activity": "com.jinjunhang.contract.controller.MainActivity2"}, "badge": 1,  "approval": {"id":"20415","keyword":"FY14001049","type":"总经理审批","reporter":"董客娜","approvalObject":"出口费用申请单","amount":851.24,"status":"待批","reportDate":"2014-11-15","approvalResult":null} }message_type=1timestamp=14648339669033de614af0fa12d8899701c45908fb
+2016-06-02 10:19:26,987 [25] DEBUG NotificationService [(null)] - sign=  b830c92997155446f40030b421462243
+2016-06-02 10:19:26,988 [25] DEBUG NotificationService [(null)] - access_id=2100199195&device_token=7e720d4e7b2ffadd46ad85f23237568a75b64c1c&message={"content":"您有一条来自董客娜的审批","title":"新审批", "vibrate":1, "action": {"activity": "com.jinjunhang.contract.controller.MainActivity2"}, "badge": 1,  "approval": {"id":"20415","keyword":"FY14001049","type":"总经理审批","reporter":"董客娜","approvalObject":"出口费用申请单","amount":851.24,"status":"待批","reportDate":"2014-11-15","approvalResult":null} }&message_type=1&sign=b830c92997155446f40030b421462243&timestamp=1464833966
+2016-06-02 10:19:27,146 [25] DEBUG NotificationService [(null)] - response = {"ret_code":0}
+2016-06-02 10:19:27,150 [25] DEBUG NotificationMananger [(null)] - userid = 0001, approvalId = 20415, 消息发送成功
+2016-06-02 10:19:27,178 [25] DEBUG NotificationService [(null)] - POSTopenapi.xg.qq.com/v2/push/single_deviceaccess_id=2100199195device_token=7e720d4e7b2ffadd46ad85f23237568a75b64c1cmessage={"content":"您有一条来自徐金儿的审批","title":"新审批", "vibrate":1, "action": {"activity": "com.jinjunhang.contract.controller.MainActivity2"}, "badge": 2,  "approval": {"id":"20407","keyword":"FY14000783","type":"总经理审批","reporter":"徐金儿","approvalObject":"出口费用申请单","amount":316.37,"status":"待批","reportDate":"2014-9-10","approvalResult":null} }message_type=1timestamp=14648339679033de614af0fa12d8899701c45908fb
+2016-06-02 10:19:27,179 [25] DEBUG NotificationService [(null)] - sign=  389ee1ed93563317f24ab5c6414da869
+2016-06-02 10:19:27,179 [25] DEBUG NotificationService [(null)] - access_id=2100199195&device_token=7e720d4e7b2ffadd46ad85f23237568a75b64c1c&message={"content":"您有一条来自徐金儿的审批","title":"新审批", "vibrate":1, "action": {"activity": "com.jinjunhang.contract.controller.MainActivity2"}, "badge": 2,  "approval": {"id":"20407","keyword":"FY14000783","type":"总经理审批","reporter":"徐金儿","approvalObject":"出口费用申请单","amount":316.37,"status":"待批","reportDate":"2014-9-10","approvalResult":null} }&message_type=1&sign=389ee1ed93563317f24ab5c6414da869&timestamp=1464833967
+2016-06-02 10:19:28,001 [25] DEBUG NotificationService [(null)] - response = {"ret_code":0}
+2016-06-02 10:19:28,002 [25] DEBUG NotificationMananger [(null)] - userid = 0001, approvalId = 20407, 消息发送成功
+2016-06-02 10:22:21,095 [17] DEBUG Global [(null)] - TimerWorker
+2016-06-02 10:22:21,095 [17] DEBUG NotificationMananger [(null)] - sleep 3 seconds
+2016-06-02 10:22:24,122 [17] DEBUG NotificationMananger [(null)] - 继续执行
+2016-06-02 10:22:24,464 [17] DEBUG NotificationMananger [(null)] - check userid = 0001, platform = android, badeg = 2 approvals
+2016-06-02 10:22:24,464 [17] DEBUG ApprovalService [(null)] - SELECT top 10000
+                                                    xh as id, 
+                                                    shgjz as keyword, 
+                                                    bssj as reportDate, 
+                                                    (SELECT name FROM rs_employee where rs_employee.e_no = bsry) as reporter, 
+                                                    shdx as approvalObject, 
+                                                    spjg as approvalResult,
+                                                    je as amount, [status], 
+                                                    shlx as type  
+                                                        FROM [dbo].[t_spjl] where  t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2013-08-06' AND bssj <= '2016-06-02' and t_spjl.status = '待批'  and xh not in ( select top 0 xh from [dbo].[t_spjl] where t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2013-08-06' AND bssj <= '2016-06-02' and t_spjl.status = '待批'  order by bssj desc ) order by bssj desc 
+2016-06-02 10:22:24,865 [17] DEBUG NotificationMananger [(null)] - userid = 0001, approvalid = 20415 has sent
+2016-06-02 10:22:24,912 [17] DEBUG NotificationMananger [(null)] - userid = 0001, approvalid = 20407 has sent
+2016-06-02 10:25:21,096 [17] DEBUG Global [(null)] - TimerWorker
+2016-06-02 10:25:21,097 [17] DEBUG NotificationMananger [(null)] - sleep 4 seconds
+2016-06-02 10:25:25,133 [17] DEBUG NotificationMananger [(null)] - 继续执行
+2016-06-02 10:25:25,148 [17] DEBUG NotificationMananger [(null)] - check userid = 0001, platform = android, badeg = 2 approvals
+2016-06-02 10:25:25,149 [17] DEBUG ApprovalService [(null)] - SELECT top 10000
+                                                    xh as id, 
+                                                    shgjz as keyword, 
+                                                    bssj as reportDate, 
+                                                    (SELECT name FROM rs_employee where rs_employee.e_no = bsry) as reporter, 
+                                                    shdx as approvalObject, 
+                                                    spjg as approvalResult,
+                                                    je as amount, [status], 
+                                                    shlx as type  
+                                                        FROM [dbo].[t_spjl] where  t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2013-08-06' AND bssj <= '2016-06-02' and t_spjl.status = '待批'  and xh not in ( select top 0 xh from [dbo].[t_spjl] where t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2013-08-06' AND bssj <= '2016-06-02' and t_spjl.status = '待批'  order by bssj desc ) order by bssj desc 
+2016-06-02 10:25:25,204 [17] DEBUG NotificationMananger [(null)] - userid = 0001, approvalid = 20415 has sent
+2016-06-02 10:25:25,217 [17] DEBUG NotificationMananger [(null)] - userid = 0001, approvalid = 20407 has sent
+2016-06-02 10:28:21,097 [16] DEBUG Global [(null)] - TimerWorker
+2016-06-02 10:28:21,097 [16] DEBUG NotificationMananger [(null)] - sleep 4 seconds
+2016-06-02 10:28:25,125 [16] DEBUG NotificationMananger [(null)] - 继续执行
+2016-06-02 10:28:25,139 [16] DEBUG NotificationMananger [(null)] - check userid = 0001, platform = android, badeg = 2 approvals
+2016-06-02 10:28:25,140 [16] DEBUG ApprovalService [(null)] - SELECT top 10000
+                                                    xh as id, 
+                                                    shgjz as keyword, 
+                                                    bssj as reportDate, 
+                                                    (SELECT name FROM rs_employee where rs_employee.e_no = bsry) as reporter, 
+                                                    shdx as approvalObject, 
+                                                    spjg as approvalResult,
+                                                    je as amount, [status], 
+                                                    shlx as type  
+                                                        FROM [dbo].[t_spjl] where  t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2013-08-06' AND bssj <= '2016-06-02' and t_spjl.status = '待批'  and xh not in ( select top 0 xh from [dbo].[t_spjl] where t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2013-08-06' AND bssj <= '2016-06-02' and t_spjl.status = '待批'  order by bssj desc ) order by bssj desc 
+2016-06-02 10:28:25,196 [16] DEBUG NotificationMananger [(null)] - userid = 0001, approvalid = 20415 has sent
+2016-06-02 10:28:25,208 [16] DEBUG NotificationMananger [(null)] - userid = 0001, approvalid = 20407 has sent
+2016-06-02 10:29:03,045 [17] DEBUG NotificationService [(null)] - POSTopenapi.xg.qq.com/v2/push/single_deviceaccess_id=2100199195device_token=7e720d4e7b2ffadd46ad85f23237568a75b64c1cmessage={"content":"您有一条来自于金军航的审批","title":"新审批", "vibrate":1, "action": {"activity": "com.jinjunhang.contract.controller.MainActivity2"}, "badge": 1,  "approval": {"id":"111","keyword":"keyword","type":"type","reporter":"reporter","approvalObject":"审批对象","amount":100.0,"status":"待批","reportDate":"2016-05-01","approvalResult":""} }message_type=1timestamp=14648345439033de614af0fa12d8899701c45908fb
+2016-06-02 10:29:03,045 [17] DEBUG NotificationService [(null)] - sign=  33b6245b0ec089b23dda61c6ae5d6fbe
+2016-06-02 10:29:03,046 [17] DEBUG NotificationService [(null)] - access_id=2100199195&device_token=7e720d4e7b2ffadd46ad85f23237568a75b64c1c&message={"content":"您有一条来自于金军航的审批","title":"新审批", "vibrate":1, "action": {"activity": "com.jinjunhang.contract.controller.MainActivity2"}, "badge": 1,  "approval": {"id":"111","keyword":"keyword","type":"type","reporter":"reporter","approvalObject":"审批对象","amount":100.0,"status":"待批","reportDate":"2016-05-01","approvalResult":""} }&message_type=1&sign=33b6245b0ec089b23dda61c6ae5d6fbe&timestamp=1464834543
+2016-06-02 10:29:03,210 [17] DEBUG NotificationService [(null)] - response = {"ret_code":0}
+2016-06-02 10:30:09,801 [13] DEBUG NotificationService [(null)] - POSTopenapi.xg.qq.com/v2/push/single_deviceaccess_id=2100199195device_token=7e720d4e7b2ffadd46ad85f23237568a75b64c1cmessage={"content":"您有一条来自于金军航的审批","title":"新审批", "vibrate":1, "action": {"activity": "com.jinjunhang.contract.controller.MainActivity2"}, "customContent": 1,  "approval": {"id":"111","keyword":"keyword","type":"type","reporter":"reporter","approvalObject":"审批对象","amount":100.0,"status":"待批","reportDate":"2016-05-01","approvalResult":""} }message_type=1timestamp=14648346099033de614af0fa12d8899701c45908fb
+2016-06-02 10:30:09,812 [13] DEBUG NotificationService [(null)] - sign=  86efe1715fcaa3dd36e2cf771b928a19
+2016-06-02 10:30:09,813 [13] DEBUG NotificationService [(null)] - access_id=2100199195&device_token=7e720d4e7b2ffadd46ad85f23237568a75b64c1c&message={"content":"您有一条来自于金军航的审批","title":"新审批", "vibrate":1, "action": {"activity": "com.jinjunhang.contract.controller.MainActivity2"}, "customContent": 1,  "approval": {"id":"111","keyword":"keyword","type":"type","reporter":"reporter","approvalObject":"审批对象","amount":100.0,"status":"待批","reportDate":"2016-05-01","approvalResult":""} }&message_type=1&sign=86efe1715fcaa3dd36e2cf771b928a19&timestamp=1464834609
+2016-06-02 10:30:09,969 [13] DEBUG NotificationService [(null)] - response = {"ret_code":0}
+2016-06-02 10:33:08,543 [25] DEBUG Global [(null)] - TimerWorker
+2016-06-02 10:33:08,546 [25] DEBUG NotificationMananger [(null)] - sleep 4 seconds
+2016-06-02 10:33:12,839 [25] DEBUG NotificationMananger [(null)] - 继续执行
+2016-06-02 10:33:12,890 [25] DEBUG NotificationMananger [(null)] - check userid = 0001, platform = android, badeg = 2 approvals
+2016-06-02 10:33:12,893 [25] DEBUG ApprovalService [(null)] - SELECT top 10000
+                                                    xh as id, 
+                                                    shgjz as keyword, 
+                                                    bssj as reportDate, 
+                                                    (SELECT name FROM rs_employee where rs_employee.e_no = bsry) as reporter, 
+                                                    shdx as approvalObject, 
+                                                    spjg as approvalResult,
+                                                    je as amount, [status], 
+                                                    shlx as type  
+                                                        FROM [dbo].[t_spjl] where  t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2013-08-06' AND bssj <= '2016-06-02' and t_spjl.status = '待批'  and xh not in ( select top 0 xh from [dbo].[t_spjl] where t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2013-08-06' AND bssj <= '2016-06-02' and t_spjl.status = '待批'  order by bssj desc ) order by bssj desc 
+2016-06-02 10:33:12,963 [25] DEBUG NotificationMananger [(null)] - userid = 0001, approvalid = 20415 has sent
+2016-06-02 10:33:12,978 [25] DEBUG NotificationMananger [(null)] - userid = 0001, approvalid = 20407 has sent
+2016-06-02 10:33:55,722 [16] DEBUG NotificationService [(null)] - POSTopenapi.xg.qq.com/v2/push/single_deviceaccess_id=2100199195device_token=7e720d4e7b2ffadd46ad85f23237568a75b64c1cmessage={"content":"您有一条来自于金军航的审批","title":"新审批", "vibrate":1, "action": {"activity": "com.jinjunhang.contract.controller.MainActivity2"}, "customContent": 1,  "approval": {"id":"111","keyword":"keyword","type":"type","reporter":"reporter","approvalObject":"审批对象","amount":100.0,"status":"待批","reportDate":"2016-05-01","approvalResult":""} }message_type=1timestamp=14648348359033de614af0fa12d8899701c45908fb
+2016-06-02 10:33:55,723 [16] DEBUG NotificationService [(null)] - sign=  2c0a46d7b63a75037f5006219d8fd0fb
+2016-06-02 10:33:55,723 [16] DEBUG NotificationService [(null)] - access_id=2100199195&device_token=7e720d4e7b2ffadd46ad85f23237568a75b64c1c&message={"content":"您有一条来自于金军航的审批","title":"新审批", "vibrate":1, "action": {"activity": "com.jinjunhang.contract.controller.MainActivity2"}, "customContent": 1,  "approval": {"id":"111","keyword":"keyword","type":"type","reporter":"reporter","approvalObject":"审批对象","amount":100.0,"status":"待批","reportDate":"2016-05-01","approvalResult":""} }&message_type=1&sign=2c0a46d7b63a75037f5006219d8fd0fb&timestamp=1464834835
+2016-06-02 10:33:55,877 [16] DEBUG NotificationService [(null)] - response = {"ret_code":0}
+2016-06-02 10:35:24,642 [17] DEBUG NotificationService [(null)] - {"content":"您有一条来自于金军航的审批","title":"新审批", "vibrate":1, "action": {"activity": "com.jinjunhang.contract.controller.MainActivity2"}, "custom_content": { "badge": 1,  "approval": {"id":"111","keyword":"keyword","type":"type","reporter":"reporter","approvalObject":"审批对象","amount":100.0,"status":"待批","reportDate":"2016-05-01","approvalResult":""}} }
+2016-06-02 10:35:24,654 [17] DEBUG NotificationService [(null)] - POSTopenapi.xg.qq.com/v2/push/single_deviceaccess_id=2100199195device_token=7e720d4e7b2ffadd46ad85f23237568a75b64c1cmessage={"content":"您有一条来自于金军航的审批","title":"新审批", "vibrate":1, "action": {"activity": "com.jinjunhang.contract.controller.MainActivity2"}, "custom_content": { "badge": 1,  "approval": {"id":"111","keyword":"keyword","type":"type","reporter":"reporter","approvalObject":"审批对象","amount":100.0,"status":"待批","reportDate":"2016-05-01","approvalResult":""}} }message_type=1timestamp=14648349249033de614af0fa12d8899701c45908fb
+2016-06-02 10:35:24,655 [17] DEBUG NotificationService [(null)] - sign=  1d247ce38ff80b21165e3e2e4da59b67
+2016-06-02 10:35:24,656 [17] DEBUG NotificationService [(null)] - access_id=2100199195&device_token=7e720d4e7b2ffadd46ad85f23237568a75b64c1c&message={"content":"您有一条来自于金军航的审批","title":"新审批", "vibrate":1, "action": {"activity": "com.jinjunhang.contract.controller.MainActivity2"}, "custom_content": { "badge": 1,  "approval": {"id":"111","keyword":"keyword","type":"type","reporter":"reporter","approvalObject":"审批对象","amount":100.0,"status":"待批","reportDate":"2016-05-01","approvalResult":""}} }&message_type=1&sign=1d247ce38ff80b21165e3e2e4da59b67&timestamp=1464834924
+2016-06-02 10:35:24,805 [17] DEBUG NotificationService [(null)] - response = {"ret_code":0}
+2016-06-02 10:38:23,392 [17] DEBUG Global [(null)] - TimerWorker
+2016-06-02 10:38:23,395 [17] DEBUG NotificationMananger [(null)] - sleep 5 seconds
+2016-06-02 10:38:28,525 [17] DEBUG NotificationMananger [(null)] - 继续执行
+2016-06-02 10:38:28,543 [17] DEBUG NotificationMananger [(null)] - check userid = 0001, platform = android, badeg = 2 approvals
+2016-06-02 10:38:28,546 [17] DEBUG ApprovalService [(null)] - SELECT top 10000
+                                                    xh as id, 
+                                                    shgjz as keyword, 
+                                                    bssj as reportDate, 
+                                                    (SELECT name FROM rs_employee where rs_employee.e_no = bsry) as reporter, 
+                                                    shdx as approvalObject, 
+                                                    spjg as approvalResult,
+                                                    je as amount, [status], 
+                                                    shlx as type  
+                                                        FROM [dbo].[t_spjl] where  t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2013-08-06' AND bssj <= '2016-06-02' and t_spjl.status = '待批'  and xh not in ( select top 0 xh from [dbo].[t_spjl] where t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2013-08-06' AND bssj <= '2016-06-02' and t_spjl.status = '待批'  order by bssj desc ) order by bssj desc 
+2016-06-02 10:38:28,622 [17] DEBUG NotificationMananger [(null)] - userid = 0001, approvalid = 20415 has sent
+2016-06-02 10:38:28,639 [17] DEBUG NotificationMananger [(null)] - userid = 0001, approvalid = 20407 has sent
+2016-06-02 10:41:23,393 [9] DEBUG Global [(null)] - TimerWorker
+2016-06-02 10:41:23,393 [9] DEBUG NotificationMananger [(null)] - sleep 0 seconds
+2016-06-02 10:41:23,428 [9] DEBUG NotificationMananger [(null)] - 继续执行
+2016-06-02 10:41:23,447 [9] DEBUG NotificationMananger [(null)] - check userid = 0001, platform = android, badeg = 2 approvals
+2016-06-02 10:41:23,447 [9] DEBUG ApprovalService [(null)] - SELECT top 10000
+                                                    xh as id, 
+                                                    shgjz as keyword, 
+                                                    bssj as reportDate, 
+                                                    (SELECT name FROM rs_employee where rs_employee.e_no = bsry) as reporter, 
+                                                    shdx as approvalObject, 
+                                                    spjg as approvalResult,
+                                                    je as amount, [status], 
+                                                    shlx as type  
+                                                        FROM [dbo].[t_spjl] where  t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2013-08-06' AND bssj <= '2016-06-02' and t_spjl.status = '待批'  and xh not in ( select top 0 xh from [dbo].[t_spjl] where t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2013-08-06' AND bssj <= '2016-06-02' and t_spjl.status = '待批'  order by bssj desc ) order by bssj desc 
+2016-06-02 10:41:23,731 [9] DEBUG NotificationMananger [(null)] - userid = 0001, approvalid = 20415 has sent
+2016-06-02 10:41:23,747 [9] DEBUG NotificationMananger [(null)] - userid = 0001, approvalid = 20407 has sent
+2016-06-02 10:44:23,394 [28] DEBUG Global [(null)] - TimerWorker
+2016-06-02 10:44:23,394 [28] DEBUG NotificationMananger [(null)] - sleep 5 seconds
+2016-06-02 10:44:24,167 [13] DEBUG NotificationService [(null)] - {"content":"您有一条来自于金军航的审批","title":"新审批", "vibrate":1, "action": {"activity": "com.jinjunhang.contract.controller.MainActivity2"}, "custom_content": { "badge": 1,  "approval": {"id":"111","keyword":"keyword","type":"type","reporter":"reporter","approvalObject":"审批对象","amount":100.0,"status":"待批","reportDate":"2016-05-01","approvalResult":""}} }
+2016-06-02 10:44:24,168 [13] DEBUG NotificationService [(null)] - POSTopenapi.xg.qq.com/v2/push/single_deviceaccess_id=2100199195device_token=7e720d4e7b2ffadd46ad85f23237568a75b64c1cmessage={"content":"您有一条来自于金军航的审批","title":"新审批", "vibrate":1, "action": {"activity": "com.jinjunhang.contract.controller.MainActivity2"}, "custom_content": { "badge": 1,  "approval": {"id":"111","keyword":"keyword","type":"type","reporter":"reporter","approvalObject":"审批对象","amount":100.0,"status":"待批","reportDate":"2016-05-01","approvalResult":""}} }message_type=1timestamp=14648354649033de614af0fa12d8899701c45908fb
+2016-06-02 10:44:24,168 [13] DEBUG NotificationService [(null)] - sign=  1c368f42397272975dea640bff60945c
+2016-06-02 10:44:24,169 [13] DEBUG NotificationService [(null)] - access_id=2100199195&device_token=7e720d4e7b2ffadd46ad85f23237568a75b64c1c&message={"content":"您有一条来自于金军航的审批","title":"新审批", "vibrate":1, "action": {"activity": "com.jinjunhang.contract.controller.MainActivity2"}, "custom_content": { "badge": 1,  "approval": {"id":"111","keyword":"keyword","type":"type","reporter":"reporter","approvalObject":"审批对象","amount":100.0,"status":"待批","reportDate":"2016-05-01","approvalResult":""}} }&message_type=1&sign=1c368f42397272975dea640bff60945c&timestamp=1464835464
+2016-06-02 10:44:24,323 [13] DEBUG NotificationService [(null)] - response = {"ret_code":0}
+2016-06-02 10:44:28,430 [28] DEBUG NotificationMananger [(null)] - 继续执行
+2016-06-02 10:44:28,446 [28] DEBUG NotificationMananger [(null)] - check userid = 0001, platform = android, badeg = 2 approvals
+2016-06-02 10:44:28,446 [28] DEBUG ApprovalService [(null)] - SELECT top 10000
+                                                    xh as id, 
+                                                    shgjz as keyword, 
+                                                    bssj as reportDate, 
+                                                    (SELECT name FROM rs_employee where rs_employee.e_no = bsry) as reporter, 
+                                                    shdx as approvalObject, 
+                                                    spjg as approvalResult,
+                                                    je as amount, [status], 
+                                                    shlx as type  
+                                                        FROM [dbo].[t_spjl] where  t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2013-08-06' AND bssj <= '2016-06-02' and t_spjl.status = '待批'  and xh not in ( select top 0 xh from [dbo].[t_spjl] where t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2013-08-06' AND bssj <= '2016-06-02' and t_spjl.status = '待批'  order by bssj desc ) order by bssj desc 
+2016-06-02 10:44:28,512 [28] DEBUG NotificationMananger [(null)] - userid = 0001, approvalid = 20415 has sent
+2016-06-02 10:44:28,530 [28] DEBUG NotificationMananger [(null)] - userid = 0001, approvalid = 20407 has sent
+2016-06-02 10:44:52,632 [16] DEBUG NotificationService [(null)] - {"content":"您有一条来自于金军航的审批","title":"新审批", "vibrate":1, "action": {"activity": "com.jinjunhang.contract.controller.MainActivity2"}, "custom_content": { "badge": 1,  "approval": {"id":"111","keyword":"keyword","type":"type","reporter":"reporter","approvalObject":"审批对象","amount":100.0,"status":"待批","reportDate":"2016-05-01","approvalResult":""}} }
+2016-06-02 10:44:52,633 [16] DEBUG NotificationService [(null)] - POSTopenapi.xg.qq.com/v2/push/single_deviceaccess_id=2100199195device_token=7e720d4e7b2ffadd46ad85f23237568a75b64c1cmessage={"content":"您有一条来自于金军航的审批","title":"新审批", "vibrate":1, "action": {"activity": "com.jinjunhang.contract.controller.MainActivity2"}, "custom_content": { "badge": 1,  "approval": {"id":"111","keyword":"keyword","type":"type","reporter":"reporter","approvalObject":"审批对象","amount":100.0,"status":"待批","reportDate":"2016-05-01","approvalResult":""}} }message_type=1timestamp=14648354929033de614af0fa12d8899701c45908fb
+2016-06-02 10:44:52,634 [16] DEBUG NotificationService [(null)] - sign=  0d0065c874413eebfcd65b36927ab60f
+2016-06-02 10:44:52,634 [16] DEBUG NotificationService [(null)] - access_id=2100199195&device_token=7e720d4e7b2ffadd46ad85f23237568a75b64c1c&message={"content":"您有一条来自于金军航的审批","title":"新审批", "vibrate":1, "action": {"activity": "com.jinjunhang.contract.controller.MainActivity2"}, "custom_content": { "badge": 1,  "approval": {"id":"111","keyword":"keyword","type":"type","reporter":"reporter","approvalObject":"审批对象","amount":100.0,"status":"待批","reportDate":"2016-05-01","approvalResult":""}} }&message_type=1&sign=0d0065c874413eebfcd65b36927ab60f&timestamp=1464835492
+2016-06-02 10:44:52,778 [16] DEBUG NotificationService [(null)] - response = {"ret_code":0}
+2016-06-02 10:45:36,759 [13] DEBUG NotificationService [(null)] - {"content":"您有一条来自于金军航的审批","title":"新审批", "vibrate":1, "action": {"activity": "com.jinjunhang.contract.controller.MainActivity2"}, "custom_content": { "badge": 5,  "approval": {"id":"111","keyword":"keyword","type":"type","reporter":"reporter","approvalObject":"审批对象","amount":100.0,"status":"待批","reportDate":"2016-05-01","approvalResult":""}} }
+2016-06-02 10:45:36,760 [13] DEBUG NotificationService [(null)] - POSTopenapi.xg.qq.com/v2/push/single_deviceaccess_id=2100199195device_token=7e720d4e7b2ffadd46ad85f23237568a75b64c1cmessage={"content":"您有一条来自于金军航的审批","title":"新审批", "vibrate":1, "action": {"activity": "com.jinjunhang.contract.controller.MainActivity2"}, "custom_content": { "badge": 5,  "approval": {"id":"111","keyword":"keyword","type":"type","reporter":"reporter","approvalObject":"审批对象","amount":100.0,"status":"待批","reportDate":"2016-05-01","approvalResult":""}} }message_type=1timestamp=14648355369033de614af0fa12d8899701c45908fb
+2016-06-02 10:45:36,761 [13] DEBUG NotificationService [(null)] - sign=  0dea530f9cafd94b6d2081c9cd49256c
+2016-06-02 10:45:36,761 [13] DEBUG NotificationService [(null)] - access_id=2100199195&device_token=7e720d4e7b2ffadd46ad85f23237568a75b64c1c&message={"content":"您有一条来自于金军航的审批","title":"新审批", "vibrate":1, "action": {"activity": "com.jinjunhang.contract.controller.MainActivity2"}, "custom_content": { "badge": 5,  "approval": {"id":"111","keyword":"keyword","type":"type","reporter":"reporter","approvalObject":"审批对象","amount":100.0,"status":"待批","reportDate":"2016-05-01","approvalResult":""}} }&message_type=1&sign=0dea530f9cafd94b6d2081c9cd49256c&timestamp=1464835536
+2016-06-02 10:45:36,909 [13] DEBUG NotificationService [(null)] - response = {"ret_code":0}
+2016-06-02 10:45:54,284 [12] DEBUG NotificationService [(null)] - {"content":"您有一条来自于金军航的审批","title":"新审批", "vibrate":1, "action": {"activity": "com.jinjunhang.contract.controller.MainActivity2"}, "custom_content": { "badge": 5,  "approval": {"id":"111","keyword":"keyword","type":"type","reporter":"reporter","approvalObject":"审批对象","amount":100.0,"status":"待批","reportDate":"2016-05-01","approvalResult":""}} }
+2016-06-02 10:45:54,285 [12] DEBUG NotificationService [(null)] - POSTopenapi.xg.qq.com/v2/push/single_deviceaccess_id=2100199195device_token=7e720d4e7b2ffadd46ad85f23237568a75b64c1cmessage={"content":"您有一条来自于金军航的审批","title":"新审批", "vibrate":1, "action": {"activity": "com.jinjunhang.contract.controller.MainActivity2"}, "custom_content": { "badge": 5,  "approval": {"id":"111","keyword":"keyword","type":"type","reporter":"reporter","approvalObject":"审批对象","amount":100.0,"status":"待批","reportDate":"2016-05-01","approvalResult":""}} }message_type=1timestamp=14648355549033de614af0fa12d8899701c45908fb
+2016-06-02 10:45:54,285 [12] DEBUG NotificationService [(null)] - sign=  d793f95065611c6b4d9636594bde7602
+2016-06-02 10:45:54,286 [12] DEBUG NotificationService [(null)] - access_id=2100199195&device_token=7e720d4e7b2ffadd46ad85f23237568a75b64c1c&message={"content":"您有一条来自于金军航的审批","title":"新审批", "vibrate":1, "action": {"activity": "com.jinjunhang.contract.controller.MainActivity2"}, "custom_content": { "badge": 5,  "approval": {"id":"111","keyword":"keyword","type":"type","reporter":"reporter","approvalObject":"审批对象","amount":100.0,"status":"待批","reportDate":"2016-05-01","approvalResult":""}} }&message_type=1&sign=d793f95065611c6b4d9636594bde7602&timestamp=1464835554
+2016-06-02 10:45:54,425 [12] DEBUG NotificationService [(null)] - response = {"ret_code":0}
+2016-06-02 10:47:23,394 [23] DEBUG Global [(null)] - TimerWorker
+2016-06-02 10:47:23,394 [23] DEBUG NotificationMananger [(null)] - sleep 5 seconds
+2016-06-02 10:47:28,433 [23] DEBUG NotificationMananger [(null)] - 继续执行
+2016-06-02 10:47:28,451 [23] DEBUG NotificationMananger [(null)] - check userid = 0001, platform = android, badeg = 2 approvals
+2016-06-02 10:47:28,451 [23] DEBUG ApprovalService [(null)] - SELECT top 10000
+                                                    xh as id, 
+                                                    shgjz as keyword, 
+                                                    bssj as reportDate, 
+                                                    (SELECT name FROM rs_employee where rs_employee.e_no = bsry) as reporter, 
+                                                    shdx as approvalObject, 
+                                                    spjg as approvalResult,
+                                                    je as amount, [status], 
+                                                    shlx as type  
+                                                        FROM [dbo].[t_spjl] where  t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2013-08-06' AND bssj <= '2016-06-02' and t_spjl.status = '待批'  and xh not in ( select top 0 xh from [dbo].[t_spjl] where t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2013-08-06' AND bssj <= '2016-06-02' and t_spjl.status = '待批'  order by bssj desc ) order by bssj desc 
+2016-06-02 10:47:28,518 [23] DEBUG NotificationMananger [(null)] - userid = 0001, approvalid = 20415 has sent
+2016-06-02 10:47:28,535 [23] DEBUG NotificationMananger [(null)] - userid = 0001, approvalid = 20407 has sent
+2016-06-02 10:50:23,409 [13] DEBUG Global [(null)] - TimerWorker
+2016-06-02 10:50:23,409 [13] DEBUG NotificationMananger [(null)] - sleep 3 seconds
+2016-06-02 10:50:26,444 [13] DEBUG NotificationMananger [(null)] - 继续执行
+2016-06-02 10:50:26,460 [13] DEBUG NotificationMananger [(null)] - check userid = 0001, platform = android, badeg = 2 approvals
+2016-06-02 10:50:26,461 [13] DEBUG ApprovalService [(null)] - SELECT top 10000
+                                                    xh as id, 
+                                                    shgjz as keyword, 
+                                                    bssj as reportDate, 
+                                                    (SELECT name FROM rs_employee where rs_employee.e_no = bsry) as reporter, 
+                                                    shdx as approvalObject, 
+                                                    spjg as approvalResult,
+                                                    je as amount, [status], 
+                                                    shlx as type  
+                                                        FROM [dbo].[t_spjl] where  t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2013-08-06' AND bssj <= '2016-06-02' and t_spjl.status = '待批'  and xh not in ( select top 0 xh from [dbo].[t_spjl] where t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2013-08-06' AND bssj <= '2016-06-02' and t_spjl.status = '待批'  order by bssj desc ) order by bssj desc 
+2016-06-02 10:50:26,529 [13] DEBUG NotificationMananger [(null)] - userid = 0001, approvalid = 20415 has sent
+2016-06-02 10:50:26,546 [13] DEBUG NotificationMananger [(null)] - userid = 0001, approvalid = 20407 has sent
+2016-06-02 10:53:23,425 [15] DEBUG Global [(null)] - TimerWorker
+2016-06-02 10:53:23,425 [15] DEBUG NotificationMananger [(null)] - sleep 7 seconds
+2016-06-02 10:53:30,461 [15] DEBUG NotificationMananger [(null)] - 继续执行
+2016-06-02 10:53:30,482 [15] DEBUG NotificationMananger [(null)] - check userid = 0001, platform = android, badeg = 2 approvals
+2016-06-02 10:53:30,483 [15] DEBUG ApprovalService [(null)] - SELECT top 10000
+                                                    xh as id, 
+                                                    shgjz as keyword, 
+                                                    bssj as reportDate, 
+                                                    (SELECT name FROM rs_employee where rs_employee.e_no = bsry) as reporter, 
+                                                    shdx as approvalObject, 
+                                                    spjg as approvalResult,
+                                                    je as amount, [status], 
+                                                    shlx as type  
+                                                        FROM [dbo].[t_spjl] where  t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2013-08-06' AND bssj <= '2016-06-02' and t_spjl.status = '待批'  and xh not in ( select top 0 xh from [dbo].[t_spjl] where t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2013-08-06' AND bssj <= '2016-06-02' and t_spjl.status = '待批'  order by bssj desc ) order by bssj desc 
+2016-06-02 10:53:30,548 [15] DEBUG NotificationMananger [(null)] - userid = 0001, approvalid = 20415 has sent
+2016-06-02 10:53:30,565 [15] DEBUG NotificationMananger [(null)] - userid = 0001, approvalid = 20407 has sent
+2016-06-02 10:56:23,438 [27] DEBUG Global [(null)] - TimerWorker
+2016-06-02 10:56:23,439 [27] DEBUG NotificationMananger [(null)] - sleep 0 seconds
+2016-06-02 10:56:23,638 [27] DEBUG NotificationMananger [(null)] - 继续执行
+2016-06-02 10:56:23,738 [27] DEBUG NotificationMananger [(null)] - check userid = 0001, platform = android, badeg = 2 approvals
+2016-06-02 10:56:23,738 [27] DEBUG ApprovalService [(null)] - SELECT top 10000
+                                                    xh as id, 
+                                                    shgjz as keyword, 
+                                                    bssj as reportDate, 
+                                                    (SELECT name FROM rs_employee where rs_employee.e_no = bsry) as reporter, 
+                                                    shdx as approvalObject, 
+                                                    spjg as approvalResult,
+                                                    je as amount, [status], 
+                                                    shlx as type  
+                                                        FROM [dbo].[t_spjl] where  t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2013-08-06' AND bssj <= '2016-06-02' and t_spjl.status = '待批'  and xh not in ( select top 0 xh from [dbo].[t_spjl] where t_spjl.spry = @userId 
+                                            AND  t_spjl.enabled = '1' AND bssj >= '2013-08-06' AND bssj <= '2016-06-02' and t_spjl.status = '待批'  order by bssj desc ) order by bssj desc 
+2016-06-02 10:56:23,987 [27] DEBUG NotificationMananger [(null)] - userid = 0001, approvalid = 20415 has sent
+2016-06-02 10:56:24,087 [27] DEBUG NotificationMananger [(null)] - userid = 0001, approvalid = 20407 has sent

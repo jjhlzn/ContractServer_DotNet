@@ -37,7 +37,7 @@ public partial class sendNotify : System.Web.UI.Page
 
         if (platform == "android")
         {
-            responseString = notificationService.Send("7e720d4e7b2ffadd46ad85f23237568a75b64c1c", 1,
+            responseString = notificationService.Send("7e720d4e7b2ffadd46ad85f23237568a75b64c1c", 5,
                 "您有一条来自于金军航的审批", approval, "android");
         }
         else
