@@ -34,7 +34,7 @@ public partial class reportPrice : BasePage
                 resp = service.Search(GetRequestParameter("userid"), GetRequestParameter("keyword"), GetRequestParameter("startDate"),  GetRequestParameter("endDate"),  GetIntRequestParameter("index"), GetIntRequestParameter("pagesize"));
                 break;
             case "getPriceReport":
-                resp = service.GetPriceReport(GetRequestParameter("reportId"), GetIntRequestParameter("index"), GetIntRequestParameter("pageSize"));
+                resp = service.GetPriceReport(GetRequestParameter("reportId"));
                 break;
             case "searchProducts":
                 resp = service.SearchProducts(GetRequestParameter("userid"), GetRequestParameter("codes"));

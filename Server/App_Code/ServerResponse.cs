@@ -276,6 +276,7 @@ public class SearchPriceReportResponse : ServerResponse
 
 public class GetPriceReportResponse : ServerResponse
 {
+    public int totalNumber { get; set; }
     public List<PriceReportProduct> products { get; set; }
 
     public GetPriceReportResponse()
@@ -295,6 +296,7 @@ public class GetPriceReportResponse : ServerResponse
 
 public class SearchProductResponse : ServerResponse
 {
+   
     public List<PriceReportProduct> products { get; set; }
 
     public SearchProductResponse ()

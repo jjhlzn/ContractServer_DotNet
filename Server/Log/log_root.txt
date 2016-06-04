@@ -139,3 +139,534 @@
 2016-06-04 17:18:31,782 [52] DEBUG Global [(null)] - TimerWorker
 2016-06-04 17:18:31,783 [52] DEBUG NotificationMananger [(null)] - sleep 7 seconds
 2016-06-04 17:18:38,805 [52] DEBUG NotificationMananger [(null)] - 继续执行
+2016-06-04 19:17:36,035 [5] DEBUG BasePage [(null)] - start handle request from ::1, action is getPriceReport
+2016-06-04 19:17:36,054 [5] DEBUG reportPrice [(null)] - {[action, getPriceReport]}
+2016-06-04 19:18:29,752 [16] DEBUG BasePage [(null)] - start handle request from ::1, action is getPriceReport
+2016-06-04 19:18:29,765 [16] DEBUG reportPrice [(null)] - {[action, getPriceReport]}
+2016-06-04 19:18:30,084 [16] DEBUG BasePage [(null)] - request handle complete from ::1, action is getPriceReport
+2016-06-04 19:18:39,628 [10] DEBUG BasePage [(null)] - start handle request from ::1, action is getPriceReport
+2016-06-04 19:18:39,629 [10] DEBUG reportPrice [(null)] - {[action, getPriceReport]}
+2016-06-04 19:18:39,646 [10] DEBUG PriceReportService [(null)] - select sphh as id, spgg as specificaton, spywmc as englishName , bhsdj as price ,
+                                                        (select top 1 wbbb from yw_quotation b where b.bjdh = 'Q12HZ0002' and b.bbh = 1 ) as moneyType
+                                            from yw_quotation_cmd 
+                                            where   bjdh = @reportId and bbh = @version  order by cxh 
+2016-06-04 19:18:59,877 [6] DEBUG BasePage [(null)] - start handle request from ::1, action is getPriceReport
+2016-06-04 19:18:59,890 [6] DEBUG reportPrice [(null)] - {[action, getPriceReport]}
+2016-06-04 19:19:00,029 [6] DEBUG PriceReportService [(null)] - select sphh as id, spgg as specificaton, spywmc as englishName , bhsdj as price ,
+                                                        (select top 1 wbbb from yw_quotation b where b.bjdh = 'Q12HZ0002' and b.bbh = 1 ) as moneyType
+                                            from yw_quotation_cmd 
+                                            where   bjdh = @reportId and bbh = @version  order by cxh 
+2016-06-04 19:19:00,176 [6] DEBUG BasePage [(null)] - request handle complete from ::1, action is getPriceReport
+2016-06-04 19:49:03,924 [10] DEBUG BasePage [(null)] - start handle request from ::1, action is search
+2016-06-04 19:49:03,937 [10] DEBUG reportPrice [(null)] - {[action, search]}
+2016-06-04 19:49:03,941 [10] DEBUG PriceReportService [(null)] - startDate = 2001-1-1, endDate = 2016-1-1
+2016-06-04 19:49:03,948 [10] DEBUG PriceReportService [(null)] - select top 10 bjdh as id, (select top 1 name from rs_employee b where yw_quotation.zdr = b.e_no) as reporter, bjrq as date,
+                                                        yxts as validDays, state as status, wbbb as moneyType, bbh as version
+                                            from yw_quotation 
+                                            where  yw_quotation.bb_flag='Y' 
+                        and bjrq >= @startDate and bjrq <= @endDate and (bjdh like '%%')  and bjdh not in ( select top 0 bjdh from yw_quotation  where yw_quotation.bb_flag='Y' 
+                        and bjrq >= @startDate and bjrq <= @endDate and (bjdh like '%%')  order by bjrq desc) order by bjrq desc
+2016-06-04 19:49:35,697 [10] DEBUG BasePage [(null)] - start handle request from ::1, action is search
+2016-06-04 19:49:35,709 [10] DEBUG reportPrice [(null)] - {[action, search]}
+2016-06-04 19:49:35,713 [10] DEBUG PriceReportService [(null)] - startDate = 2001-1-1, endDate = 2016-1-1
+2016-06-04 19:49:35,717 [10] DEBUG PriceReportService [(null)] - select top 10 bjdh as id, (select top 1 name from rs_employee b where yw_quotation.zdr = b.e_no) as reporter, bjrq as date,
+                                                        yxts as validDays, state as status, wbbb as moneyType, bbh as version
+                                            from yw_quotation 
+                                            where  yw_quotation.bb_flag='Y' 
+                        and bjrq >= @startDate and bjrq <= @endDate and (bjdh like '%%')  and bjdh not in ( select top 0 bjdh from yw_quotation  where yw_quotation.bb_flag='Y' 
+                        and bjrq >= @startDate and bjrq <= @endDate and (bjdh like '%%')  order by bjrq desc) order by bjrq desc
+2016-06-04 19:49:36,049 [10] DEBUG BasePage [(null)] - request handle complete from ::1, action is search
+2016-06-04 19:49:37,457 [10] DEBUG BasePage [(null)] - start handle request from ::1, action is search
+2016-06-04 19:49:37,457 [10] DEBUG reportPrice [(null)] - {[action, search]}
+2016-06-04 19:49:37,472 [10] DEBUG PriceReportService [(null)] - startDate = 2001-1-1, endDate = 2016-1-1
+2016-06-04 19:49:37,473 [10] DEBUG PriceReportService [(null)] - select top 10 bjdh as id, (select top 1 name from rs_employee b where yw_quotation.zdr = b.e_no) as reporter, bjrq as date,
+                                                        yxts as validDays, state as status, wbbb as moneyType, bbh as version
+                                            from yw_quotation 
+                                            where  yw_quotation.bb_flag='Y' 
+                        and bjrq >= @startDate and bjrq <= @endDate and (bjdh like '%%')  and bjdh not in ( select top 0 bjdh from yw_quotation  where yw_quotation.bb_flag='Y' 
+                        and bjrq >= @startDate and bjrq <= @endDate and (bjdh like '%%')  order by bjrq desc) order by bjrq desc
+2016-06-04 19:49:37,531 [10] DEBUG BasePage [(null)] - request handle complete from ::1, action is search
+2016-06-04 19:51:37,575 [11] DEBUG BasePage [(null)] - start handle request from ::1, action is search
+2016-06-04 19:51:37,587 [11] DEBUG reportPrice [(null)] - {[action, search]}
+2016-06-04 19:51:37,592 [11] DEBUG PriceReportService [(null)] - startDate = 2001-1-1, endDate = 2016-1-1
+2016-06-04 19:51:37,595 [11] DEBUG PriceReportService [(null)] - select top 10 bjdh as id, (select top 1 name from rs_employee b where yw_quotation.zdr = b.e_no) as reporter, bjrq as date,
+                                                        yxts as validDays, state as status, wbbb as moneyType, bbh as version
+                                            from yw_quotation 
+                                            where  yw_quotation.bb_flag='Y' 
+                        and bjrq >= @startDate and bjrq <= @endDate and (bjdh like '%%')  and bjdh not in ( select top 0 bjdh from yw_quotation  where yw_quotation.bb_flag='Y' 
+                        and bjrq >= @startDate and bjrq <= @endDate and (bjdh like '%%')  order by bjrq desc) order by bjrq desc
+2016-06-04 19:51:37,865 [11] DEBUG BasePage [(null)] - request handle complete from ::1, action is search
+2016-06-04 19:54:35,964 [19] DEBUG Global [(null)] - TimerWorker
+2016-06-04 19:54:35,971 [19] DEBUG NotificationMananger [(null)] - sleep 0 seconds
+2016-06-04 19:54:36,020 [19] DEBUG NotificationMananger [(null)] - 继续执行
+2016-06-04 20:04:43,389 [17] DEBUG BasePage [(null)] - start handle request from ::1, action is searchProducts
+2016-06-04 20:04:43,405 [17] DEBUG reportPrice [(null)] - {[action, searchProducts]}
+2016-06-04 20:04:43,408 [17] DEBUG PriceReportService [(null)] - select spzwmc as name,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        spgg as specification,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity  where  txm in ( '')
+2016-06-04 20:04:43,792 [17] DEBUG BasePage [(null)] - request handle complete from ::1, action is searchProducts
+2016-06-04 20:07:56,871 [16] DEBUG BasePage [(null)] - start handle request from ::1, action is searchProducts
+2016-06-04 20:07:56,884 [16] DEBUG reportPrice [(null)] - {[action, searchProducts]}
+2016-06-04 20:07:56,987 [16] DEBUG BasePage [(null)] - request handle complete from ::1, action is searchProducts
+2016-06-04 20:08:22,029 [24] DEBUG BasePage [(null)] - start handle request from ::1, action is searchProducts
+2016-06-04 20:08:22,030 [24] DEBUG reportPrice [(null)] - {[action, searchProducts]}
+2016-06-04 20:08:22,033 [24] DEBUG BasePage [(null)] - request handle complete from ::1, action is searchProducts
+2016-06-04 20:08:24,698 [16] DEBUG BasePage [(null)] - start handle request from ::1, action is searchProducts
+2016-06-04 20:08:24,699 [16] DEBUG reportPrice [(null)] - {[action, searchProducts]}
+2016-06-04 20:08:24,710 [16] DEBUG BasePage [(null)] - request handle complete from ::1, action is searchProducts
+2016-06-04 20:09:23,842 [16] DEBUG BasePage [(null)] - start handle request from ::1, action is searchProducts
+2016-06-04 20:09:23,843 [16] DEBUG reportPrice [(null)] - {[action, searchProducts]}
+2016-06-04 20:09:23,845 [16] DEBUG BasePage [(null)] - request handle complete from ::1, action is searchProducts
+2016-06-04 20:09:30,974 [19] DEBUG BasePage [(null)] - start handle request from ::1, action is searchProducts
+2016-06-04 20:09:30,975 [19] DEBUG reportPrice [(null)] - {[action, searchProducts]}
+2016-06-04 20:09:30,977 [19] DEBUG BasePage [(null)] - request handle complete from ::1, action is searchProducts
+2016-06-04 20:09:52,558 [14] DEBUG BasePage [(null)] - start handle request from ::1, action is searchProducts
+2016-06-04 20:09:52,559 [14] DEBUG reportPrice [(null)] - {[action, searchProducts]}
+2016-06-04 20:09:52,561 [14] DEBUG BasePage [(null)] - request handle complete from ::1, action is searchProducts
+2016-06-04 20:10:55,355 [25] DEBUG Global [(null)] - TimerWorker
+2016-06-04 20:10:55,361 [25] DEBUG NotificationMananger [(null)] - sleep 3 seconds
+2016-06-04 20:10:58,552 [25] DEBUG NotificationMananger [(null)] - 继续执行
+2016-06-04 20:12:35,099 [25] DEBUG BasePage [(null)] - start handle request from ::1, action is searchProducts
+2016-06-04 20:12:35,112 [25] DEBUG reportPrice [(null)] - {[action, searchProducts]}
+2016-06-04 20:12:35,117 [25] DEBUG PriceReportService [(null)] - select spzwmc as name,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        spgg as specification,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity  where  txm in ( '6162003134527')
+2016-06-04 20:12:35,459 [25] DEBUG BasePage [(null)] - request handle complete from ::1, action is searchProducts
+2016-06-04 20:13:07,646 [23] DEBUG BasePage [(null)] - start handle request from ::1, action is searchProducts
+2016-06-04 20:13:07,660 [23] DEBUG reportPrice [(null)] - {[action, searchProducts]}
+2016-06-04 20:13:07,664 [23] DEBUG PriceReportService [(null)] - select spzwmc as name,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        spgg as specification,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity  where  txm in ( '^^^6162003134527')
+2016-06-04 20:13:07,924 [23] DEBUG BasePage [(null)] - request handle complete from ::1, action is searchProducts
+2016-06-04 20:13:39,665 [25] DEBUG BasePage [(null)] - start handle request from ::1, action is searchProducts
+2016-06-04 20:13:39,678 [25] DEBUG reportPrice [(null)] - {[action, searchProducts]}
+2016-06-04 20:13:39,689 [25] DEBUG PriceReportService [(null)] - select spzwmc as name,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        spgg as specification,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity  where  txm in ( '6162003134527')
+2016-06-04 20:13:39,974 [25] DEBUG BasePage [(null)] - request handle complete from ::1, action is searchProducts
+2016-06-04 20:13:51,034 [14] DEBUG BasePage [(null)] - start handle request from ::1, action is searchProducts
+2016-06-04 20:13:51,047 [14] DEBUG reportPrice [(null)] - {[action, searchProducts]}
+2016-06-04 20:13:51,051 [14] DEBUG PriceReportService [(null)] - select spzwmc as name,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        spgg as specification,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity  where  txm in ( '___6162003134527')
+2016-06-04 20:13:51,269 [14] DEBUG BasePage [(null)] - request handle complete from ::1, action is searchProducts
+2016-06-04 20:13:59,358 [25] DEBUG BasePage [(null)] - start handle request from ::1, action is searchProducts
+2016-06-04 20:13:59,359 [25] DEBUG reportPrice [(null)] - {[action, searchProducts]}
+2016-06-04 20:13:59,361 [25] DEBUG PriceReportService [(null)] - select spzwmc as name,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        spgg as specification,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity  where  txm in ( '6162003134527', 'fdsf')
+2016-06-04 20:13:59,390 [25] DEBUG BasePage [(null)] - request handle complete from ::1, action is searchProducts
+2016-06-04 20:18:27,356 [5] DEBUG BasePage [(null)] - start handle request from ::1, action is searchProducts
+2016-06-04 20:18:27,369 [5] DEBUG reportPrice [(null)] - {[action, searchProducts]}
+2016-06-04 20:18:27,473 [5] DEBUG BasePage [(null)] - request handle complete from ::1, action is searchProducts
+2016-06-04 20:18:39,069 [25] DEBUG BasePage [(null)] - start handle request from ::1, action is searchProducts
+2016-06-04 20:18:39,070 [25] DEBUG reportPrice [(null)] - {[action, searchProducts]}
+2016-06-04 20:18:39,074 [25] DEBUG BasePage [(null)] - request handle complete from ::1, action is searchProducts
+2016-06-04 20:18:51,934 [5] DEBUG BasePage [(null)] - start handle request from ::1, action is searchProducts
+2016-06-04 20:18:51,935 [5] DEBUG reportPrice [(null)] - {[action, searchProducts]}
+2016-06-04 20:18:51,940 [5] DEBUG BasePage [(null)] - request handle complete from ::1, action is searchProducts
+2016-06-04 20:18:57,788 [25] DEBUG BasePage [(null)] - start handle request from ::1, action is searchProducts
+2016-06-04 20:18:57,789 [25] DEBUG reportPrice [(null)] - {[action, searchProducts]}
+2016-06-04 20:18:57,791 [25] DEBUG BasePage [(null)] - request handle complete from ::1, action is searchProducts
+2016-06-04 20:19:07,254 [5] DEBUG BasePage [(null)] - start handle request from ::1, action is searchProducts
+2016-06-04 20:19:07,254 [5] DEBUG reportPrice [(null)] - {[action, searchProducts]}
+2016-06-04 20:19:07,257 [5] DEBUG BasePage [(null)] - request handle complete from ::1, action is searchProducts
+2016-06-04 20:19:10,111 [25] DEBUG BasePage [(null)] - start handle request from ::1, action is searchProducts
+2016-06-04 20:19:10,111 [25] DEBUG reportPrice [(null)] - {[action, searchProducts]}
+2016-06-04 20:19:10,114 [25] DEBUG BasePage [(null)] - request handle complete from ::1, action is searchProducts
+2016-06-04 20:19:36,133 [19] DEBUG BasePage [(null)] - start handle request from ::1, action is searchProducts
+2016-06-04 20:19:36,146 [19] DEBUG reportPrice [(null)] - {[action, searchProducts]}
+2016-06-04 20:19:36,150 [19] DEBUG PriceReportService [(null)] - select spzwmc as name,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        spgg as specification,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity  where  txm in ( '6162003134527', 'xx')
+2016-06-04 20:19:36,582 [19] DEBUG BasePage [(null)] - request handle complete from ::1, action is searchProducts
+2016-06-04 20:19:39,431 [16] DEBUG BasePage [(null)] - start handle request from ::1, action is searchProducts
+2016-06-04 20:19:39,432 [16] DEBUG reportPrice [(null)] - {[action, searchProducts]}
+2016-06-04 20:19:39,434 [16] DEBUG PriceReportService [(null)] - select spzwmc as name,
+                        spywmc as englishName,
+                        sphh as huohao,
+                        spggms as chineseDesc,
+                        spggywms as englishDesc, 
+                        spgg as specification,
+                        yw_spbm as id,
+                        txm as barCode
+
+                        from yw_commodity  where  txm in ( '6162003134527', '6162003136101')
+2016-06-04 20:19:39,457 [16] DEBUG BasePage [(null)] - request handle complete from ::1, action is searchProducts
+2016-06-04 20:22:09,924 [16] DEBUG BasePage [(null)] - start handle request from ::1, action is searchProducts
+2016-06-04 20:22:09,938 [16] DEBUG reportPrice [(null)] - {[action, searchProducts]}
+2016-06-04 20:22:10,047 [16] DEBUG BasePage [(null)] - request handle complete from ::1, action is searchProducts
+2016-06-04 20:25:08,419 [16] DEBUG Global [(null)] - TimerWorker
+2016-06-04 20:25:08,426 [16] DEBUG NotificationMananger [(null)] - sleep 2 seconds
+2016-06-04 20:25:10,620 [16] DEBUG NotificationMananger [(null)] - 继续执行
+2016-06-04 20:28:08,432 [18] DEBUG Global [(null)] - TimerWorker
+2016-06-04 20:28:08,434 [18] DEBUG NotificationMananger [(null)] - sleep 4 seconds
+2016-06-04 20:28:12,473 [18] DEBUG NotificationMananger [(null)] - 继续执行
+2016-06-04 21:21:23,617 [5] DEBUG BasePage [(null)] - start handle request from ::1, action is submit
+2016-06-04 21:21:23,635 [5] DEBUG reportPrice [(null)] - {[action, submit]}
+2016-06-04 21:21:23,973 [5] DEBUG BasePage [(null)] - request handle complete from ::1, action is submit
+2016-06-04 21:21:39,777 [5] DEBUG BasePage [(null)] - start handle request from ::1, action is submit
+2016-06-04 21:21:39,778 [5] DEBUG reportPrice [(null)] - {[action, submit]}
+2016-06-04 21:24:03,294 [5] DEBUG BasePage [(null)] - start handle request from ::1, action is submit
+2016-06-04 21:24:03,310 [5] DEBUG reportPrice [(null)] - {[action, submit]}
+2016-06-04 21:24:23,580 [5] DEBUG BasePage [(null)] - start handle request from ::1, action is searchProducts
+2016-06-04 21:24:23,580 [5] DEBUG reportPrice [(null)] - {[action, searchProducts]}
+2016-06-04 21:24:23,676 [5] DEBUG BasePage [(null)] - request handle complete from ::1, action is searchProducts
+2016-06-04 21:24:26,781 [6] DEBUG BasePage [(null)] - start handle request from ::1, action is search
+2016-06-04 21:24:26,781 [6] DEBUG reportPrice [(null)] - {[action, search]}
+2016-06-04 21:24:26,785 [6] DEBUG PriceReportService [(null)] - startDate = 2001-1-1, endDate = 2016-1-1
+2016-06-04 21:24:26,786 [6] DEBUG PriceReportService [(null)] - select top 10 bjdh as id, (select top 1 name from rs_employee b where yw_quotation.zdr = b.e_no) as reporter, bjrq as date,
+                                                        yxts as validDays, state as status, wbbb as moneyType, bbh as version
+                                            from yw_quotation 
+                                            where  yw_quotation.bb_flag='Y' 
+                        and bjrq >= @startDate and bjrq <= @endDate and (bjdh like '%%')  and bjdh not in ( select top 0 bjdh from yw_quotation  where yw_quotation.bb_flag='Y' 
+                        and bjrq >= @startDate and bjrq <= @endDate and (bjdh like '%%')  order by bjrq desc) order by bjrq desc
+2016-06-04 21:24:27,078 [6] DEBUG BasePage [(null)] - request handle complete from ::1, action is search
+2016-06-04 21:25:37,404 [7] DEBUG BasePage [(null)] - start handle request from ::1, action is searchProducts
+2016-06-04 21:25:37,417 [7] DEBUG reportPrice [(null)] - {[action, searchProducts]}
+2016-06-04 21:25:37,527 [7] DEBUG BasePage [(null)] - request handle complete from ::1, action is searchProducts
+2016-06-04 21:25:39,585 [5] DEBUG BasePage [(null)] - start handle request from ::1, action is submit
+2016-06-04 21:25:39,585 [5] DEBUG reportPrice [(null)] - {[action, submit]}
+2016-06-04 21:25:40,105 [5] DEBUG PriceReportService [(null)] - newid = BJD1606DD00001
+2016-06-04 21:25:40,107 [5] DEBUG PriceReportService [(null)] - INSERT INTO yw_quotation (bjdh, zdr, rjrq, yxts, state, wbbb, bbh, ywy, bb_flag, tt_no) 
+                               value (@id, @userId, @date, @validDays, @status, @moneyType, @version, @ywy, @flag, @ttno)
+2016-06-04 21:25:40,133 [5] FATAL PriceReportService [(null)] - System.InvalidOperationException: 如果分配给命令的连接位于本地挂起事务中，ExecuteNonQuery 要求命令拥有事务。命令的 Transaction 属性尚未初始化。
+   在 System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 3318
+   在 Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 1312
+   在 Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 1186
+   在 PriceReportService.CreatePriceReport(String userId, String codeString) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\PriceReportService.cs:行号 271
+System.InvalidOperationException: 如果分配给命令的连接位于本地挂起事务中，ExecuteNonQuery 要求命令拥有事务。命令的 Transaction 属性尚未初始化。
+   在 System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 3318
+   在 Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 1312
+   在 Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 1186
+   在 PriceReportService.CreatePriceReport(String userId, String codeString) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\PriceReportService.cs:行号 271
+2016-06-04 21:25:40,149 [5] FATAL PriceReportService [(null)] - 回滚事务
+2016-06-04 21:25:40,203 [5] DEBUG BasePage [(null)] - request handle complete from ::1, action is submit
+2016-06-04 21:27:50,669 [13] DEBUG BasePage [(null)] - start handle request from ::1, action is submit
+2016-06-04 21:27:50,682 [13] DEBUG reportPrice [(null)] - {[action, submit]}
+2016-06-04 21:27:50,880 [13] DEBUG PriceReportService [(null)] - newid = BJD1606DD00001
+2016-06-04 21:27:50,880 [13] DEBUG PriceReportService [(null)] - INSERT INTO yw_quotation (bjdh, zdr, rjrq, yxts, state, wbbb, bbh, ywy, bb_flag, tt_no) 
+                               value (@id, @userId, @date, @validDays, @status, @moneyType, @version, @ywy, @flag, @ttno)
+2016-06-04 21:27:50,903 [13] FATAL PriceReportService [(null)] - System.Data.SqlClient.SqlException (0x80131904): 'value' 附近有语法错误。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 3318
+   在 Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 1312
+   在 Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 1186
+   在 PriceReportService.CreatePriceReport(String userId, String codeString) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\PriceReportService.cs:行号 272
+ClientConnectionId:f14a9d15-12e7-4c99-9845-13f1af76bdf4
+Error Number:102,State:1,Class:15
+System.Data.SqlClient.SqlException (0x80131904): 'value' 附近有语法错误。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 3318
+   在 Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 1312
+   在 Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 1186
+   在 PriceReportService.CreatePriceReport(String userId, String codeString) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\PriceReportService.cs:行号 272
+ClientConnectionId:f14a9d15-12e7-4c99-9845-13f1af76bdf4
+Error Number:102,State:1,Class:15
+2016-06-04 21:27:50,917 [13] FATAL PriceReportService [(null)] - 回滚事务
+2016-06-04 21:27:51,067 [13] DEBUG BasePage [(null)] - request handle complete from ::1, action is submit
+2016-06-04 21:28:21,785 [6] DEBUG BasePage [(null)] - start handle request from ::1, action is submit
+2016-06-04 21:28:21,798 [6] DEBUG reportPrice [(null)] - {[action, submit]}
+2016-06-04 21:28:22,002 [6] DEBUG PriceReportService [(null)] - newid = BJD1606DD00001
+2016-06-04 21:28:22,002 [6] DEBUG PriceReportService [(null)] - INSERT INTO yw_quotation (bjdh, zdr, rjrq, yxts, state, wbbb, bbh, ywy, bb_flag, tt_no) 
+                               VALUES (@id, @userId, @date, @validDays, @status, @moneyType, @version, @ywy, @flag, @ttno)
+2016-06-04 21:28:22,031 [6] FATAL PriceReportService [(null)] - System.Data.SqlClient.SqlException (0x80131904): 必须声明标量变量 "@validDays"。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 3318
+   在 Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 1312
+   在 Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 1186
+   在 PriceReportService.CreatePriceReport(String userId, String codeString) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\PriceReportService.cs:行号 272
+ClientConnectionId:ca9545f0-fb4b-4b5a-9e33-0ad92eae1fab
+Error Number:137,State:2,Class:15
+System.Data.SqlClient.SqlException (0x80131904): 必须声明标量变量 "@validDays"。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 3318
+   在 Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 1312
+   在 Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 1186
+   在 PriceReportService.CreatePriceReport(String userId, String codeString) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\PriceReportService.cs:行号 272
+ClientConnectionId:ca9545f0-fb4b-4b5a-9e33-0ad92eae1fab
+Error Number:137,State:2,Class:15
+2016-06-04 21:28:22,038 [6] FATAL PriceReportService [(null)] - 回滚事务
+2016-06-04 21:28:22,159 [6] DEBUG BasePage [(null)] - request handle complete from ::1, action is submit
+2016-06-04 21:28:53,746 [14] DEBUG BasePage [(null)] - start handle request from ::1, action is submit
+2016-06-04 21:28:53,758 [14] DEBUG reportPrice [(null)] - {[action, submit]}
+2016-06-04 21:28:53,967 [14] DEBUG PriceReportService [(null)] - newid = BJD1606DD00001
+2016-06-04 21:28:53,969 [14] DEBUG PriceReportService [(null)] - INSERT INTO yw_quotation (bjdh, zdr, rjrq, yxts, state, wbbb, bbh, ywy, bb_flag, tt_no) 
+                               VALUES (@id, @userId, @date, @validDays, @status, @moneyType, @version, @ywy, @flag, @ttno)
+2016-06-04 21:28:54,003 [14] FATAL PriceReportService [(null)] - System.Data.SqlClient.SqlException (0x80131904): 列名 'rjrq' 无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 3318
+   在 Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 1312
+   在 Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 1186
+   在 PriceReportService.CreatePriceReport(String userId, String codeString) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\PriceReportService.cs:行号 272
+ClientConnectionId:95e3bfc6-abd2-4e13-881c-2eeaaf38e1ad
+Error Number:207,State:1,Class:16
+System.Data.SqlClient.SqlException (0x80131904): 列名 'rjrq' 无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 3318
+   在 Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 1312
+   在 Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 1186
+   在 PriceReportService.CreatePriceReport(String userId, String codeString) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\PriceReportService.cs:行号 272
+ClientConnectionId:95e3bfc6-abd2-4e13-881c-2eeaaf38e1ad
+Error Number:207,State:1,Class:16
+2016-06-04 21:28:54,026 [14] FATAL PriceReportService [(null)] - 回滚事务
+2016-06-04 21:28:54,186 [14] DEBUG BasePage [(null)] - request handle complete from ::1, action is submit
+2016-06-04 21:30:03,152 [5] DEBUG BasePage [(null)] - start handle request from ::1, action is submit
+2016-06-04 21:30:03,165 [5] DEBUG reportPrice [(null)] - {[action, submit]}
+2016-06-04 21:30:03,370 [5] DEBUG PriceReportService [(null)] - newid = BJD1606DD00001
+2016-06-04 21:30:03,371 [5] DEBUG PriceReportService [(null)] - INSERT INTO yw_quotation (bjdh, zdr, bjrq, yxts, state, wbbb, bbh, ywy, bb_flag, tt_no) 
+                               VALUES (@id, @userId, @date, @validDays, @status, @moneyType, @version, @ywy, @flag, @ttno)
+2016-06-04 21:30:03,416 [5] FATAL PriceReportService [(null)] - System.Data.SqlClient.SqlException (0x80131904): 必须声明标量变量 "@index"。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 3318
+   在 Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 1312
+   在 Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 1186
+   在 PriceReportService.CreatePriceReport(String userId, String codeString) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\PriceReportService.cs:行号 299
+ClientConnectionId:d99a005f-9bc6-45fe-bf4f-17ab6e13f8a0
+Error Number:137,State:2,Class:15
+System.Data.SqlClient.SqlException (0x80131904): 必须声明标量变量 "@index"。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 3318
+   在 Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 1312
+   在 Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 1186
+   在 PriceReportService.CreatePriceReport(String userId, String codeString) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\PriceReportService.cs:行号 299
+ClientConnectionId:d99a005f-9bc6-45fe-bf4f-17ab6e13f8a0
+Error Number:137,State:2,Class:15
+2016-06-04 21:30:03,422 [5] FATAL PriceReportService [(null)] - 回滚事务
+2016-06-04 21:30:03,591 [5] DEBUG BasePage [(null)] - request handle complete from ::1, action is submit
+2016-06-04 21:30:37,998 [9] DEBUG BasePage [(null)] - start handle request from ::1, action is submit
+2016-06-04 21:30:38,014 [9] DEBUG reportPrice [(null)] - {[action, submit]}
+2016-06-04 21:30:38,219 [9] DEBUG PriceReportService [(null)] - newid = BJD1606DD00001
+2016-06-04 21:30:38,221 [9] DEBUG PriceReportService [(null)] - INSERT INTO yw_quotation (bjdh, zdr, bjrq, yxts, state, wbbb, bbh, ywy, bb_flag, tt_no) 
+                               VALUES (@id, @userId, @date, @validDays, @status, @moneyType, @version, @ywy, @flag, @ttno)
+2016-06-04 21:30:38,274 [9] FATAL PriceReportService [(null)] - System.Data.SqlClient.SqlException (0x80131904): 必须声明标量变量 "@huohao"。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 3318
+   在 Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 1312
+   在 Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 1186
+   在 PriceReportService.CreatePriceReport(String userId, String codeString) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\PriceReportService.cs:行号 299
+ClientConnectionId:6252ddc7-e289-4b8c-90c0-696f8af991cc
+Error Number:137,State:2,Class:15
+System.Data.SqlClient.SqlException (0x80131904): 必须声明标量变量 "@huohao"。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 3318
+   在 Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 1312
+   在 Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\SqlMapper.cs:行号 1186
+   在 PriceReportService.CreatePriceReport(String userId, String codeString) 位置 c:\Users\jjh\Documents\GitHub\ContractServer_DotNet\Server\App_Code\PriceReportService.cs:行号 299
+ClientConnectionId:6252ddc7-e289-4b8c-90c0-696f8af991cc
+Error Number:137,State:2,Class:15
+2016-06-04 21:30:38,290 [9] FATAL PriceReportService [(null)] - 回滚事务
+2016-06-04 21:30:38,543 [9] DEBUG BasePage [(null)] - request handle complete from ::1, action is submit
+2016-06-04 21:31:06,042 [9] DEBUG BasePage [(null)] - start handle request from ::1, action is submit
+2016-06-04 21:31:06,056 [9] DEBUG reportPrice [(null)] - {[action, submit]}
+2016-06-04 21:31:06,295 [9] DEBUG PriceReportService [(null)] - newid = BJD1606DD00001
+2016-06-04 21:31:06,296 [9] DEBUG PriceReportService [(null)] - INSERT INTO yw_quotation (bjdh, zdr, bjrq, yxts, state, wbbb, bbh, ywy, bb_flag, tt_no) 
+                               VALUES (@id, @userId, @date, @validDays, @status, @moneyType, @version, @ywy, @flag, @ttno)
+2016-06-04 21:31:06,343 [9] DEBUG PriceReportService [(null)] - INSERT INTO yw_quotation_cmd (bjdh, bbh, cxh, spbm, spywmc, spgg, sphh, bhsdj) 
+                          VALUES (@id, @version, @index, @productId, @englishName, @specification, @huohao, @price)
+2016-06-04 21:31:06,361 [9] DEBUG PriceReportService [(null)] - INSERT INTO yw_quotation_cmd (bjdh, bbh, cxh, spbm, spywmc, spgg, sphh, bhsdj) 
+                          VALUES (@id, @version, @index, @productId, @englishName, @specification, @huohao, @price)
+2016-06-04 21:31:06,518 [9] DEBUG BasePage [(null)] - request handle complete from ::1, action is submit
+2016-06-04 21:32:04,926 [13] DEBUG BasePage [(null)] - start handle request from ::1, action is submit
+2016-06-04 21:32:04,927 [13] DEBUG reportPrice [(null)] - {[action, submit]}
+2016-06-04 21:32:04,960 [13] DEBUG PriceReportService [(null)] - newid = BJD1606DD00002
+2016-06-04 21:32:04,961 [13] DEBUG PriceReportService [(null)] - INSERT INTO yw_quotation (bjdh, zdr, bjrq, yxts, state, wbbb, bbh, ywy, bb_flag, tt_no) 
+                               VALUES (@id, @userId, @date, @validDays, @status, @moneyType, @version, @ywy, @flag, @ttno)
+2016-06-04 21:32:04,994 [13] DEBUG PriceReportService [(null)] - INSERT INTO yw_quotation_cmd (bjdh, bbh, cxh, spbm, spywmc, spgg, sphh, bhsdj) 
+                          VALUES (@id, @version, @index, @productId, @englishName, @specification, @huohao, @price)
+2016-06-04 21:32:05,010 [13] DEBUG PriceReportService [(null)] - INSERT INTO yw_quotation_cmd (bjdh, bbh, cxh, spbm, spywmc, spgg, sphh, bhsdj) 
+                          VALUES (@id, @version, @index, @productId, @englishName, @specification, @huohao, @price)
+2016-06-04 21:32:05,028 [13] DEBUG BasePage [(null)] - request handle complete from ::1, action is submit
+2016-06-04 21:34:04,422 [13] DEBUG Global [(null)] - TimerWorker
+2016-06-04 21:34:04,430 [13] DEBUG NotificationMananger [(null)] - sleep 3 seconds
+2016-06-04 21:34:07,938 [13] DEBUG NotificationMananger [(null)] - 继续执行
+2016-06-04 21:37:04,432 [6] DEBUG Global [(null)] - TimerWorker
+2016-06-04 21:37:04,433 [6] DEBUG NotificationMananger [(null)] - sleep 9 seconds
+2016-06-04 21:37:13,586 [6] DEBUG NotificationMananger [(null)] - 继续执行
+2016-06-04 21:40:04,433 [17] DEBUG Global [(null)] - TimerWorker
+2016-06-04 21:40:04,433 [17] DEBUG NotificationMananger [(null)] - sleep 9 seconds
+2016-06-04 21:40:13,480 [17] DEBUG NotificationMananger [(null)] - 继续执行
+2016-06-04 21:43:04,448 [17] DEBUG Global [(null)] - TimerWorker
+2016-06-04 21:43:04,448 [17] DEBUG NotificationMananger [(null)] - sleep 7 seconds
+2016-06-04 21:43:11,490 [17] DEBUG NotificationMananger [(null)] - 继续执行
+2016-06-04 21:46:04,462 [20] DEBUG Global [(null)] - TimerWorker
+2016-06-04 21:46:04,464 [20] DEBUG NotificationMananger [(null)] - sleep 6 seconds
+2016-06-04 21:46:10,562 [20] DEBUG NotificationMananger [(null)] - 继续执行
+2016-06-04 21:49:04,462 [21] DEBUG Global [(null)] - TimerWorker
+2016-06-04 21:49:04,463 [21] DEBUG NotificationMananger [(null)] - sleep 6 seconds
+2016-06-04 21:49:10,503 [21] DEBUG NotificationMananger [(null)] - 继续执行
+2016-06-04 22:05:12,899 [19] DEBUG BasePage [(null)] - start handle request from ::1, action is submit
+2016-06-04 22:05:12,912 [19] DEBUG reportPrice [(null)] - {[action, submit]}
+2016-06-04 22:05:13,120 [19] DEBUG PriceReportService [(null)] - newid = BJD1606DD00003
+2016-06-04 22:05:13,121 [19] DEBUG PriceReportService [(null)] - INSERT INTO yw_quotation (bjdh, zdr, bjrq, yxts, state, wbbb, bbh, ywy, bb_flag, tt_no) 
+                               VALUES (@id, @userId, @date, @validDays, @status, @moneyType, @version, @ywy, @flag, @ttno)
+2016-06-04 22:05:13,160 [19] DEBUG PriceReportService [(null)] - INSERT INTO yw_quotation_cmd (bjdh, bbh, cxh, spbm, spywmc, spgg, sphh, bhsdj) 
+                          VALUES (@id, @version, @index, @productId, @englishName, @specification, @huohao, @price)
+2016-06-04 22:05:13,188 [19] DEBUG PriceReportService [(null)] - INSERT INTO yw_quotation_cmd (bjdh, bbh, cxh, spbm, spywmc, spgg, sphh, bhsdj) 
+                          VALUES (@id, @version, @index, @productId, @englishName, @specification, @huohao, @price)
+2016-06-04 22:05:13,330 [19] DEBUG BasePage [(null)] - request handle complete from ::1, action is submit
+2016-06-04 22:05:42,427 [19] DEBUG BasePage [(null)] - start handle request from ::1, action is submit
+2016-06-04 22:05:42,440 [19] DEBUG reportPrice [(null)] - {[action, submit]}
+2016-06-04 22:05:42,641 [19] DEBUG PriceReportService [(null)] - newid = BJD1606DD00004
+2016-06-04 22:05:42,642 [19] DEBUG PriceReportService [(null)] - INSERT INTO yw_quotation (bjdh, zdr, bjrq, yxts, state, wbbb, bbh, ywy, bb_flag, tt_no) 
+                               VALUES (@id, @userId, @date, @validDays, @status, @moneyType, @version, @ywy, @flag, @ttno)
+2016-06-04 22:05:42,685 [19] DEBUG PriceReportService [(null)] - INSERT INTO yw_quotation_cmd (bjdh, bbh, cxh, spbm, spywmc, spgg, sphh, bhsdj) 
+                          VALUES (@id, @version, @index, @productId, @englishName, @specification, @huohao, @price)
+2016-06-04 22:05:42,703 [19] DEBUG PriceReportService [(null)] - INSERT INTO yw_quotation_cmd (bjdh, bbh, cxh, spbm, spywmc, spgg, sphh, bhsdj) 
+                          VALUES (@id, @version, @index, @productId, @englishName, @specification, @huohao, @price)
+2016-06-04 22:05:42,844 [19] DEBUG BasePage [(null)] - request handle complete from ::1, action is submit
+2016-06-04 22:06:09,997 [19] DEBUG BasePage [(null)] - start handle request from ::1, action is submit
+2016-06-04 22:06:10,011 [19] DEBUG reportPrice [(null)] - {[action, submit]}
+2016-06-04 22:06:10,238 [19] DEBUG PriceReportService [(null)] - newid = BJD1606DD00005
+2016-06-04 22:06:10,239 [19] DEBUG PriceReportService [(null)] - INSERT INTO yw_quotation (bjdh, zdr, bjrq, yxts, state, wbbb, bbh, ywy, bb_flag, tt_no) 
+                               VALUES (@id, @userId, @date, @validDays, @status, @moneyType, @version, @ywy, @flag, @ttno)
+2016-06-04 22:06:10,278 [19] DEBUG PriceReportService [(null)] - INSERT INTO yw_quotation_cmd (bjdh, bbh, cxh, spbm, spywmc, spgg, sphh, bhsdj) 
+                          VALUES (@id, @version, @index, @productId, @englishName, @specification, @huohao, @price)
+2016-06-04 22:06:10,294 [19] DEBUG PriceReportService [(null)] - INSERT INTO yw_quotation_cmd (bjdh, bbh, cxh, spbm, spywmc, spgg, sphh, bhsdj) 
+                          VALUES (@id, @version, @index, @productId, @englishName, @specification, @huohao, @price)
+2016-06-04 22:06:10,440 [19] DEBUG BasePage [(null)] - request handle complete from ::1, action is submit
+2016-06-04 22:38:47,561 [26] DEBUG BasePage [(null)] - start handle request from ::1, action is search
+2016-06-04 22:38:47,574 [26] DEBUG reportPrice [(null)] - {[action, search]}
+2016-06-04 22:38:47,583 [26] DEBUG PriceReportService [(null)] - startDate = 2001-1-1, endDate = 2016-1-1
+2016-06-04 22:38:47,586 [26] DEBUG PriceReportService [(null)] - select top 10 bjdh as id, (select top 1 name from rs_employee b where yw_quotation.zdr = b.e_no) as reporter, CONVERT(varchar(100), bjrq, 23) as date,
+                                                        yxts as validDays, state as status, wbbb as moneyType, bbh as version
+                                            from yw_quotation 
+                                            where  yw_quotation.bb_flag='Y' 
+                        and bjrq >= @startDate and bjrq <= @endDate and (bjdh like '%%')  and bjdh not in ( select top 0 bjdh from yw_quotation  where yw_quotation.bb_flag='Y' 
+                        and bjrq >= @startDate and bjrq <= @endDate and (bjdh like '%%')  order by bjrq desc) order by bjrq desc
+2016-06-04 22:38:47,852 [26] DEBUG BasePage [(null)] - request handle complete from ::1, action is search
