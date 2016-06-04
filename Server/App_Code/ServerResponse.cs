@@ -253,4 +253,82 @@ public class ResetBadgeResponse : ServerResponse
     
 }
 
+public class SearchPriceReportResponse : ServerResponse
+{
+    public int totalNumber { get; set; }
+    public List<PriceReport> reports { get; set; }
+
+
+    public SearchPriceReportResponse()
+    {
+        reports = new List<PriceReport>();
+    }
+    public override void ResetNullProperteis()
+    {
+        foreach (var item in reports)
+        {
+            item.resetNullProperties();
+        }
+        
+    }
+}
+
+
+public class GetPriceReportResponse : ServerResponse
+{
+    public List<PriceReportProduct> products { get; set; }
+
+    public GetPriceReportResponse()
+    {
+        products = new List<PriceReportProduct>();
+    }
+
+    public override void ResetNullProperteis()
+    {
+        foreach (var item in products)
+        {
+            item.resetNullProperties();
+        }
+
+    } 
+}
+
+public class SearchProductResponse : ServerResponse
+{
+    public List<PriceReportProduct> products { get; set; }
+
+    public SearchProductResponse ()
+    {
+        products = new List<PriceReportProduct>();
+    }
+
+    public override void ResetNullProperteis()
+    {
+        foreach (var item in products)
+        {
+            item.resetNullProperties();
+        }
+
+    } 
+}
+
+public class CreatePriceReportResponse : ServerResponse
+{
+    public PriceReport report { get; set; }
+
+    public CreatePriceReportResponse()
+    {
+        report = new PriceReport();
+    }
+
+
+    public override void ResetNullProperteis()
+    {
+        report.resetNullProperties();
+
+    } 
+}
+
+
+
 
