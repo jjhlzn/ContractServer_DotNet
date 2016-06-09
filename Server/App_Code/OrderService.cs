@@ -20,7 +20,7 @@ public class OrderService
 	{
 	}
 
-    public SearchOrderResponse Search(string keyword, string startDate, string endDate, 
+    public SearchOrderResponse Search(string userid, string keyword, string startDate, string endDate, 
         int pageNo, int pageSize)
     {
         var response = new SearchOrderResponse();
@@ -35,8 +35,9 @@ public class OrderService
             string whereClause =
                 string.Format(
                     @" yw_contract.ywy=rs_employee.e_no and yw_contract.khbm=yw_wldw.yw_khbm and yw_contract.bb_flag='Y' 
-                        and qyrq >= @startDate and qyrq <= @endDate and (yw_contract.wxhth like '%{0}%' or po_no like '%{1}%') ", keyword, keyword);
-            string sql = @"select top " + pageSize + @" name as businessPerson,wxhth as contractNo,po_no as orderNo,zje as amount,yw_wldw.khmc as guestName,yw_contract.wbbb as moneyType , qyrq
+                        and qyrq >= @startDate and qyrq <= @endDate and yw_contract.ywy in (select scope from t_m_o_scope where t_m_o_scope.m_no = 'yw' and t_m_o_scope.e_no = @userid) 
+                        and (yw_contract.wxhth like '%{0}%' or po_no like '%{1}%') ", keyword, keyword);
+            string sql = @"select top " + pageSize + @" name as businessPerson,wxhth as contractNo,po_no as orderNo,zje as amount,yw_wldw.khmc as guestName,yw_contract.wbbb as moneyType, qyrq
                                             from yw_contract,rs_employee,yw_wldw
                                             where " + whereClause + @" and wxhth not in ( select top " + skipCount +
                          " wxhth from yw_contract,rs_employee,yw_wldw where"
@@ -44,7 +45,7 @@ public class OrderService
             Logger.DebugFormat(sql);
 
             
-            var result = conn.Query<Order>(sql , new { startDate, endDate });
+            var result = conn.Query<Order>(sql , new { startDate, endDate, userid });
             foreach (var order in result)
             {
                 if (order.moneyType == "RMB")
@@ -55,7 +56,7 @@ public class OrderService
                     order.moneyType = "$";
                 }
             }
-            var count = conn.Query<int>("select COUNT(*) from yw_contract,rs_employee,yw_wldw where " + whereClause, new { startDate, endDate }).First();
+            var count = conn.Query<int>("select COUNT(*) from yw_contract,rs_employee,yw_wldw where " + whereClause, new { startDate, endDate, userid }).First();
             
             response.orders = new List<Order>(result);
             response.totalNumber = count;

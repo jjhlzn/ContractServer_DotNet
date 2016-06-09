@@ -18,7 +18,7 @@ public class PriceReportService
 	{
 	}
 
-    public SearchPriceReportResponse Search(string userId, string keyword, string startDate, string endDate, int pageNo, int pageSize)
+    public SearchPriceReportResponse Search(string userid, string keyword, string startDate, string endDate, int pageNo, int pageSize)
     {
         var response = new SearchPriceReportResponse();
         if (string.IsNullOrEmpty(startDate) || string.IsNullOrEmpty(endDate))
@@ -35,7 +35,7 @@ public class PriceReportService
 
             string whereClause =
                 string.Format(
-                    @" yw_quotation.bb_flag='Y' 
+                    @" yw_quotation.bb_flag='Y' and  yw_quotation.ywy in (select scope from t_m_o_scope where t_m_o_scope.m_no = 'yw' and t_m_o_scope.e_no = @userid) 
                         and bjrq >= @startDate and bjrq <= @endDate and (bjdh like '%{0}%') ", keyword);
 
             string sql = @"select top " + pageSize + @" bjdh as id, (select top 1 name from rs_employee b where yw_quotation.zdr = b.e_no) as reporter, CONVERT(varchar(100), bjrq, 23) as date,
@@ -48,13 +48,13 @@ public class PriceReportService
             Logger.DebugFormat(sql);
 
 
-            var result = conn.Query<PriceReport>(sql, new { startDate, endDate });
+            var result = conn.Query<PriceReport>(sql, new { startDate, endDate, userid });
             foreach (var report in result)
             {
                 report.date = report.date.Substring(0, 10);
             }
-            
-            var count = conn.Query<int>("select COUNT(*) from yw_quotation where " + whereClause, new { startDate, endDate }).First();
+
+            var count = conn.Query<int>("select COUNT(*) from yw_quotation where " + whereClause, new { startDate, endDate, userid }).First();
 
             response.reports = new List<PriceReport>(result);
             setDetailInfo(response.reports);
