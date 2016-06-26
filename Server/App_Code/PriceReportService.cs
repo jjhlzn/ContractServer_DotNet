@@ -190,21 +190,23 @@ public class PriceReportService
         List<PriceReportProduct> products = new List<PriceReportProduct>();
 
         PriceReportProduct product = new PriceReportProduct();
-        product.id = "3007003028";
-        product.huohuo = "";
+        product.id = "3007000001";
+        product.huohuo = "ES-2810";
         product.name = "边框枕头";
         product.price = 100;
         product.englishName = "CONTINENTAL PILLOW CASE";
         product.barCode = "6162003134527";
+        product.specification = "10cm * 20cm";
         products.Add(product);
 
         product = new PriceReportProduct();
-        product.id = "3007002823";
-        product.huohuo = "";
+        product.id = "3007000003";
+        product.huohuo = "ES-2811";
         product.name = "毛巾环";
         product.price = 100;
         product.englishName = "HAND TOWEL RING";
         product.barCode = "6162003136101";
+        product.specification = "10cm * 20cm";
         products.Add(product);
         resp.products = products;
         return resp;
@@ -376,7 +378,7 @@ public class PriceReportService
     private string getNextComputeId()
     {
         DateTime today = DateTime.Now.Date;
-        string prefix = "BJD" + today.ToString("yyMMDD") ;
+        string prefix = "BJD" + today.ToString("yyMMdd") ;
         return prefix + getNextSequence(prefix);
     }
 
