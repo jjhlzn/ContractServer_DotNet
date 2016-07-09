@@ -38,7 +38,8 @@ public class PriceReportService
                     @" yw_quotation.bb_flag='Y' and  yw_quotation.ywy in (select scope from t_m_o_scope where t_m_o_scope.m_no = 'yw' and t_m_o_scope.e_no = @userid) 
                         and bjrq >= @startDate and bjrq <= @endDate and (bjdh like '%{0}%') ", keyword);
 
-            string sql = @"select top " + pageSize + @" bjdh as id, (select top 1 name from rs_employee b where yw_quotation.zdr = b.e_no) as reporter, CONVERT(varchar(100), bjrq, 23) as date,
+            string sql = @"select top " + pageSize + @" bjdh as id,  (select top 1 name from rs_employee b where yw_quotation.zdr = b.e_no) as reporter,
+                                                        CONVERT(varchar(100), bjrq, 23) as date,
                                                         yxts as validDays, state as status, wbbb as moneyType, bbh as version
                                             from yw_quotation 
                                             where " + whereClause + @" and bjdh not in ( select top " + skipCount +
@@ -153,7 +154,7 @@ public class PriceReportService
                 string.Format(
                     @"  bjdh = @reportId and bbh = @version ");
 
-            string sql = @"select sphh as id, spgg as specificaton, spywmc as englishName , bhsdj as price , 
+            string sql = @"select sphh as id, sphh as huohuo, spgg as specificaton, spywmc as englishName , bhsdj as price ,  str(jjsl) + '/' + jjdw as unit, 
                                                         (select top 1 spzwmc from yw_commodity c where c.yw_spbm = yw_quotation_cmd.spbm) as name,
                                                         (select top 1 wbbb from yw_quotation b where b.bjdh = 'Q12HZ0002' and b.bbh = 1 ) as moneyType
                                             from yw_quotation_cmd 
@@ -197,6 +198,7 @@ public class PriceReportService
         product.englishName = "CONTINENTAL PILLOW CASE";
         product.barCode = "6162003134527";
         product.specification = "10cm * 20cm";
+        product.unit = "1/PCS";
         products.Add(product);
 
         product = new PriceReportProduct();
@@ -207,6 +209,7 @@ public class PriceReportService
         product.englishName = "HAND TOWEL RING";
         product.barCode = "6162003136101";
         product.specification = "10cm * 20cm";
+        product.unit = "1/PCS";
         products.Add(product);
         resp.products = products;
         return resp;
@@ -228,7 +231,7 @@ public class PriceReportService
                         spgg as specification,
                         yw_spbm as id,
                         txm as barCode
-
+                        
                         from yw_commodity ";
 
         string where = " where  txm in (";
@@ -266,7 +269,7 @@ public class PriceReportService
         }
     }
 
-    public CreatePriceReportResponse CreatePriceReport(string userId, string codeString)
+    public CreatePriceReportResponse CreatePriceReport(string userId, string codeString, string companyName, string contactPerson, string contactPhone)
     {
         //TODO: mocck
         codeString = "____6162003134527____6162003136101";
@@ -296,8 +299,8 @@ public class PriceReportService
             try
             {
                 //插入主表
-                string sql = @"INSERT INTO yw_quotation (bjdh, zdr, bjrq, yxts, state, wbbb, bbh, ywy, bb_flag, tt_no) 
-                               VALUES (@id, @userId, @date, @validDays, @status, @moneyType, @version, @ywy, @flag, @ttno)";
+                string sql = @"INSERT INTO yw_quotation (bjdh, zdr, bjrq, yxts, state, wbbb, bbh, ywy, bb_flag, tt_no, khmc, lxr, tel) 
+                               VALUES (@id, @userId, @date, @validDays, @status, @moneyType, @version, @ywy, @flag, @ttno, @companyName, @contactPerson, @contactPhone)";
 
                 string id = getNextComputeId();
                 Logger.DebugFormat("newid = {0}", id);
@@ -308,13 +311,16 @@ public class PriceReportService
                         id,
                         userId,
                         date = DateTime.Now,
-                        validDays = 15,
+                        validDays = 31,
                         status = "新制",
                         moneyType = "USD",
                         version = 1,
                         ywy = userId,
                         flag = "Y",
-                        ttno = "01’"
+                        ttno = "01’",
+                        companyName,
+                        contactPerson,
+                        contactPhone
                     }, trasaction);
 
                 //插入分表

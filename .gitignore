@@ -45,3 +45,4 @@ Temporary Items
 #Log
 Server/Log/
 Server/Log/*
+Server/Log/log_root.txt

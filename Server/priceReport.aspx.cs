@@ -40,7 +40,11 @@ public partial class reportPrice : BasePage
                 resp = service.SearchProducts(GetRequestParameter("userid"), GetRequestParameter("codes"));
                 break;
             case "submit":
-                resp = service.CreatePriceReport(GetRequestParameter("userid"), GetRequestParameter("codes"));
+                string companyName = HttpUtility.HtmlDecode(GetRequestParameter("companyname"));
+                string contactperson = HttpUtility.HtmlDecode(GetRequestParameter("contactperson"));
+                string contactphone = HttpUtility.HtmlDecode(GetRequestParameter("contactphone"));
+                Logger.Debug("companyName = " + companyName);
+                resp = service.CreatePriceReport(GetRequestParameter("userid"), GetRequestParameter("codes"), companyName, contactperson, contactphone);
                 break;
         }
         return resp;
